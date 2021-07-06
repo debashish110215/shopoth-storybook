@@ -1,4 +1,5 @@
 import React from 'react'
+import {FaSpinner} from 'react-icons/fa'
 import './cartButton.scss'
 
 interface ButtonProps{
@@ -9,6 +10,7 @@ interface ButtonProps{
     block?:string;
     label:string;
     onClick?:() => void;
+    spinnerOn?:boolean
    
 }
 
@@ -19,6 +21,7 @@ export const CartButton = ({
     backgroundColor,
     block ,
     label, 
+    spinnerOn = false,
     ...props
 }:ButtonProps) => {
     const btnStyle = outline?`btn-outline-${color}`:`btn-${color}`
@@ -29,16 +32,7 @@ export const CartButton = ({
             style={{backgroundColor}}
             {...props}
         >
-            {label}
+         {label}  { spinnerOn && <FaSpinner/>} 
         </button>
     )
 }
-
-// export default CartButton
-
-
-
- // secondary?:boolean
-    // success?:boolean
-    // warning?:boolean
-    // danger?:boolean
