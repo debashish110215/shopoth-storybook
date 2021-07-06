@@ -1,0 +1,140 @@
+.btn{
+    font-family: 'Nunito Sans', 'Helvetica Neue',  Helvetica, Arial, sans-serif;
+    font-weight:700 ;
+    border: 0;
+    border-radius: 3em;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+}
+
+.btn-primary{
+    color:white;
+    background: #0275d8;
+    &:hover{
+        background-color: #1d8ae9;
+    }
+}
+
+.btn-secondary{
+    color: #333;
+    background: #adb5bd;
+    &:hover{
+        background-color: #c6cbcf;
+    }
+}
+
+.btn-success{
+    color:white;
+    background: #5cb85c;
+    &:hover{
+        background-color: #6fc76f;
+    }
+}
+.btn-info{
+    color:white;
+    background: #5bc0de;
+    &:hover{
+        background-color: #6fcbe7;
+    }
+}
+.btn-warning{
+    color:white;
+    background: #f0ad4e;
+    &:hover{
+        background-color: #f7bb68;
+    }
+}
+.btn-danger{
+    color:white;
+    background: #d9534f;
+    &:hover{
+        background-color: #eb6a65;
+    }
+}
+.btn-cart{
+    color:white;
+    background: #f80e68;
+    &:hover{
+        background-color: #fd3b85;
+    }
+}
+.btn-outline-primary{
+    color:#0275d8;
+    border: 1px solid #0275d8;
+    &:hover{
+        color: white;
+        background-color: #0275d8;
+    }
+}
+.btn-outline-secondary{
+    color:#adb5bd;
+    border: 1px solid #adb5bd;
+    &:hover{
+        color: white;
+        background-color: #adb5bd;
+    }
+}
+.btn-outline-success{
+    color:#5cb85c;
+    border: 1px solid #5cb85c;
+    &:hover{
+        color: white;
+        background-color: #5cb85c;
+    }
+}
+.btn-outline-info{
+    color:#5bc0de;
+    border: 1px solid #5bc0de;
+    &:hover{
+        color: white;
+        background-color: #5bc0de;
+    }
+}
+.btn-outline-warning{
+    color:#f0ad4e;
+    border: 1px solid #f0ad4e;
+    &:hover{
+        color: white;
+        background-color: #f0ad4e;
+    }
+}
+.btn-outline-danger{
+    color:#d9534f;
+    border: 1px solid #d9534f;
+    &:hover{
+        color: white;
+        background-color: #d9534f;
+    }
+}
+.btn-outline-cart{
+    color:#f80e68;
+    border: 1px solid #f80e68;
+    &:hover{
+        color: white;
+        background-color: #f80e68;
+    }
+}
+
+.btn-small{
+    font-size: 12px;
+    padding: 10px 16px;
+
+}
+ 
+
+.btn-medium {
+    font-size: 14px;
+    padding: 11px 20px;
+}
+
+
+.btn-large{
+    font-size: 16px;
+    padding: 12px 24px;
+}
+
+.btn-block{
+    width: 100%;
+    
+}
