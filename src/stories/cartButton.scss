@@ -1,3 +1,19 @@
+$primary_color:#0275d8;
+$primary_hover_color:#1d8ae9;
+$secondary_color:#adb5bd;
+$secondary_hover_color:#c6cbcf;
+$success_color:#5cb85c;
+$success_hover_color:#6fc76f;
+$info_color:#5bc0de;
+$info_hover_color:#6fcbe7;
+$warning_color:#f0ad4e;
+$warning_hover_color:#f7bb68;
+$danger_color:#d9534f;
+$danger_hover_color:#eb6a65;
+$cart_color:#f80e68;
+$cart_hover_color:#fd3b85;
+
+
 .btn{
     font-family: 'Nunito Sans', 'Helvetica Neue',  Helvetica, Arial, sans-serif;
     font-weight:700 ;
@@ -10,109 +26,109 @@
 
 .btn-primary{
     color:white;
-    background: #0275d8;
+    background: $primary_color;
     &:hover{
-        background-color: #1d8ae9;
+        background-color: $primary_hover_color;
     }
 }
 
 .btn-secondary{
     color: #333;
-    background: #adb5bd;
+    background: $secondary_color;
     &:hover{
-        background-color: #c6cbcf;
+        background-color: $secondary_hover_color;
     }
 }
 
 .btn-success{
     color:white;
-    background: #5cb85c;
+    background: $success_color;
     &:hover{
-        background-color: #6fc76f;
+        background-color: $success_hover_color;
     }
 }
 .btn-info{
     color:white;
-    background: #5bc0de;
+    background: $info_color;
     &:hover{
-        background-color: #6fcbe7;
+        background-color: $info_hover_color;
     }
 }
 .btn-warning{
     color:white;
-    background: #f0ad4e;
+    background: $warning_color;
     &:hover{
-        background-color: #f7bb68;
+        background-color: $warning_hover_color;
     }
 }
 .btn-danger{
     color:white;
-    background: #d9534f;
+    background: $danger_color;
     &:hover{
-        background-color: #eb6a65;
+        background-color: $danger_hover_color;
     }
 }
 .btn-cart{
     color:white;
-    background: #f80e68;
+    background: $cart_color;
     &:hover{
-        background-color: #fd3b85;
+        background-color: $cart_hover_color;
     }
 }
 .btn-outline-primary{
-    color:#0275d8;
-    border: 1px solid #0275d8;
+    color:$primary_color;
+    border: 1px solid $primary_color;
     &:hover{
         color: white;
-        background-color: #0275d8;
+        background-color: $primary_color;
     }
 }
 .btn-outline-secondary{
-    color:#adb5bd;
-    border: 1px solid #adb5bd;
+    color:$secondary_color;
+    border: 1px solid $secondary_color;
     &:hover{
         color: white;
-        background-color: #adb5bd;
+        background-color: $secondary_color;
     }
 }
 .btn-outline-success{
-    color:#5cb85c;
-    border: 1px solid #5cb85c;
+    color:$success_color;
+    border: 1px solid $success_color;
     &:hover{
         color: white;
-        background-color: #5cb85c;
+        background-color: $success_color;
     }
 }
 .btn-outline-info{
-    color:#5bc0de;
-    border: 1px solid #5bc0de;
+    color:$info_color;
+    border: 1px solid $info_color;
     &:hover{
         color: white;
-        background-color: #5bc0de;
+        background-color: $info_color;
     }
 }
 .btn-outline-warning{
-    color:#f0ad4e;
-    border: 1px solid #f0ad4e;
+    color:$warning_color;
+    border: 1px solid $warning_color;
     &:hover{
         color: white;
-        background-color: #f0ad4e;
+        background-color: $warning_color;
     }
 }
 .btn-outline-danger{
-    color:#d9534f;
-    border: 1px solid #d9534f;
+    color:$danger_color;
+    border: 1px solid $danger_color;
     &:hover{
         color: white;
-        background-color: #d9534f;
+        background-color: $danger_color;
     }
 }
 .btn-outline-cart{
-    color:#f80e68;
-    border: 1px solid #f80e68;
+    color:$cart_color;
+    border: 1px solid $cart_color;
     &:hover{
         color: white;
-        background-color: #f80e68;
+        background-color: $cart_color;
     }
 }
 
