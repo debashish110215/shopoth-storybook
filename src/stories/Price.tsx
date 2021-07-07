@@ -1,23 +1,24 @@
 import './price.scss'
 
 interface PriceProps{
-    currentPrice:number;
-    regularPrice?:number;
+    currentPrice: string;
+    regularPrice?: string;
+    currency?: string;
     size?:number;
     color?:'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger'| 'cart'|'light'|'dark';
 
 }
 
-export const Price = ({regularPrice, currentPrice, size=0.8, color='dark'}:PriceProps) => {
+export const Price = ({regularPrice, currentPrice, currency="Tk", size=0.8, color='dark'}:PriceProps) => {
     return (
         <div 
         className={['price-container', `text-${color}`].join(' ')}
         style ={{fontSize:`${size}rem`}}
         >
-            <div className='currentPrice'>Tk {currentPrice}</div>
+            <div className='currentPrice'>{currency} {currentPrice}</div>
 
             {
-                regularPrice &&  <div className='regularPrice'>Tk {regularPrice}</div>
+                regularPrice &&  <div className='regularPrice'>{currency} {regularPrice}</div>
             }
           
         </div>
