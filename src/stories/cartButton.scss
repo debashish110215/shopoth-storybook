@@ -12,6 +12,8 @@ $danger_color:#d9534f;
 $danger_hover_color:#eb6a65;
 $cart_color:#f80e68;
 $cart_hover_color:#fd3b85;
+$dark_color:#050505;
+$light_color:#ffffff;
 
 
 .btn{
@@ -154,6 +156,32 @@ $cart_hover_color:#fd3b85;
     width: 100%;
     
 }
-// .btn-spinner{
-//     width: 5rem;
-// }
+
+.text-primary{
+    color: $primary_color;
+}
+.text-secondary{
+    color: $secondary_color;
+}
+.text-success{
+    color: $success_color;
+}
+.text-info{
+    color: $info_color;
+}
+.text-warning{
+    color: $warning_color;
+}
+.text-danger{
+    color: $danger_color;
+}
+.text-cart{
+    color: $cart_color;
+}
+.text-dark{
+    color: $dark_color
+}
+.text-light{
+    color: $light_color;
+}
+

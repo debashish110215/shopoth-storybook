@@ -26,6 +26,8 @@ export const Success = Template.bind({});
 Success.args = {
   color:'success',
   label: 'Button',
+  loading:true,
+  loaderColor:'dark'
 };
 export const Info = Template.bind({});
 Info.args = {

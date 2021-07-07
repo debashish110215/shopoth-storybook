@@ -1,6 +1,6 @@
-import React from 'react'
-import {FaSpinner} from 'react-icons/fa'
+import React,{useState, useEffect} from 'react'
 import './cartButton.scss'
+import ClipLoader from "react-spinners/ClipLoader";
 
 interface ButtonProps{
     color?:'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger'| 'cart';
@@ -10,7 +10,8 @@ interface ButtonProps{
     block?:string;
     label:string;
     onClick?:() => void;
-    spinnerOn?:boolean
+    loading?:boolean;
+    loaderColor?: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger'| 'cart'|'light'|'dark';
    
 }
 
@@ -19,20 +20,24 @@ export const CartButton = ({
     outline = false,
     size = 'medium',
     backgroundColor,
+    loaderColor='success',
     block ,
     label, 
-    spinnerOn = false,
+    loading = false,
     ...props
 }:ButtonProps) => {
     const btnStyle = outline?`btn-outline-${color}`:`btn-${color}`
+    const loaderstyle = `text-${loaderColor}`
     return (
         <button
             type='button'
             className={['btn', `btn-${size}`, `${block?'btn-block':''}`, btnStyle].join(' ')}
             style={{backgroundColor}}
+            disabled={loading}
             {...props}
         >
-         {label}  { spinnerOn && <FaSpinner/>} 
+
+          {loading?  <ClipLoader color={loaderstyle} loading={loading}  size={10}/> : `${label}`}
         </button>
     )
 }
