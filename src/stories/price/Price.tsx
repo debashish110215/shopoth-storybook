@@ -5,21 +5,22 @@ interface PriceProps{
     regularPrice?:number;
     currentPriceSize?:number;
     regularPriceSize?:number;
+    currency?:string
 
 }
 
-export const Price = ({regularPrice =586452, currentPrice, currentPriceSize=1.2, regularPriceSize=1}:PriceProps) => {
+export const Price = ({regularPrice, currentPrice, currentPriceSize=1.2, regularPriceSize=1, currency='Tk'}:PriceProps) => {
     return (
         <div 
         className={['price-container'].join(' ')}
        
         >
             <div className='currentPrice'  style ={{fontSize:`${currentPriceSize}rem`}}>
-                <p>Tk {currentPrice}</p>
+                <p>{currency} {currentPrice}</p>
             </div>
             { regularPrice &&  
             <div className='regularPrice'  style ={{fontSize:`${regularPriceSize}rem`}}>
-                <p>Tk {regularPrice}</p>
+                <p>{currency} {regularPrice}</p>
             </div>
             }
           

@@ -17,8 +17,6 @@ export const CardOne = Template.bind({});
 CardOne.args = {
     badgeTitle:'50% Discount',
     cardImage:'sum2.jpg',
-    productTitle:'Sumsung Galaxy S52s',
-    productVariation:'Silver color'
- 
+    productTitle:'Sumsung Galaxy S52s -Silver color', 
 };
 

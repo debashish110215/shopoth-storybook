@@ -4,10 +4,11 @@ import './rating.scss'
 
 interface RatingProps{
     onRatingClick?:()=> void;
-    noOfRating?:number
+    noOfRating?:number;
+    avgRating?:number;
 }
 
-export const Rating:FC<RatingProps> = ({onRatingClick, noOfRating = 10}:RatingProps) => {
+export const Rating:FC<RatingProps> = ({onRatingClick, noOfRating = 10, avgRating}:RatingProps) => {
     const [value, setValue] = useState<number|undefined>(0);
     return (
         <div className='card-rating'>

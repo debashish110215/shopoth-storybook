@@ -16,7 +16,7 @@ interface ButtonProps{
 }
 
 export const CartButton = ({
-    color = 'cart',
+    color = 'secondary',
     outline = false,
     size = 'medium',
     backgroundColor,

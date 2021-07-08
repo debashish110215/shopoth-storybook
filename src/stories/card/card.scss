@@ -1,25 +1,51 @@
 .card{
     width: 280px;
-    box-shadow: 1px 1px 5px #6e6e6e;
+    position: relative;
+}
+.card-main{
+    display: block;
+    box-shadow: 1px 1px 5px #c0c0c0;
     border-radius: 5px;
     box-sizing: border-box;
-    padding: 15px;
+    padding: 20px 15px;
+    z-index:1;
 }
-.card-head{
-    display: flex;
-    justify-content: space-between;
+.card-badge{
+    position: absolute;
+    top: 40px;
+    left: 15px;
+}
+.card-wishlist{
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
-.card-body{
-    margin-top: 15px;
+.card-colorAttr{
+    position: absolute;
+    top: 290px;
+    left: 65px;
 }
 .card-title {
-    margin-top: -10px;
+    margin-top: 55px;
 }
 
 .card-title h4{
-    font-weight: 300;
-    font-size: 1.2rem;
-    margin-bottom: -1.5rem;
-    color: #232749;
+    font-weight: 200;
+    font-size: 1.4rem;
+    color: #434986;
+}
+.card-rating{
+    margin-top: -10px;
+}
+.card-price{
+    margin-top: -25px;
+    margin-bottom: 35px;
+}
+
+.card-btn{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 85%;
 }
