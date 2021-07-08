@@ -1,0 +1,16 @@
+.card-img{
+  
+    img{
+    width: 250px;
+    height: 250px;
+    z-index: -1;
+    transition: width 2s, height 4s;
+
+    &:hover{
+        transform: scale(1.5,1.5) 
+    }
+    }
+    
+   
+}
+

@@ -1,0 +1,30 @@
+.color-variation{
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+.variation-red,.variation-blue,.variation-black,.variation-white{
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+}
+
+.variation-red{
+    background-color: #ff0000;
+    margin-right: 10px;
+}
+.variation-black{
+    background-color: #000000;
+    margin-right: 10px;
+
+}
+.variation-blue{
+    background-color: #0000ff;
+    margin-right: 10px;
+
+}
+
+.variation-white{
+    background-color: #d1d0d0;
+
+}

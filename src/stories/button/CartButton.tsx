@@ -16,12 +16,12 @@ interface ButtonProps{
 }
 
 export const CartButton = ({
-    color = 'secondary',
+    color = 'cart',
     outline = false,
     size = 'medium',
     backgroundColor,
     loaderColor='success',
-    block ,
+    block ='block',
     label, 
     loading = false,
     ...props

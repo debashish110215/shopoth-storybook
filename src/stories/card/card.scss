@@ -1,0 +1,25 @@
+.card{
+    width: 280px;
+    box-shadow: 1px 1px 5px #6e6e6e;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.card-head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-body{
+    margin-top: 15px;
+}
+.card-title {
+    margin-top: -10px;
+}
+
+.card-title h4{
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: -1.5rem;
+    color: #232749;
+}

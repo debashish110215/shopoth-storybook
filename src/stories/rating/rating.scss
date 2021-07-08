@@ -1,0 +1,17 @@
+.card-rating{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-top:20px;
+}
+
+.rating-num{
+    padding-left: 1rem;
+    // padding-top: 5px;
+    color: #5c5c5c;
+    font-size: 1.2rem;
+}
+.react-star-rate div{
+    font-size: 30px;
+    width: 1.6rem;
+}
