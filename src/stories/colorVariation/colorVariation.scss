@@ -1,11 +1,10 @@
 .color-variation{
     display: flex;
-    justify-content: center;
     z-index: 1;
 }
 .variation-red,.variation-blue,.variation-black,.variation-white{
-    width: 25px;
-    height: 25px;
+    width: 24px;
+    height: 24px;
     border-radius: 50px;
 }
 
