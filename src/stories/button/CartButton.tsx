@@ -1,6 +1,13 @@
-import React,{useState, useEffect} from 'react'
+import React from 'react'
 import './cartButton.scss'
 import ClipLoader from "react-spinners/ClipLoader";
+
+export enum CartButtonState {
+    NORMAL,
+    LOADING,
+    DISABLED,
+    HIDDEN
+  }
 
 interface ButtonProps{
     color?:'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger'| 'cart';
@@ -10,7 +17,7 @@ interface ButtonProps{
     block?:string;
     label:string;
     onClick?:() => void;
-    loading?:boolean;
+    state?:CartButtonState;
     loaderColor?: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger'| 'cart'|'light'|'dark';
    
 }
@@ -23,21 +30,25 @@ export const CartButton = ({
     loaderColor='success',
     block ='block',
     label, 
-    loading = false,
+    state = CartButtonState.NORMAL,
     ...props
 }:ButtonProps) => {
     const btnStyle = outline?`btn-outline-${color}`:`btn-${color}`
     const loaderstyle = `text-${loaderColor}`
+    const isLoading = state === CartButtonState.LOADING
     return (
-        <button
-            type='button'
-            className={['btn', `btn-${size}`, `${block?'btn-block':''}`, btnStyle].join(' ')}
-            style={{backgroundColor}}
-            disabled={loading}
-            {...props}
-        >
-
-          {loading?  <ClipLoader color={loaderstyle} loading={loading}  size={10}/> : `${label}`}
-        </button>
+        <React.Fragment> 
+            {
+                state !== CartButtonState.HIDDEN &&
+                <button
+                    type='button'
+                    className={['btn', `btn-${size}`, `${block?'btn-block':''}`, btnStyle].join(' ')}
+                    style={{backgroundColor}}
+                    disabled={isLoading}
+                    {...props} > 
+                    {isLoading?  <ClipLoader color={loaderstyle} loading={isLoading}  size={10}/> : `${label}`}
+                </button>
+            }
+        </React.Fragment>
     )
 }

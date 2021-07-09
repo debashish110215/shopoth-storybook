@@ -1,5 +1,5 @@
-import {ComponentStory, ComponentMeta} from '@storybook/react'
-import {CartButton} from './CartButton'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { CartButton, CartButtonState } from './CartButton'
 
 export default {
     title:'shop/CartButton',
@@ -26,7 +26,7 @@ export const Success = Template.bind({});
 Success.args = {
   color:'success',
   label: 'Button',
-  loading:true,
+  state: CartButtonState.LOADING,
   loaderColor:'dark'
 };
 export const Info = Template.bind({});
@@ -108,4 +108,12 @@ export const Block = Template.bind({})
 Block.args = {
     block:'block',
     label:'Button'
+}
+
+
+export const Hidden = Template.bind({})
+Block.args = {
+    block:'block',
+    label:'Button',
+    state: CartButtonState.HIDDEN
 }

@@ -15,8 +15,8 @@ const Template: ComponentStory<typeof Price> = (args) => <Price {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-    currentPrice:5700,
-    regularPrice:6200,
+    currentPrice:'5700',
+    regularPrice:'6200',
     color: 'primary',
     size:1.5
   
