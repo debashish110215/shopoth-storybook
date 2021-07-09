@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { OverLay } from './Overlay'
+import { OverLay } from './components/Overlay'
 
 export default {
     title:'shop/Overlay',

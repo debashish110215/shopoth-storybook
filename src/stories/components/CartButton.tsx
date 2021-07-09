@@ -1,5 +1,5 @@
 import React from 'react'
-import './cartButton.scss'
+import '../styles/cartButton.scss'
 import ClipLoader from "react-spinners/ClipLoader";
 
 export enum CartButtonState {
@@ -28,7 +28,7 @@ export const CartButton = ({
     size = 'medium',
     backgroundColor,
     loaderColor='success',
-    block ,
+    block ='block',
     label, 
     state = CartButtonState.NORMAL,
     ...props

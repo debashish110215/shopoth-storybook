@@ -1,0 +1,71 @@
+
+.card{
+    width: 248px;
+    height: 496px;
+    position: relative;
+    transition: width 2s;
+  
+    &:hover{
+        top: -10px;
+    }
+
+    .card-main{
+        display: block;
+        box-shadow: 1px 1px 5px #c0c0c0;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 24px 15px;
+        z-index:1;
+        font-family: 'Lato', sans-serif;
+        transition: transform .2s;
+
+        &:hover{
+            box-shadow: 1px 1px 10px #adadad;
+
+        } 
+    }
+    .card-badge{
+        position: absolute;
+        top: 30px;
+        left: 24px;
+    }
+
+    .card-wishlist{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    
+    .card-colorAttr{
+        position: absolute;
+        top: 220px;
+        left: 24px;
+    }
+    .card-title {
+        margin-top: 65px;
+        padding-left: 5px;
+        h4{
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: #434986;
+        }
+    }
+    
+    .card-rating{
+        margin-top: -15px;
+        padding-left: 5px;
+    }
+    .card-price{
+        margin-top: -25px;
+        margin-bottom: 35px;
+    }
+    
+    .card-btn{
+        position: absolute;
+        bottom: 65px;
+        left: 20px;
+        width: 85%;
+    }
+}
+
+

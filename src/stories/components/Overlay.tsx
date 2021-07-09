@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import './overlay.scss'
+import '../styles/overlay.scss'
 
 interface OverLayProps {
     onClose: () => void;

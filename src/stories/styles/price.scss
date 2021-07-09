@@ -1,0 +1,20 @@
+
+.price-container{
+    display: flex;
+    justify-content:space-evenly ;
+    align-items: baseline;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.regularPrice{
+    text-decoration: line-through;
+    margin-left: 1.5rem;
+    color: #636aa8;
+    font-family: 200;
+}
+
+.currentPrice{
+    color: #2c2f52;
+}
+

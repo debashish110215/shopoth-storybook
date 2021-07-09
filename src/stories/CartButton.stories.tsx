@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { CartButton, CartButtonState } from './CartButton'
+import { CartButton, CartButtonState } from '../stories/components/CartButton'
 
 export default {
     title:'shop/CartButton',
