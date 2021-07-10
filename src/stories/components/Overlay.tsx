@@ -12,12 +12,12 @@ interface OverLayProps {
 export const Overlay = ({show = true, children, onClose, allowScroll = false}:OverLayProps) => { 
     useEffect(()=> {
         if (!allowScroll) {
-            let classes = document.querySelector("body").classList
-            classes.add("no-scroll")
+            let classes = document?.querySelector("body")?.classList
+            classes?.add("no-scroll")
         }
         return () => {
-            let classes = document.querySelector("body").classList
-            classes.remove("no-scroll")
+            let classes = document?.querySelector("body")?.classList
+            classes?.remove("no-scroll")
         };
     })
     return (
