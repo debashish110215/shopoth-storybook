@@ -7,9 +7,9 @@ interface BadgeProps{
 
 export const Badge:FC<BadgeProps> = ({title}:BadgeProps) => {
     return (
-        <button className='badge'>
+        <div className='badge'>
             {title}
-        </button>
+        </div>
     )
 }
 

@@ -1,5 +1,7 @@
 import {FC} from 'react'
 import {Link, BrowserRouter as Router} from 'react-router-dom'
+// import LinesEllipsis from 'react-lines-ellipsis'
+import Dotdotdot from 'react-dotdotdot'
 import {Badge} from '../badge/Badge'
 import {Wishlist} from '../wishlist/Wishlist'
 import {Image} from '../image/Image'
@@ -17,7 +19,7 @@ interface CardProps{
     isWishlistAdded:boolean;
     onWishlistClick?: () => void;
     // image
-    CardImageList:string[];
+    CardImageList?:string[];
     // color attribute
     colorAttrbute?:string[];
     onAttrClick?:()=> void;
@@ -58,8 +60,15 @@ const Card:FC<CardProps> = ({badgeTitle, cardImage, productTitle}:CardProps) => 
                     </div>
                    
                     <div className='card-title'>
-                        <h4>{productTitle}</h4>
+                        <Dotdotdot clamp={3}>
+                            <h4>{productTitle}</h4>
+                        </Dotdotdot>
                     </div>
+                    {/* <div className='card-title'>
+                        <Dotdotdot clamp={3}>
+                            <h4>{productTitle}</h4>
+                        </Dotdotdot>
+                    </div> */}
                     <div className="card-rating">
                         <Rating/>
                     </div>
