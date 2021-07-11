@@ -1,0 +1,18 @@
+.subscribe{
+    width:50%;
+    position: relative;
+}
+
+.subscribe  input[type=email]{
+    width: 70%;
+    box-sizing: border-box;
+    border: 2px solid #8cc0f1;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 1rem;
+}
+
+.subscribe button[type=submit]{
+    display: inline-block;
+    padding: 15px;
+}
