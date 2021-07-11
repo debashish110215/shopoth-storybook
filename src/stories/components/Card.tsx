@@ -1,5 +1,6 @@
 import {FC} from 'react'
 import {Link, BrowserRouter as Router} from 'react-router-dom'
+import Dotdotdot from 'react-dotdotdot'
 import {Badge} from './Badge'
 import {Wishlist} from './Wishlist'
 import {Image} from './Image'
@@ -17,7 +18,7 @@ interface CardProps{
     isWishlistAdded:boolean;
     onWishlistClick?: () => void;
     // image
-    CardImageList:string[];
+    CardImageList?:string[];
     // color attribute
     colorAttrbute?:string[];
     onAttrClick?:()=> void;
@@ -58,7 +59,9 @@ const Card:FC<CardProps> = ({badgeTitle, cardImage, productTitle}:CardProps) => 
                     </div>
                    
                     <div className='card-title'>
-                        <h4>{productTitle}</h4>
+                        <Dotdotdot clamp={3}>
+                            <h4>{productTitle}</h4>
+                        </Dotdotdot>
                     </div>
                     <div className="card-rating">
                         <Rating/>
