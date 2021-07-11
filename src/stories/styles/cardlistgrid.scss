@@ -13,13 +13,16 @@
         width: 780px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
         margin: 0 auto;
     }
 
 }
-@media only screen and (min-width:1204px) and (max-width:1440px){
+
+@media only screen and (min-width:1204px){
     .card-container{
         display: grid;
+        width: 1300px;
         grid-template-columns: repeat(5, 1fr);
         margin: 0 auto;
     }
