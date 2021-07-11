@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Price} from './Price';
+import { Price} from '../stories/components/Price';
 
 export default {
   title: 'Shop/Price',
@@ -17,9 +17,6 @@ export const Primary = Template.bind({});
 Primary.args = {
     currentPrice:5700,
     regularPrice:6200,
-    color: 'primary',
-    size:1.5
-  
 };
 
 

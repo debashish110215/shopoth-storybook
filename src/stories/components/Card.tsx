@@ -1,5 +1,6 @@
 import {FC} from 'react'
 import {Link, BrowserRouter as Router} from 'react-router-dom'
+<<<<<<< HEAD:src/stories/card/Card.tsx
 // import LinesEllipsis from 'react-lines-ellipsis'
 import Dotdotdot from 'react-dotdotdot'
 import {Badge} from '../badge/Badge'
@@ -10,6 +11,16 @@ import {Rating} from '../rating/Rating'
 import {Price} from '../price/Price'
 import {CartButton} from '../button/CartButton'
 import './card.scss'
+=======
+import {Badge} from './Badge'
+import {Wishlist} from './Wishlist'
+import {Image} from './Image'
+import {ColorVariation} from './ColorVariation'
+import {Rating} from './Rating'
+import {Price} from './Price'
+import {CartButton} from './CartButton'
+import '../styles/card.scss'
+>>>>>>> 015a4429da25fea7a319b5b2df57e62e2f49e3dc:src/stories/components/Card.tsx
 
 
 interface CardProps{

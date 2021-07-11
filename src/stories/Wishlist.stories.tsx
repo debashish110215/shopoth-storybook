@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Wishlist } from './Wishlist';
+import { Wishlist } from '../stories/components/Wishlist';
 
 export default {
   title: 'Shop/Wishlist',

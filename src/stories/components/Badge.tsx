@@ -1,5 +1,5 @@
 import {FC} from 'react'
-import './badge.scss'
+import '../styles/badge.scss'
 
 interface BadgeProps{
     title:string

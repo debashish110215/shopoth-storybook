@@ -2,7 +2,7 @@
 import {FC} from 'react'
 import {BsHeart} from 'react-icons/bs'
 import {BsHeartFill} from 'react-icons/bs'
-import './wishlist.scss'
+import '../styles/wishlist.scss'
 
 interface WishlistProps{
     isWishlistAdded:boolean;

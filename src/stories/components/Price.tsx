@@ -1,5 +1,5 @@
 import NumberFormat from 'react-number-format';
-import './price.scss'
+import '../styles/price.scss'
 
 interface PriceProps{
     currentPrice:number;

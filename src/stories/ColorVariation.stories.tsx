@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { ColorVariation } from './ColorVariation';
+import { ColorVariation } from './components/ColorVariation';
 
 export default {
   title: 'Shop/ColorVariation',

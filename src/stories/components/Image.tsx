@@ -1,5 +1,5 @@
 import {FC} from 'react'
-import './image.scss'
+import '../styles/image.scss'
 
 interface ImageProps{
     imageUrl:string;

@@ -1,5 +1,5 @@
 import {FC} from 'react'
-import Card from '../card/Card'
+import Card from '../components/Card'
 import './cardlistgrid.scss'
 interface CardListGridProps{
     title:string;

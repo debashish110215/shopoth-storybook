@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Rating } from './Rating';
+import { Rating } from '../stories/components/Rating';
 
 export default {
   title: 'Shop/Rating',

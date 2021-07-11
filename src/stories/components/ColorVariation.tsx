@@ -1,5 +1,5 @@
 import {FC} from 'react'
-import './colorVariation.scss'
+import '../styles/colorVariation.scss'
 
 interface ColorVariationProps{
     colorAttrbute?:string[],

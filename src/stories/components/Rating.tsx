@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 import StarsRating from 'react-star-rate';
-import './rating.scss'
+import '../styles/rating.scss'
 
 interface RatingProps{
     onRatingClick?:()=> void;
