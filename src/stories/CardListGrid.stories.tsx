@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import CardListGrid from './CardListGrid';
+import CardListGrid from './components/CardListGrid';
 
 export default {
   title: 'Shop/CardListGrid',
