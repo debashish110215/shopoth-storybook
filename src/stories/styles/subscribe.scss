@@ -1,0 +1,38 @@
+.subscribe{
+    position: relative;
+    box-sizing: border-box;
+}
+.input-email{
+    min-width: 20rem;
+}
+
+.input-email input[type=email]{
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #8cc0f1;
+    border-radius: 5px;
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+}
+ .input-email input[type=email]:focus{
+    border: 2px solid #8cc0f1;
+    outline: 0;
+    box-shadow: 1px 1px 7px #a4cff7;
+}
+.subcribe-btn{
+    position: absolute;
+    right: 1px;
+    bottom: 2px;
+}
+.subcribe-btn button[type=submit]{
+    padding: 15px;
+    border: 1px solid rgb(255, 60, 119);
+    background-color: rgb(255, 60, 119);
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 4px;
+    border-top-left-radius:0 ;
+    border-bottom-left-radius:0 ;
+    cursor: pointer;
+}

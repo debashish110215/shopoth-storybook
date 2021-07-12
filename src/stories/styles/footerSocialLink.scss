@@ -1,0 +1,38 @@
+.footer-social-link{
+    display: flex;
+}
+
+.social-app-link{
+    align-self: baseline;
+    margin-left: auto;
+    ul{
+        list-style-type: none;
+        li{
+            display: inline-block;
+            a{
+                text-decoration: none;
+                display: block;
+                padding: 1rem;
+                color: #80878f;
+            }
+        }
+    }
+}
+
+.mobile-app-link{
+    font-size: 1.5rem;
+    align-self: center;
+    margin-left: auto;
+    a{
+        color: #80878f;
+    }
+}
+
+@media only screen and (max-width:1204px) {
+    .social-app-link{
+        margin-left: 0; 
+    }
+    .mobile-app-link{
+        margin: 0 auto;
+    }
+}
