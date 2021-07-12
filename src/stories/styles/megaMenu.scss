@@ -1,0 +1,22 @@
+.mega-menu {
+    .menu-level {
+        position: absolute;
+        height: 100vh;
+        background-color: hsl(200, 50%, 50%);
+        top: 0;
+        width: 200px;
+        ul > li > a, p{
+            color: black;
+        }
+    }
+    .menu-level.level2 {
+        left: 200px;
+        background-color: hsl(100, 50%, 50%);
+    }
+    .d-block {
+        display: block;
+    }
+    .d-none {
+        display: none;
+    }
+}
