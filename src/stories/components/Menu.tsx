@@ -41,7 +41,6 @@ interface MenuLevel2 {
     menu : MegaMenu
     menuState: MenuState
     selectedMenuId : string
-    onMenuSelect : (id: string) => void
 }
 
 export const MenuLevel1 = ({menu, selectedMenuId, onMenuSelect, menuState = MenuState.OPEN}: MenuLevel1) => {
@@ -67,7 +66,7 @@ export const MenuLevel1 = ({menu, selectedMenuId, onMenuSelect, menuState = Menu
     )
 }
 
-export const MenuLevel2 = ({menu, onMenuSelect, menuState = MenuState.OPEN, selectedMenuId}: MenuLevel2) => {
+export const MenuLevel2 = ({menu, menuState = MenuState.OPEN, selectedMenuId}: MenuLevel2) => {
     let subItem = menu.categories.find(i => i.id === selectedMenuId)
     return (
         <>
@@ -78,7 +77,7 @@ export const MenuLevel2 = ({menu, onMenuSelect, menuState = MenuState.OPEN, sele
                         {
                             subItem?.subCategory.map(subItem=>{
                                 return (
-                                    <li className="menu-li" key={subItem.title} onMouseOver={()=>onMenuSelect(subItem.id)}>
+                                    <li className="menu-li" key={subItem.title}>
                                         <a href={subItem.id}>{subItem.title}</a>
                                     </li>
                                 )
@@ -156,7 +155,6 @@ export const MegaMenuDesktop = ({primaryMenu, secondaryMenu, customerServices, m
                             } 
                         }
                         selectedMenuId = {selectedId}
-                        onMenuSelect = {menuSelect}
                     />
                     
                     <MenuLevel2 
@@ -168,7 +166,6 @@ export const MegaMenuDesktop = ({primaryMenu, secondaryMenu, customerServices, m
                             } 
                         }
                         selectedMenuId = {selectedId}
-                        onMenuSelect = {menuSelect}
                     />
                     
                     <MenuLevel2 
@@ -180,7 +177,6 @@ export const MegaMenuDesktop = ({primaryMenu, secondaryMenu, customerServices, m
                             } 
                         }
                         selectedMenuId = {selectedId}
-                        onMenuSelect = {menuSelect}
                     />
                 </div>
             }
