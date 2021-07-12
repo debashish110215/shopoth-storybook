@@ -44,6 +44,8 @@
     .card-title {
         margin-top: 65px;
         padding-left: 5px;
+        height: 80px;
+        text-overflow: ellipsis;
         h4{
             font-weight: 400;
             font-size: 1.2rem;
@@ -62,7 +64,7 @@
     
     .card-btn{
         position: absolute;
-        bottom: 65px;
+        bottom: 45px;
         left: 20px;
         width: 85%;
     }
