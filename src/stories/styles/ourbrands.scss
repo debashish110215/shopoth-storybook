@@ -1,0 +1,58 @@
+*{
+    margin: 0 ;
+    padding: 0;
+}
+.our-brands{
+    display: flex;
+    align-items: center;
+    background-color: #e9eeff;
+    color: #707070;
+    padding-left: 30px;
+    font-size: 20px;
+    box-sizing: border-box;
+    
+    img{
+        width: 61px;
+        height: auto;
+    }
+
+    ul{
+        list-style-type: none;
+        li{
+            display: inline-block;
+            margin-left: 1rem;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+
+    .barnd-logo{
+        padding-top: 15px;
+    }
+}
+
+@media only screen and (max-width:767px){
+   .our-brands{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        ul{
+            list-style-type: none;
+            li{
+                display: inline-block;
+                margin-left: 0;
+                margin-right: 0.4rem;
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    .brand-text{
+        padding-top: 15px;
+    }
+    .barnd-logo{ 
+        padding-top: 0px;
+    }
+   }
+}

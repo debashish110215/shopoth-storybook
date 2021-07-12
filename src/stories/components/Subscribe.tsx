@@ -16,8 +16,12 @@ interface SubscribeProps{
     return (
         <div className='subscribe'>
             <form onSubmit={onSubmit}>
-                <input type="email" {...register('email')} placeholder='Join the newsletter club'/>
-                <button type='submit'>Subscribe</button>
+                <div className='input-email'>
+                    <input type="email" {...register('email')} placeholder='Join the newsletter club'/>
+                </div>
+                <div className='subcribe-btn'>
+                    <button type='submit'>Subscribe</button>
+                </div>
             </form>
         </div>
     )

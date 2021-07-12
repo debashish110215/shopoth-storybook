@@ -1,0 +1,116 @@
+$link-color:#4d4d4d;
+$heading-color:#3b3b3b;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.footer-info-wrapper-outer{
+    background-color: #e9eeff;
+    .footer-info-container{
+        height: 250px;
+         display: grid;
+         grid-template-columns: repeat(12, 1fr);
+         grid-template-areas: '. si si as as as cs cs pc pc pc .';
+         justify-items: center;
+         align-content: center;
+         box-sizing: border-box;
+         font-family: 'Lato', sans-serif;
+         font-weight: 500;
+         h4{
+             font-size: 24px;
+             line-height: 1px;
+             color: $heading-color;
+             padding: 1.5em 0;
+         }
+         img{
+             width: 50px; 
+             height: 50px;
+         } 
+         ul{
+             list-style-type: none;
+             margin: 0;
+             padding: 0;
+             li{
+                 a{
+                     text-decoration: none;
+                     color: $link-color;
+                     font-size: 1.2rem;
+                 }
+             }
+         }
+     
+         .shopoth-info{
+             grid-area: si;
+             img{
+                 padding-top: .5em;
+                 width: 12rem;
+             }
+             ul{
+                 margin-top: 1em;
+             }
+         }
+     
+         .about-us{
+            grid-area: as;
+         }
+     
+         .contact-us{
+            grid-area: cs;
+                address{
+                    font-size: 1rem;
+                    color: $link-color;
+                }
+         }
+     
+         .payment-channel{ 
+            grid-area: pc;
+                li{
+                     display: inline-block;
+                     padding: 0 15px;
+                     
+                 }  
+         }
+     }
+    
+     
+     @media only screen and (max-width:767px){
+        .footer-info-container{
+            height: auto;
+            display:  grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-areas: 
+            'si si si si si si si si si si si si'
+            'as as as as as as as as as as as as'
+            'cs cs cs cs cs cs cs cs cs cs cs cs'
+            'pc pc pc pc pc pc pc pc pc pc pc pc'
+            ;
+            .about-us{
+                padding-top: 25px;
+            }
+            .contact-us{
+                padding: 25px 0;
+            }
+        }
+     }
+     @media only screen and (min-width:768px) and (max-width:1204px){
+         .footer-info-container{
+             height: 450px;
+             display:  grid;
+             grid-template-columns: repeat(12, 1fr);
+             grid-template-areas: 
+             '. si si si si si cs cs cs cs cs . '
+             '. as as as as as pc pc pc pc pc . '
+             ;
+
+             .about-us{
+                padding-top: 25px;
+            }
+            .payment-channel{
+                padding-top: 25px;
+            }
+         }
+
+        }
+}

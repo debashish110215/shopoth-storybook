@@ -1,9 +1,14 @@
-import React from 'react'
+import {FC} from 'react'
+import '../styles/allrightsreserved.scss'
 
-const AllRightReserved = () => {
+
+interface AllRigtsReservedProps{
+    year?:string
+}
+export const AllRightReserved:FC<AllRigtsReservedProps> = ({year}:AllRigtsReservedProps) => {
     return (
-        <div>
-            
+        <div className='all-rights-reserved'>
+            <p>&copy; 2021 <a href="www.shopoth.com">Shopoth.com</a> Limited. All rights reserved.</p>
         </div>
     )
 }
