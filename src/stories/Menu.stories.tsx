@@ -22,12 +22,12 @@ MegaMenu.args = {
                 icon : <FaHireAHelper/>,
                 title : "Phone ",
                 bnTitle: "Phone",
-                id : "33",
+                id : "1",
                 subCategory:[
                     {
                         title : "Phone 33",
                         bnTitle: "Phone",
-                        id : "1",
+                        id : "11",
                         subCategory: []
                     }
                 ]
@@ -41,12 +41,12 @@ MegaMenu.args = {
                 icon : <FaHireAHelper/>,
                 title : "Phone ",
                 bnTitle: "Phone",
-                id : "44",
+                id : "2",
                 subCategory:[
                     {
                         title : "Phone 44",
                         bnTitle: "Phone",
-                        id : "1",
+                        id : "21",
                         subCategory: []
                     }
                 ]
@@ -55,12 +55,12 @@ MegaMenu.args = {
                 icon : <FaHireAHelper/>,
                 title : "Phone ",
                 bnTitle: "Phone",
-                id : "45",
+                id : "3",
                 subCategory:[
                     {
                         title : "Phone 44",
                         bnTitle: "Phone",
-                        id : "1",
+                        id : "31",
                         subCategory: []
                     }
                 ]
@@ -69,12 +69,12 @@ MegaMenu.args = {
                 icon : <FaHireAHelper/>,
                 title : "Phone ",
                 bnTitle: "Phone",
-                id : "46",
+                id : "4",
                 subCategory:[
                     {
                         title : "Phone 44",
                         bnTitle: "Phone",
-                        id : "1",
+                        id : "41",
                         subCategory: []
                     }
                 ]
@@ -87,30 +87,30 @@ MegaMenu.args = {
             {
                 title : "Phone ",
                 bnTitle: "Phone",
-                id : "1",
+                id : "5",
                 subCategory: [
                     {
                         title : "Phone 1",
                         bnTitle: "Phone",
-                        id : "1",
+                        id : "51",
                         subCategory: []
                     },
                     {
                         title : "Phone 2",
                         bnTitle: "Phone",
-                        id : "1",
+                        id : "52",
                         subCategory: []
                     },
                     {
                         title : "Phone 3",
                         bnTitle: "Phone",
-                        id : "1",
+                        id : "53",
                         subCategory: []
                     },
                     {
                         title : "Phone 4",
                         bnTitle: "Phone",
-                        id : "1",
+                        id : "54",
                         subCategory: []
                     }
                 ]
@@ -118,30 +118,30 @@ MegaMenu.args = {
             {
                 title : "Phone 2",
                 bnTitle: "Phone",
-                id : "2",
+                id : "6",
                 subCategory: [
                     {
                         title : "Phone 21",
                         bnTitle: "Phone",
-                        id : "1",
+                        id : "61",
                         subCategory: []
                     },
                     {
                         title : "Phone 22",
                         bnTitle: "Phone",
-                        id : "1",
+                        id : "62",
                         subCategory: []
                     },
                     {
                         title : "Phone 23",
                         bnTitle: "Phone",
-                        id : "1",
+                        id : "63",
                         subCategory: []
                     },
                     {
                         title : "Phone 24",
                         bnTitle: "Phone",
-                        id : "1",
+                        id : "64",
                         subCategory: []
                     }
                 ]
@@ -149,7 +149,7 @@ MegaMenu.args = {
             {
                 title : "Phone 3",
                 bnTitle: "Phone",
-                id : "3",
+                id : "7",
                 subCategory: [ ]
             }
         ]
