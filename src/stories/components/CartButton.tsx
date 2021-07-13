@@ -19,6 +19,7 @@ interface ButtonProps{
     onClick?:() => void;
     state?:CartButtonState;
     loaderColor?: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger'| 'cart'|'light'|'dark';
+    search_key?:string;
    
 }
 
@@ -31,6 +32,7 @@ export const CartButton = ({
     block ='block',
     label, 
     state = CartButtonState.NORMAL,
+    search_key,
     ...props
 }:ButtonProps) => {
     const btnStyle = outline?`btn-outline-${color}`:`btn-${color}`
@@ -46,7 +48,13 @@ export const CartButton = ({
                     style={{backgroundColor}}
                     disabled={isLoading}
                     {...props} > 
-                    {isLoading?  <ClipLoader color={loaderstyle} loading={isLoading}  size={10}/> : `${label}`}
+                    {isLoading? 
+                         <ClipLoader 
+                            color={loaderstyle} 
+                            loading={isLoading}  
+                            size={10}/> 
+                            :`${label} ${search_key ? '"'+ search_key+'"':''}`
+                    }
                 </button>
             }
         </React.Fragment>

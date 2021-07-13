@@ -38,18 +38,9 @@ const Filter:FC<FilterProps> = ({productList}:FilterProps) => {
     const [showCategoryBox, setShowCategoryBox] = useState<Boolean>(false)
     const [isCategorySelect, setIsCategorySelect] = useState<Boolean>(false)
 
-    console.log('category', category)
-    // const [products, setProduct] = useState(
-    //     [
-    //         {id:1, category_id:1,}
-    //     ]
-    // )
-
-  
+ 
     const{register, handleSubmit, formState:{errors}, reset} = useForm<UseFormInput>()
-    const onSubmit = handleSubmit(data=>{
-        console.log(data)
-    })
+  
 
     const handleshowCategoryBox = () =>{
         setShowCategoryBox(!showCategoryBox)
@@ -74,6 +65,10 @@ const Filter:FC<FilterProps> = ({productList}:FilterProps) => {
         setShowCategoryBox(!showCategoryBox)
     }
 
+
+    const onSubmit = handleSubmit(data=>{
+        console.log(data)
+    })
     return (
         <div className="filter-wrapper">
             {
