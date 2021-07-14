@@ -1,0 +1,151 @@
+
+$primary_hover_color:#21409A;
+$textColor: hsl(246, 100%, 6%);
+
+@keyframes slide-left {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(-100vw);
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes slide-right-to-center {
+    0% {
+        -webkit-transform: translateX(100vw);
+        transform: translateX(100vw);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-from-left-to-center {
+    0% {
+        -webkit-transform: translateX(-100vw);
+        transform: translateX(-100vw);
+    }
+    100% {
+        -webkit-transform: translateX(100);
+        transform: translateX(100);
+    }
+}
+
+@keyframes slide-left-to-center {
+    0% {
+        -webkit-transform: translateX(-100vw);
+        transform: translateX(-100vw);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-center-to-right {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(100vw);
+        transform: translateX(100vw);
+    }
+}
+
+.mega-mobile-menu {
+    position: relative;
+    top: 20px;
+    .mega-menu-level1 {
+        position: absolute;
+        height: calc(100vh - 120px);
+        width: 100vw;
+        background-color: hsl(0, 50%, 100%);
+        border-left: 1px solid hsl(0, 50%, 0%);
+        overflow-y: auto;
+        padding-bottom: 25px;
+    }
+    .mega-menu-level2 {
+        position: absolute;
+        left:0;
+        top:0;
+        background-color: hsl(0, 50%, 100%);
+        margin-left: 2px;
+        overflow-y: auto;
+        width: 100vw;
+        height: calc(100vh - 120px);
+        padding-bottom: 25px;
+    }
+    .mega-menu-level1.left {
+        animation: slide-left 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
+    }
+    
+    .mega-menu-level1.center {
+        animation: slide-left-to-center 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
+    }
+    
+    .mega-menu-level2.center {
+        animation: slide-right-to-center 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
+    }
+    
+    .mega-menu-level2.right {
+        animation: slide-center-to-right 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
+    }
+    
+    .menu-level {
+        width: 100%;
+        margin-top: 50px;
+        .menu-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: $textColor;
+            margin-bottom: 20px;
+            .menu-category {
+                text-decoration: none;
+                color: $textColor;
+            }
+        }
+        .menu-li {
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            &:hover {
+                a,p {
+                    color: $primary_hover_color;
+                    text-decoration: underline;
+                }
+            }
+            a, p {
+                color: black;
+                text-decoration: none;
+            }
+            &.active {
+                a,p {
+                    color: $primary_hover_color;
+                    text-decoration: underline;
+                } 
+            }
+        }
+        .back-to-main {
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+    }
+    
+    .d-block {
+        display: block; 
+    }
+    .d-none {
+        display: none;
+    }
+}
+
+
+
+
