@@ -1,5 +1,4 @@
-import {FC, useState, useEffect, useRef, FocusEvent} from 'react';
-import {useForm} from 'react-hook-form'
+import {FC, useState, useEffect, useRef, FocusEvent,FormEvent} from 'react';
 import {FiSearch} from 'react-icons/fi'
 import {RiArrowDownSFill} from 'react-icons/ri'
 import '../styles/filter.scss'
@@ -12,9 +11,12 @@ interface FilterProps{
     // productList?:string[]
 }
 
-interface UseFormInput{
-    searchCategory:string;
-    searchProduct:string;
+interface Product{
+    id:number;
+    category_id:number;
+    title:string;
+    imgUrl:string;
+    price:number;
 }
 
 
@@ -96,20 +98,16 @@ const Filter:FC<FilterProps> = ({}:FilterProps) => {
             },
         ]
     )
-    const{register, handleSubmit, formState:{errors}, reset, watch} = useForm<UseFormInput>()
     const [category, setCategory] = useState({id:0, title:''})
     const [product, setProduct] = useState({})
     const [categoryId, setCategoryId] = useState<number|undefined>(0)
     const [showCategoryBox, setShowCategoryBox] = useState<Boolean>(false)
     const [showProductBox, setShowProductBox] = useState<Boolean>(false)
     const [isCategorySelect, setIsCategorySelect] = useState<Boolean>(false)
-    const [productsByCategoryFilter, setProductsByCategoryFilter] =useState<any>([])
+    const [productsByCategoryFilter, setProductsByCategoryFilter] =useState<Product[]>([])
     const [serachProduct, setSeacrhProduct]= useState('')
-    const [searchProductsByKeywords, setsearchProductsByKeywords] = useState<any>([])
+    const [searchProductsByKeywords, setsearchProductsByKeywords] = useState<Product[]>([])
 
-        console.log('product', product)
-
-        // const watchSearchProduct = watch('searchProduct')
         useEffect(()=>{
             const productsByCategory = products?.filter(product=>(
                 product.category_id === categoryId
@@ -167,11 +165,7 @@ const Filter:FC<FilterProps> = ({}:FilterProps) => {
         ))
         if(productItem){
             setProduct(productItem)
-            // reset({
-            //     searchProduct:productItem.title
-            // })
-            setSeacrhProduct(productItem.title)
-            
+            setSeacrhProduct(productItem.title) 
         }
         setShowProductBox(false)
     }
@@ -183,9 +177,9 @@ const Filter:FC<FilterProps> = ({}:FilterProps) => {
         setSeacrhProduct('')
     }
 
-    const onSubmit = handleSubmit(data=>{
-        console.log(data)
-    })
+    const onSubmit = (e:FormEvent<HTMLFormElement>)=>{
+        e.preventDefault()
+    }
     return (
         <div className="filter-wrapper">
             {
