@@ -1,6 +1,6 @@
 .search-product-list-wrapper{
     font-family: 'Lato', sans-serif;
-    max-width: 500px;
+    width: 600px;
     box-sizing: border-box;
     padding: 16px;
     box-shadow: 1px 2px 5px #a5a5a5;
@@ -17,9 +17,14 @@
 
     .category-title{
         border-bottom: 1px solid #ebebeb;
-        padding: 10px 0px;
+        padding: 15px 0px;
+        &:hover{
+            text-decoration: underline;
+        }
     }
     .search-product{
+        // width: auto;
+        flex-grow: 1;
         display: flex;
         border-bottom: 1px solid #ebebeb;
         padding: 10px;
@@ -37,5 +42,10 @@
             text-decoration: underline;
         }
 
+    }
+
+    .filter-no-product-found{
+        padding: 15px;
+        text-align: center;
     }
 }
