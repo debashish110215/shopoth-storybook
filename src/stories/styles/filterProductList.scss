@@ -1,6 +1,6 @@
 .search-product-list-wrapper{
     font-family: 'Lato', sans-serif;
-    width: 600px;
+    min-width: 450px;
     box-sizing: border-box;
     padding: 16px;
     box-shadow: 1px 2px 5px #a5a5a5;
@@ -17,18 +17,16 @@
 
     .category-title{
         border-bottom: 1px solid #ebebeb;
-        padding: 15px 0px;
+        padding: 10px 0px;
         &:hover{
             text-decoration: underline;
         }
     }
     .search-product{
-        // width: auto;
         flex-grow: 1;
         display: flex;
         border-bottom: 1px solid #ebebeb;
         padding: 10px;
-        // align-items: center;
 
         .product-info{
             margin-left: 15px;
@@ -37,9 +35,6 @@
         }
         &:hover{
             background-color: #ececec;
-        }
-       p:hover, h4:hover{
-            text-decoration: underline;
         }
 
     }
@@ -50,7 +45,6 @@
     }
 
     .search-bottom-btn{
-        border: 1px solid #3f3f3f;
         padding-top: 10px;
     }
 }

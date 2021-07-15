@@ -2,23 +2,29 @@
     position: relative;
 
     .category-list{
-        position: absolute;
-        top: 40px;
-        left: 5px;
+        position: relative;
+        white-space: nowrap;
+        // width: auto;
+        max-width: 605px;
+        margin-right: 40px;
+        left: 15px;
         z-index: 1;
     }
 
     .product-list{
-        position: absolute;
-        top: 40px;
-        left: 5px;
+        position: relative;
+        max-width: 570px;
+        margin-right:70px ;
+        // top: 40px;
+        left: 15px;
         z-index: 1;
 
     }
 }
 
 .filter{
-    max-width: 660px;
+    max-width:40rem;
+    min-width: 485px;;
     box-sizing: border-box;
     border: 2px solid #8cc0f1;
     border-radius: 25px;
@@ -44,7 +50,7 @@
     }
     input[type='text']{
         flex-grow: 1;
-        min-width: 10rem;
+        min-width: 8rem;
         border: 0;
         padding: 0.5rem 1rem;
         font-size: 0.9rem;

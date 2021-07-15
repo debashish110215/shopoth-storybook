@@ -99,7 +99,7 @@ const Filter:FC<FilterProps> = ({}:FilterProps) => {
         ]
     )
     const [category, setCategory] = useState({id:0, title:''})
-    const [product, setProduct] = useState({})
+    // const [product, setProduct] = useState({})
     const [categoryId, setCategoryId] = useState<number|undefined>(0)
     const [showCategoryBox, setShowCategoryBox] = useState<Boolean>(false)
     const [showProductBox, setShowProductBox] = useState<Boolean>(false)
@@ -131,7 +131,7 @@ const Filter:FC<FilterProps> = ({}:FilterProps) => {
                 setShowProductBox(false)
             }
 
-        },[serachProduct, product])
+        },[serachProduct])
 
 
 
@@ -160,13 +160,12 @@ const Filter:FC<FilterProps> = ({}:FilterProps) => {
     }
 
     const onSelectProduct = (id:number) =>{
-        const productItem = searchProductsByKeywords?.find(item=>(
-            item.id ===id
-        ))
-        if(productItem){
-            setProduct(productItem)
-            setSeacrhProduct(productItem.title) 
-        }
+        // const productItem = searchProductsByKeywords?.find(item=>(
+        //     item.id ===id
+        // ))
+        // if(productItem){
+        //     setSeacrhProduct(productItem.title) 
+        // }
         setShowProductBox(false)
     }
 
@@ -182,6 +181,36 @@ const Filter:FC<FilterProps> = ({}:FilterProps) => {
     }
     return (
         <div className="filter-wrapper">
+          
+          
+           
+             <div className='filter'>
+                <form onSubmit={onSubmit}>
+                    <button type='button' 
+                        onClick={handleshowCategoryBox}> 
+                        <span className='category-title'>{category.title}
+                        </span> <RiArrowDownSFill size='1.4rem'/>
+                    </button>
+                    <input 
+                        type="text" 
+                        value={serachProduct}
+                        name='searchProduct'
+                        placeholder={`${isCategorySelect?'':'Search products, brand or store' }`}
+                        onChange={handleSerachProduct}
+                        ref={inputRef}/>
+
+                        {
+                            serachProduct && (
+                            <div className="cancel-search" onClick={handleClearSearch}>
+                                <button type='button'>X</button>
+                            </div>
+                            )
+                        }
+                    <div className="search-btn">
+                        <button type='submit'><FiSearch/></button>
+                    </div>
+                </form>
+            </div>
             {
                 showCategoryBox && (
                     <div className="category-list">
@@ -201,38 +230,6 @@ const Filter:FC<FilterProps> = ({}:FilterProps) => {
                     </div>
                 )
             }
-           
-             <div className='filter'>
-                <form onSubmit={onSubmit}>
-                    <button type='button' 
-                        onClick={handleshowCategoryBox}> 
-                        <span className='category-title'>{category.title}
-                        </span> <RiArrowDownSFill size='1.4rem'/>
-                    </button>
-                    <input 
-                        type="text" 
-                        // {...register('searchProduct')} 
-                        value={serachProduct}
-                        name='searchProduct'
-                        placeholder={`${isCategorySelect?'':'Search products, brand or store' }`}
-                        onChange={handleSerachProduct}
-                        ref={inputRef}/>
-
-                        {
-                            serachProduct && (
-                            <div className="cancel-search" onClick={handleClearSearch}>
-                                <button type='button'>X</button>
-                            </div>
-                            )
-                        }
-                   
-                    
-                    <div className="search-btn">
-                        <button type='submit'><FiSearch/></button>
-                    </div>
-                </form>
-            </div>
-           
         </div>
        
     )
