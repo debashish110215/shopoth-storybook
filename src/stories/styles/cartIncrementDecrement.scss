@@ -1,0 +1,44 @@
+$textColor:#03001F;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.CartIncrementDecrementWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $textColor;
+
+    .cartIncDec{
+        box-shadow: 1px 1px 3px #bdd5fa;
+        border-radius: 5px;
+        .actionBtn{
+            padding: 5px 15px;
+            font-size: 16px;
+            border: none;
+            background-color: #f5f5f5;
+            cursor: pointer;
+            &:first-child{
+                border-right: 1px solid rgb(207, 207, 207);
+            }
+            &:last-child{
+                border-left: 1px solid rgb(207, 207, 207);
+            }
+        }
+        .countTxt{
+            padding: 3px 15px;
+            font-size: 16px;
+            // border: 1px solid #9E9E9E;
+        }
+        
+    }
+    .deleteProduct{
+        padding-top: 5px;
+        cursor: pointer;
+    }
+    
+}
