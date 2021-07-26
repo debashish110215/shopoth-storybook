@@ -2,16 +2,17 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import Card from './components/Card';
+import ProductCard from './components/ProductCard';
 
 export default {
   title: 'Shop/Card',
-  component: Card,
+  component: ProductCard,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof Card>;
+} as ComponentMeta<typeof ProductCard>;
 
-const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
+const Template: ComponentStory<typeof ProductCard> = (args) => <ProductCard {...args} />;
 
 export const CardOne = Template.bind({});
 CardOne.args = {

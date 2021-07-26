@@ -24,8 +24,6 @@ const Filter:FC<FilterProps> = ({}:FilterProps) => {
 
     const inputRef = useRef<HTMLInputElement>(null)
 
-    console.log('inputRef', inputRef.current?.focus())
-
     const [categoryList, setCategoryList] = useState([
         {id:1, title:'Fashion'},
         {id:2, title:'Phone & Accesssories'},
@@ -180,19 +178,20 @@ const Filter:FC<FilterProps> = ({}:FilterProps) => {
         e.preventDefault()
     }
     return (
-        <div className="filter-wrapper">
-          
-          
-           
              <div className='filter'>
                 <form onSubmit={onSubmit}>
                     <button type='button' 
+                        className="categorySelectionBtn"
                         onClick={handleshowCategoryBox}> 
-                        <span className='category-title'>{category.title}
+                        <span className='categoryTitle'>{category.title}
                         </span> <RiArrowDownSFill size='1.4rem'/>
                     </button>
                     <input 
                         type="text" 
+                        autoCapitalize="none" 
+                        autoComplete="off" 
+                        autoCorrect="off"
+                        autoFocus={false}
                         value={serachProduct}
                         name='searchProduct'
                         placeholder={`${isCategorySelect?'':'Search products, brand or store' }`}
@@ -201,7 +200,7 @@ const Filter:FC<FilterProps> = ({}:FilterProps) => {
 
                         {
                             serachProduct && (
-                            <div className="cancel-search" onClick={handleClearSearch}>
+                            <div className="cancelSearch" onClick={handleClearSearch}>
                                 <button type='button'>X</button>
                             </div>
                             )
@@ -210,17 +209,16 @@ const Filter:FC<FilterProps> = ({}:FilterProps) => {
                         <button type='submit'><FiSearch/></button>
                     </div>
                 </form>
-            </div>
             {
-                showCategoryBox && (
-                    <div className="category-list">
-                        <FilterCategoryList categoryList={categoryList} onCategorySelect={onCategorySelect}/>
-                    </div>
-                )
+            showCategoryBox && (
+                <div className="categoryList">
+                    <FilterCategoryList categoryList={categoryList} onCategorySelect={onCategorySelect}/>
+                </div>
+            )
             }
             {
                 showProductBox && (
-                    <div className="product-list">
+                    <div className="productList">
                         <FilterProductList 
                             productList={searchProductsByKeywords} 
                             category_title={category.title} 
@@ -230,8 +228,7 @@ const Filter:FC<FilterProps> = ({}:FilterProps) => {
                     </div>
                 )
             }
-        </div>
-       
+            </div>
     )
 }
 

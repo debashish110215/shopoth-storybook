@@ -1,0 +1,87 @@
+.product-card {
+    position: relative;
+    border: 1px solid #eff0f1;
+    border-radius: 5px;
+    height: 492px;
+    padding: 24px;
+    @media(min-width: 320px) and (max-width: 767px) { 
+        height: 360px;
+        padding: 8px;
+        
+    }
+    &:hover {
+        box-shadow: 0 7px 19px 0 rgba(188,188,188,.5);
+    }
+    .product-link {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        cursor: pointer;
+    }
+    .badge-section {
+        position: absolute;
+    }
+    .card-wishlist {
+        position: absolute;
+        right: 30px;
+        margin-top: 3px;
+        @media(min-width: 320px) and (max-width: 767px) { 
+            right: 10px;
+        }
+    }
+    .product-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        @media(min-width: 320px) and (max-width: 767px) { 
+            height: 120px;
+        }
+        img {
+            width: auto;
+            height: 190px;
+            @media(min-width: 320px) and (max-width: 767px) { 
+                height: 120px;
+            }
+        }
+    }
+    .product-attributes {
+        margin-top: 30px;
+        position: relative;
+        @media(min-width: 320px) and (max-width: 767px) { 
+            margin-top: 20px;
+        }
+    }
+    .product-title {
+        margin-top: 30px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 1.2;
+        letter-spacing: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: inherit;
+        @media(min-width: 320px) and (max-width: 767px) { 
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    }
+    .product-price {
+        margin-top: 30px;
+        @media(min-width: 320px) and (max-width: 767px) { 
+            margin-top: 20px;
+        }
+    }
+    .product-add-to-cart {
+        margin-top: 30px;
+        position: relative;
+        @media(min-width: 320px) and (max-width: 767px) { 
+            margin-top: 20px;
+        }
+    }
+}

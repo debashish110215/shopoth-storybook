@@ -16,13 +16,13 @@ export const Price = ({regularPrice, currentPrice, currentPriceSize=1.2, regular
         className={['price-container'].join(' ')}
        
         >
-            <div className='currentPrice'  style ={{fontSize:`${currentPriceSize}rem`}}>
+            <div className='currentPrice'>
                 <p>
                 {currency} <NumberFormat value={currentPrice} displayType={'text'} thousandSeparator={true} />
                 </p>
             </div>
             { regularPrice &&  
-            <div className='regularPrice'  style ={{fontSize:`${regularPriceSize}rem`}}>
+            <div className='regularPrice'>
                 <p>
                 {currency} <NumberFormat value={regularPrice} displayType={'text'} thousandSeparator={true} />
                 </p>

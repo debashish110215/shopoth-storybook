@@ -15,7 +15,7 @@ interface WishlistProps{
 export const Wishlist:FC<WishlistProps> = ({isWishlistAdded = false, color='gray', size='1.5em', ...props}:WishlistProps) => {
     return (
         <div className='card-wishlist'>
-           {isWishlistAdded?<BsHeartFill color={color} size={size}/>:<BsHeart color={color} size={size}/> } 
+           {isWishlistAdded?<BsHeartFill color={"red"} size={size}/>:<BsHeart color={color} size={size}/> } 
         </div>
     )
 }

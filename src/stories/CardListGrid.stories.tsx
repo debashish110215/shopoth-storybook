@@ -1,22 +1,25 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import CardListGrid from './components/CardListGrid';
+import ProductsGrid from './components/ProductsGrid';
 
 export default {
   title: 'Shop/CardListGrid',
-  component: CardListGrid,
+  component: ProductsGrid,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof CardListGrid>;
+} as ComponentMeta<typeof ProductsGrid>;
 
-const Template: ComponentStory<typeof CardListGrid> = (args) => <CardListGrid {...args} />;
+const Template: ComponentStory<typeof ProductsGrid> = (args) => <ProductsGrid {...args} />;
 
 export const CardListGridOne = Template.bind({});
 CardListGridOne.args = {
-    title:'50% Discount',
-    // CardListGridImage:'sum2.jpg',
-    // productTitle:'Sumsung Galaxy S52s -Silver color', 
+  clsName:'products-grid-cols-5'
 };
 
+
+export const CardListGridTwo = Template.bind({});
+CardListGridTwo.args = {
+  clsName:'products-grid-cols-4'
+};

@@ -24,6 +24,10 @@ $light_color:#ffffff;
     cursor: pointer;
     display: inline-block;
     line-height: 1;
+    height: 48px; 
+    @media(min-width: 320px) and (max-width: 767px) {   
+        height: 40px; 
+    }
 }
 
 .btn-primary{
