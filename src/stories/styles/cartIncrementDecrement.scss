@@ -22,7 +22,7 @@ $textColor:#03001F;
     .cartIncDec{
         box-shadow: 1px 1px 3px #bdd5fa;
         border-radius: 5px;
-        .actionBtn{
+        .actionBtnInc, .actionBtnDec{
             padding: 4px 12px;
             font-size: 16px;
             border: none;
@@ -36,6 +36,9 @@ $textColor:#03001F;
             &:last-child{
                 border-left: 1px solid rgb(207, 207, 207);
             }
+            &:hover{
+                box-shadow: 1px 2px 5px #b5d2fc;
+            }
         }
         .countTxt{
             padding: 4px 10px;
@@ -46,5 +49,4 @@ $textColor:#03001F;
         padding-top: 5px;
         cursor: pointer;
     }
-    
 }

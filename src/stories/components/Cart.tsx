@@ -43,7 +43,7 @@ export const Cart:FC<CartProps> = ({
                         <div className='showCartProducts'>
                         {
                             productList.map(product =>(
-                                <div  className='search-product'  key={product.id}>
+                                <div  className='cartProductList'  key={product.id}>
                                     <div className='product-img'>
                                         <img src={`${product.imgUrl}`} alt="product image" />
                                     </div>

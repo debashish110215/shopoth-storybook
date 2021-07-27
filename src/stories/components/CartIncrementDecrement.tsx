@@ -33,12 +33,18 @@ export const CartIncrementDecrement:FC<CartIncrementDecrementProps> = ({
                 {currency} {currencyFormatter(productPrice)}
             </div>
             <div className="cartIncDec">
-            <button className='actionBtn' onClick={()=>onProductDecrement(productId)}> - </button>
+            <button className='actionBtnInc' onClick={()=>onProductDecrement(productId)}> - </button>
             <span className='countTxt'>{productCount}</span>
-            <button className='actionBtn' onClick={()=>onProductIncrement(productId)}> + </button>
+            <button className='actionBtnDec' onClick={()=>onProductIncrement(productId)}> + </button>
             </div>
             <div className='deleteProduct'>
-                <DeleteOne  theme="outline" size="20" fill="#9E9E9E" onClick={()=>onCartProductDelete(productId)}/>
+                <DeleteOne
+                    theme="outline" 
+                    size="20" 
+                    fill="#9E9E9E" 
+                    onClick={()=>onCartProductDelete(productId)}
+                    
+                />
             </div>
             <div className="totalPrice">
             {currency} {currencyFormatter(countTotalPrice)}
