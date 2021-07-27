@@ -57,7 +57,6 @@ const Card:FC<CardProps> = ({badgeTitle, cardImage, productTitle}:CardProps) => 
                     <div className="product-img">
                         <Image imageUrl={cardImage} title='sumsung mobile'/>
                     </div>
-                   
                     <div className='card-title'>
                         <Dotdotdot clamp={3}>
                             <h4>{productTitle}</h4>

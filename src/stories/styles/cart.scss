@@ -1,6 +1,7 @@
 .search-product-list-wrapper{
     font-family: 'Lato', sans-serif;
     min-width: 450px;
+    height: 90vh;
     box-sizing: border-box;
     padding: 16px;
     box-shadow: 1px 2px 5px #a5a5a5;
@@ -15,14 +16,20 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 40px;
+        padding: 10px;
+
+        h4{
+            font-size: 24px;
+            font-weight: 700;
+        }
 
         .btnClearAll{
             border: none;
             background: none;
             cursor: pointer;
             color: red;
-            font-size: 16px;
+            font-size: 14px;
+            font-weight: 700;
         }
     }
     .showCartProducts{
@@ -32,24 +39,22 @@
     .search-product{
         display: flex;
         border-bottom: 1px solid #ebebeb;
-        padding: 15px 10px;
+        padding: 20px 10px;
         text-decoration: none;
-      
-       
-        
 
         .cart-product-title{
             flex-grow: 1;
             margin-left: 15px;
             color: #3f3f3f;
+            h4{
+                font-size: 16px;
+                font-weight: 400;
+            }
             .cartAction{
-                margin-top: 20px;
+                margin-top: 15px;
+                margin-bottom: 5px;
             }
         }
-        &:hover{
-            background-color: #ececec;
-        }
-
     }
 
     .filter-no-product-found{
@@ -62,8 +67,12 @@
     }
 
     .totalCalc{
-        padding: 18px 15px;
-        border-bottom: 1px solid #ebebeb;
+        padding: 15px 15px;
+        h4{
+            font-size: 18px;
+            font-weight: 700;
+        }
+        border-top: 1px solid #ebebeb;
         .discount, .grandTotal{
             display: flex;
             justify-content: space-between;

@@ -4,35 +4,38 @@ import '../styles/headerCartIcon.scss';
 
 interface HeaderCartIconProps{
     onCartClick?:()=> void;
-    cartItemCount?:number;
-    ItemTotalAmount?:number;
+    selectTotalItems?:number;
+    totalAmount:number;
 }
 
-export const HeaderCartIcon:FC<HeaderCartIconProps> = ({cartItemCount = 0, ItemTotalAmount , onCartClick}:HeaderCartIconProps) => {
+export const HeaderCartIcon:FC<HeaderCartIconProps> = ({selectTotalItems = 0, totalAmount , onCartClick}:HeaderCartIconProps) => {
+    
+    const currencyFormatter = (value:number) =>(
+        new Intl.NumberFormat('en-IN').format(value)
+    )
     return (
         <div className='cartWrapper'>
             {
-                cartItemCount > 0 && (
-                    <div> 
-                    <div className='cartCountCircle'>
-                        <span className='cartCountText'>{cartItemCount}</span>
-                    </div>
-                </div>
+                selectTotalItems > 0 && (
+                    <> 
+                        <div className='cartCountCircle' onClick={onCartClick}>
+                            <span className='cartCountText'>{selectTotalItems}</span>
+                        </div>
+                    </>
                 )
             }
 
             <div className='cartIcon'>
-                <ShoppingCartOne  onClick={onCartClick} theme="outline" size="26" fill="#333"/>
+                <ShoppingCartOne   theme="outline" size="26" fill="#333"/>
             </div>
             {
-                cartItemCount > 0 && (
+                selectTotalItems > 0 && (
                     <div className='takaIcon'>
-                    <img className='takaIconImg' src="/icons/taka.svg" alt="taka icon"   />
-                    <span className='amountText'>{ItemTotalAmount}</span>
+                    <img className='takaIconImg' src="/icons/taka2.svg" alt="taka icon"   />
+                    <span className='amountText'>{currencyFormatter(totalAmount)}</span>
                 </div>
                 )
             }
-           
         </div>
     )
 }

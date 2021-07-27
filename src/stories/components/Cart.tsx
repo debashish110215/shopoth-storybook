@@ -1,5 +1,6 @@
 import {FC} from 'react';
-import {Link, BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
+import Dotdotdot from 'react-dotdotdot'
 import {CartButton} from './CartButton';
 import {CartIncrementDecrement} from './CartIncrementDecrement'
 import '../styles/cart.scss';
@@ -7,22 +8,34 @@ import '../styles/cart.scss';
 interface CartProps{
     productList:any[];
     currency?:string;
-    category_title?:string;
-    search_key?:string;
-    onSelectProduct:(id:number)=> void
+    onProductIncrement:(id:number)=>void;
+    onProductDecrement:(id:number)=>void;
+    onCartProductDelete:(id:number)=>void;
+    clearAllProducts:()=>void;
+    discount?:number;
+    grandTotal:number
 }
-export const Cart:FC<CartProps> = ({productList, category_title, currency='Tk', search_key, onSelectProduct}:CartProps) => {
+export const Cart:FC<CartProps> = ({
+    productList, 
+    currency='Tk', 
+    discount = 0,
+    grandTotal, 
+    onProductIncrement, 
+    onProductDecrement, 
+    onCartProductDelete, 
+    clearAllProducts
+    }:CartProps) => {
     
-    const onCartProductDelete= (id:number) =>{
-        console.log(id)
-    }
+    const currencyFormatter = (value:number) =>(
+        new Intl.NumberFormat('en-IN').format(value)
+    )
     return (
         <Router>
             <div className='search-product-list-wrapper'>
                 <div className='cartHeader'>
                     <h4>Your Cart</h4>
                     <div>
-                        <button className='btnClearAll'>Clear all</button>
+                        <button className='btnClearAll' onClick={clearAllProducts}>Clear all</button>
                     </div>
                 </div>
                 {
@@ -35,13 +48,18 @@ export const Cart:FC<CartProps> = ({productList, category_title, currency='Tk', 
                                         <img src={`${product.imgUrl}`} alt="product image" />
                                     </div>
                                     <div className='cart-product-title'>
-                                        <h4>{product.title}</h4>
+                                        <Dotdotdot clamp={2}>
+                                            <h4>{product.title}</h4>
+                                        </Dotdotdot>
                                         <div className="cartAction">
                                             <CartIncrementDecrement 
-                                                productCount={85} 
-                                                productPrice={3600}
-                                                countTotalPrice={70000}
+                                                productId = {product.id}
+                                                productCount={product.selectNoOfItems} 
+                                                productPrice={product.price}
+                                                countTotalPrice={product.totalPrice}
                                                 onCartProductDelete={onCartProductDelete}
+                                                onProductIncrement = {onProductIncrement}
+                                                onProductDecrement = {onProductDecrement}
                                                 />
                                         </div>
                                     </div>
@@ -57,20 +75,18 @@ export const Cart:FC<CartProps> = ({productList, category_title, currency='Tk', 
                     )
                 }
                 <div className='totalCalc'>
-                    <div className="discount">
-                        <h4>Discount</h4>
-                        <h4> {currency} 1000</h4>
-                    </div>
+                    {
+                        discount > 0 && (
+                            <div className="discount">
+                                <h4>Discount</h4>
+                                <h4> {currency} {currencyFormatter(discount)}</h4>
+                            </div>
+                        )
+                    }
                     <div className="grandTotal">
                         <h4>Total</h4>
-                        <h4>{currency} 72002</h4>
+                        <h4>{currency} {currencyFormatter(grandTotal)}</h4>
                     </div>
-                </div>
-                <div className='cartOfferInfo'>
-                    <ul>
-                        <li><a href="#">10% Discount on Total Price</a></li>
-                        <li><a href="#">FREE Shipping Vouchar</a></li>
-                    </ul>
                 </div>
                 <div className='search-bottom-btn'>
                     <CartButton label='Procced to checkout'  color='cart'/>
