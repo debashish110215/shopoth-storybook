@@ -1,4 +1,4 @@
-import {FC, useState, useEffect} from 'react';
+import {FC} from 'react';
 import {Link, BrowserRouter as Router} from 'react-router-dom';
 import {CartButton} from './CartButton';
 import '../styles/filterProductList.scss';
@@ -21,7 +21,6 @@ export const FilterProductList:FC<FilterProductListProps> = ({productList,catego
                     </div>
                     )
                 }
-             
                 {
                     productList.length > 0?(
                         <>

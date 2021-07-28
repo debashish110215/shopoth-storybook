@@ -1,0 +1,54 @@
+$secondaryColor:hsla(352, 85%, 59%, 1);
+$primaryColor:hsla(225, 65%, 37%, 1);
+$nutralColor:hsla(0, 0%, 100%, 1);
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cartWrapper{
+    position: relative;
+    height: 45px;
+    width: 85px;
+    .cartCountCircle{
+        background-color: $secondaryColor;
+        width:24px;
+        height: 24px;
+        border-radius: 50px;
+        position: absolute;
+        left: 18px;
+        top: -13px;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 1px 2px 3px #8cbaff;
+        }
+        .cartCountText{
+            padding-top: 5px;
+            display: flex;
+            justify-content: center;
+            color:$nutralColor;
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+
+    .takaIcon{
+        position: relative;
+        top:-20px;
+        left: 20px;
+        .takaIconImg{
+            width: 30px;
+            height: 30px;
+        }
+        .amountText{
+            color:$primaryColor;
+            position: absolute;
+            top:7px;
+            left:30px;
+            
+        }
+    }
+}

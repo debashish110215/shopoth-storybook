@@ -1,18 +1,18 @@
-    import { ComponentStory, ComponentMeta } from '@storybook/react';
-    import {FilterProductList} from './components/FilterProductList';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import {Cart} from './components/Cart';
 
-    export default {
-    title: 'Shop/FilterProductList',
-    component: FilterProductList,
+export default {
+    title: 'Shop/Cart',
+    component: Cart,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    } as ComponentMeta<typeof FilterProductList>;
+    } as ComponentMeta<typeof Cart>;
 
-    const Template: ComponentStory<typeof FilterProductList> = (args) => <FilterProductList {...args} />;
+    const Template: ComponentStory<typeof Cart> = (args) => <Cart {...args} />;
 
-    export const FilterProductListOne = Template.bind({});
-    FilterProductListOne.args = {
+    export const CartOne = Template.bind({});
+    CartOne.args = {
     productList: 
         [
         {
@@ -73,5 +73,5 @@
         },
     ],
     onSelectProduct: ()=>{}
-    };
+};
 

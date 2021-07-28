@@ -1,0 +1,95 @@
+.search-product-list-wrapper{
+    font-family: 'Lato', sans-serif;
+    min-width: 450px;
+    height: 90vh;
+    box-sizing: border-box;
+    padding: 16px;
+    box-shadow: 1px 2px 5px #a5a5a5;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    img{
+        width: 75px;
+    }
+
+    .cartHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+
+        h4{
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .btnClearAll{
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: red;
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+    .showCartProducts{
+        height: 350px;
+        overflow-y: scroll;
+    }
+    .cartProductList{
+        display: flex;
+        border-bottom: 1px solid #ebebeb;
+        padding: 20px 10px;
+        text-decoration: none;
+
+        .cart-product-title{
+            flex-grow: 1;
+            margin-left: 15px;
+            color: #3f3f3f;
+            h4{
+                font-size: 16px;
+                font-weight: 400;
+            }
+            .cartAction{
+                margin-top: 15px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .filter-no-product-found{
+        padding: 15px;
+        text-align: center;
+    }
+
+    .search-bottom-btn{
+        padding-top: 1px;
+    }
+
+    .totalCalc{
+        padding: 15px 15px;
+        h4{
+            font-size: 18px;
+            font-weight: 700;
+        }
+        border-top: 1px solid #ebebeb;
+        .discount, .grandTotal{
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .discount{
+            padding-bottom: 10px;
+        }
+    }
+
+    .cartOfferInfo{
+        padding: 16px 30px;
+
+        a{
+            font-size: 14px;
+            text-decoration: none;
+            color: #3f3f3f;
+        }
+    }
+}

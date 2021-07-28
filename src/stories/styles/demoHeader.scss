@@ -1,0 +1,26 @@
+
+$secondaryColor:hsla(352, 85%, 59%, 1);
+$primaryColor:hsla(225, 65%, 37%, 1);
+$nutralColor:hsla(0, 0%, 100%, 1);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.demoHeaderWrapper{
+    .headerCartIcon{
+        display: flex;
+        justify-content: flex-end;
+        margin: 15px 35px 10px 0px;
+    }
+    .borderSeparator{
+        border-top:2px solid $secondaryColor;
+        margin-bottom: 2px;
+    }
+    .productCart{
+        max-width: 462px;
+        margin-left: auto;   
+    }
+}
