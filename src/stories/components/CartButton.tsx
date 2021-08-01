@@ -49,7 +49,7 @@ export const CartButton = ({
                     disabled={isLoading}
                     {...props} > 
                     {isLoading? 
-                         <ClipLoader 
+                        <ClipLoader 
                             color={loaderstyle} 
                             loading={isLoading}  
                             size={10}/> 
