@@ -1,0 +1,25 @@
+$primaryColor:#21409A;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.personalInfoContWrapper{
+    width: 690px;
+    max-height: 600px;
+    padding: 30px;
+    border: 1px solid #DFE7FF;
+    border-radius: 8px;
+    overflow: hidden;
+
+    .personalInfo{
+        padding-bottom: 15px;
+
+    }
+    .myAddressdetails{
+        padding-top: 35px;
+        border-top: 2px solid $primaryColor;
+    }
+}

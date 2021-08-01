@@ -1,0 +1,52 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.personalInfoWrapper{
+    font-family: 'Lato', sans-serif;
+    .personalInfoHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        border-bottom: 1px solid $borderColor;
+        padding-bottom: 10px;
+        h4{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        p{
+            cursor: pointer;
+            color: $secondaryColor;
+            font-size: 12px;
+            font-weight: 600;
+            &:hover{
+                text-decoration: underline;
+            }
+                
+        }
+    }
+
+    .personalInfo{
+        .personalInfoItem{
+            margin: 15px 0px;
+            font-size: 18px;
+            h5{
+                font-weight: 600;
+                color: $textSecondaryColor;
+            }
+            p{
+                padding-top: 4px;
+                font-size: 14px;
+                color: $textColor;
+            }
+        }
+    }
+}
