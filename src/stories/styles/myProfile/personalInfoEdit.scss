@@ -1,7 +1,72 @@
 $primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textColorGray:#343A40 ;
+$textColorLightGray:#9E9E9E;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.personalInfoEditWrapper{
+
+    .personalInfoEditHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        border-bottom: 1px solid $borderColor;
+        padding-bottom: 10px;
+        h4{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        button{
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: $secondaryColor;
+            font-size: 12px;
+            font-weight: 600;
+            &:hover{
+                text-decoration: underline;
+            }
+                
+        }
+    }
+
+    .personalInfoEditForm{
+        color: $textSecondaryColor;
+        .formItem{
+            margin: 15px 0px;
+            .inputLabel{
+                display: block;
+                padding-bottom: 5px;
+                font-size: 16px;
+                font-weight: 500;
+            }
+            .inputControl{
+                width: 422px;
+                border: 1px solid $borderColor;
+                border-radius: 5px;
+                padding: 8px; 
+                font-size: 16px;
+                outline: 0;
+                &:focus{
+                    border: 1px solid $borderColor;
+                    box-shadow: 1px 1px 4px #b9c9ff;
+                }  
+            }
+            .showError{
+                font-size: 14px;
+                padding-top: 5px;
+            }
+        }
+
+    }
+
 }
