@@ -17,7 +17,7 @@ interface YourFavouritProps{
     onAddToCart:()=>void;
 }
 
-const YourFavourit:FC<YourFavouritProps> = ({favouriteProductList, onAddToCart}:YourFavouritProps) => {
+const YourFavourit:FC<YourFavouritProps> = ({favouriteProductList, onAddToCart}) => {
     return (
         <div className='yourFavouriteWrapper'>
             {

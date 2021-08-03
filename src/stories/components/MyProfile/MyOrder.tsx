@@ -30,7 +30,7 @@ export const MyOrder:FC<MyOrderProps> = ({orderList, oreder_key}) => {
                         <div className="orderItem">
                             <div className="orderInfo">
                                 <div className="orderDes">
-                                    <p className='orderId'>Order ID #{order.orderId}</p>orderItemList
+                                    <p className='orderId'>Order ID #{order.orderId}</p>
                                     <p>Amount : {order.amount}</p>
                                     <p>Status : {order.status ==='in_progress'?'In Progress'    
                                                 :order.status === 'completed'? 'Completed'

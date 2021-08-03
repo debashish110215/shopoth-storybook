@@ -5,11 +5,16 @@ import {MyOrder} from './MyOrder'
 
 export interface Order{
     id:number;
+    imgUrl:string;
+    productTitle:string;
     orderId:string;
     amount:number;
     status:string;
     dateTime:string;
     returnDate?:string;
+    currency?:string;
+    deliveryID?:string;
+
 }
 
 interface MyOrderContainerProps{
