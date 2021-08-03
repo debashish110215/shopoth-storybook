@@ -1,0 +1,27 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textColorGray:#343A40 ;
+$textColorLightGray:#9E9E9E;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.myOrderContWrapper{
+    color: $textColor;
+    border: 1px solid $borderColor;
+    border-radius: 8px;
+    padding: 30px;
+    .myOrderContHeader{
+        h4{
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+}
