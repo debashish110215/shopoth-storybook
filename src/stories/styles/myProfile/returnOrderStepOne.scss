@@ -12,65 +12,44 @@ $borderColor:#DFE7FF;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
-.orderDetailsWrapper{
+.returnOrderOneWrapper{
     border:1px solid $borderColor;
     border-radius: 8px;
     padding: 24px 40px;
     font-weight: 700;
     color: $textColor;
-    .orderDetailsHeader{
+    .returnOrderOneHeader{
         display: flex;
         justify-content: space-between;
         align-items: center;
         h4{
             font-size: 20px;
-            padding-bottom: 20px;
+            padding-bottom: 15px;
             white-space: nowrap;
         }
-        .flexGrow{
-            flex-grow: 1;
-        }
-        .ordeReturn{
-            width: 250px;
-            display: flex;
-            color: $secondaryColor;
-            position: relative;
-            .orderReturnUntil{
-                padding-left: 10px;
-                white-space: nowrap;
-                position: relative;
-                font-weight: 400;
-                top: 12px;
-            }
-        }
-        margin-bottom: 15px;
     }
-    .orderNum{
+    .returnOrderOneNum{
         background-color: $borderColor;
         padding: 10px 25px;
         font-size: 16px;
     }
-    .orderItem{
+    .returnOrderOneItem{
         display: flex;
         border-bottom: 1px solid $borderColor;
         padding:20px 15px;
-        .orderItemSelectRadio{
+        .returnOrderOneSelectRadio{
             align-self: center;
             margin-right: 5px;
-            .itemRadioBtn{
-                background-color:#bfb;
-                border-color: #4c4;
-            }
         }
-        .orderItemImgWraper{
+        .returnOrderOneImgWrapper{
             border:1px solid $borderColor;
             border-radius: 8px;
-            .orderItemImg{
+            .returnOrderOneImg{
                 width: 150px;
                 height: 150px;
             }
         }
-        .OrderItemDes{
+        .returnOrderOneItemDes{
             flex-grow: 1;
             margin-left: 20px;
             h4{
@@ -87,34 +66,21 @@ $borderColor:#DFE7FF;
             }
         }
     }
-    .paymentDetails{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px ;
-        padding-bottom: 5px;
-        .paymentTitle,.paymentPay{
-            p{
-                line-height: 24px;
-                font-size: 16px;
-                font-weight: 400;
-                color: $textSecondaryColor;
-            }
-        }
-    }
-    .paymentTotal{
+    .returnTotal{
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-top: 2px solid $primaryColor;
+        margin-top: 15px;
         padding: 8px 20px;
         h4{
             font-size: 16px;
             font-weight: 700;
         }
     }
-    .orderPaymnet{
-        margin: 25px 0px;
+    .nextBtn{
+        width: 200px;
+        margin: 15px 0px;
     }
 }
 

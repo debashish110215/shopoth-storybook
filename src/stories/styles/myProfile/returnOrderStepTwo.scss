@@ -12,65 +12,44 @@ $borderColor:#DFE7FF;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
-.orderDetailsWrapper{
+.returnOrderOneWrapper{
     border:1px solid $borderColor;
     border-radius: 8px;
     padding: 24px 40px;
     font-weight: 700;
     color: $textColor;
-    .orderDetailsHeader{
+    .returnOrderOneHeader{
         display: flex;
         justify-content: space-between;
         align-items: center;
         h4{
             font-size: 20px;
-            padding-bottom: 20px;
+            padding-bottom: 15px;
             white-space: nowrap;
         }
-        .flexGrow{
-            flex-grow: 1;
-        }
-        .ordeReturn{
-            width: 250px;
-            display: flex;
-            color: $secondaryColor;
-            position: relative;
-            .orderReturnUntil{
-                padding-left: 10px;
-                white-space: nowrap;
-                position: relative;
-                font-weight: 400;
-                top: 12px;
-            }
-        }
-        margin-bottom: 15px;
     }
-    .orderNum{
+    .returnOrderOneNum{
         background-color: $borderColor;
         padding: 10px 25px;
         font-size: 16px;
     }
-    .orderItem{
+    .returnOrderOneItem{
         display: flex;
         border-bottom: 1px solid $borderColor;
         padding:20px 15px;
-        .orderItemSelectRadio{
+        .returnOrderOneSelectRadio{
             align-self: center;
             margin-right: 5px;
-            .itemRadioBtn{
-                background-color:#bfb;
-                border-color: #4c4;
-            }
         }
-        .orderItemImgWraper{
+        .returnOrderOneImgWrapper{
             border:1px solid $borderColor;
             border-radius: 8px;
-            .orderItemImg{
+            .returnOrderOneImg{
                 width: 150px;
                 height: 150px;
             }
         }
-        .OrderItemDes{
+        .returnOrderOneItemDes{
             flex-grow: 1;
             margin-left: 20px;
             h4{
@@ -87,22 +66,63 @@ $borderColor:#DFE7FF;
             }
         }
     }
-    .paymentDetails{
+    .returnReason{
+        margin: 20px 0px;
+        .returnReasonLabel{
+            display: block;
+            padding-bottom: 5px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .returnReasonSelect{
+            display: block;
+            width: 50%;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 400;
+            outline: none;
+            border:1px solid $borderColor;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+    }
+    .uploadImgWrapper{
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        padding: 20px ;
-        padding-bottom: 5px;
-        .paymentTitle,.paymentPay{
-            p{
-                line-height: 24px;
-                font-size: 16px;
-                font-weight: 400;
-                color: $textSecondaryColor;
+        .showUploadImg{
+            width: 100px;
+            height: 100px;
+            background-color: $textColorLightGray;
+            border-radius: 8px;
+        }
+        .uploadImg{
+            display: block;
+            width: 300px;
+            height: 100px;
+            margin-left: 10px;
+        }
+    }
+    .additionalCommentWrapper{
+        margin: 15px 0px;
+        .addCmntLabel{
+            display: block;
+            padding-bottom: 5px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .addCmntInput{
+            width: 50%;
+            outline: none;
+            border: 1px solid $borderColor;
+            border-radius: 5px;
+            padding: 10px;
+            &:focus{
+                box-shadow: 1px 3px 5px $borderColor;
             }
         }
     }
-    .paymentTotal{
+
+    .returnTotal{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -113,8 +133,9 @@ $borderColor:#DFE7FF;
             font-weight: 700;
         }
     }
-    .orderPaymnet{
-        margin: 25px 0px;
+    .nextBtn{
+        width: 200px;
+        margin: 15px 0px;
     }
 }
 

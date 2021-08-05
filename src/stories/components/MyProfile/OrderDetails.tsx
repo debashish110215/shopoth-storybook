@@ -3,7 +3,8 @@ import '../../styles/myProfile/orderDetails.scss';
 import Dotdotdot from 'react-dotdotdot';
 import {Address} from './PersonalInfoContainer';
 import PaymentSummary from './PaymentSummary'
-import ShippingDetails from './ShippingDetails'
+import ShippingDetails from './ShippingDetails';
+import {SubmitButton} from '../SubmitButton'
 
 
 export interface OrderedProduct{
@@ -47,14 +48,25 @@ const OrderDetails:FC<OrderDetailsProps> = ({
         <div className='orderDetailsWrapper'>
             <div className="orderDetailsHeader">
                 <h4>Order Details</h4>
-                <div className="orderNum">
-                    Order Number #{orderId}
+                <div className='flexGrow'></div>
+                <div className="ordeReturn">
+                    <SubmitButton label='Return' color='cart' outline={true}/>
+                    <span className='orderReturnUntil'>Until 30/07/21</span>
                 </div>
             </div>
+            <div className="orderNum">
+                    Order Number #{orderId}
+                </div>
             {
                 orderedProductList.length > 0 &&
                 orderedProductList.map(item =>(
                     <div className="orderItem" key={item.id}>
+                        <div className="orderItemSelectRadio">
+                            <label className="radioContainer">
+                                <input type="radio"  name="radio"/>
+                                <span className="checkmark"></span>
+                            </label>
+                        </div>
                         <div className="orderItemImgWraper">
                             <img className='orderItemImg' src={`${item.imgUrl}`} alt={`${item.productTitle}`} />
                         </div>
