@@ -21,6 +21,11 @@ $borderColor:#DFE7FF;
         font-size: 18px;
         font-weight: 500;
         padding-bottom: 10px;
+        .imgFormatError{
+            color: red;
+            font-size: 14px;
+            font-weight: 400;
+        }
     }
     .retrunImageUploadMain{
         display: flex;

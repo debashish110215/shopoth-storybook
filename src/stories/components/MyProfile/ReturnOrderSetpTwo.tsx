@@ -1,10 +1,12 @@
-import {FC} from 'react'
+import {FC, useState, useEffect} from 'react'
 import '../../styles/myProfile/returnOrderStepTwo.scss';
 import Dotdotdot from 'react-dotdotdot';
 import {SubmitButton} from '../SubmitButton'
 import {Address} from './PersonalInfoContainer';
 import ShippingDetails from './ShippingDetails';
 import ImageUpload from './ImageUpload';
+import {useForm, SubmitHandler} from 'react-hook-form';
+import ReturnSuccessMsg from './ReturnSuccessMsg';
 
 
 export interface returnProduct{
@@ -39,25 +41,35 @@ const reasons = [
     {id:5, title:'Reason Five', value:'reason_five'},
 ]
 
+interface Inputs{
+    return_reason:string;
+    add_cmnt:string;
+}
+
 const ReturnOrderSetpTwo:FC<ReturnOrderSetpTwoProps> = ({
     returnProductDetails, 
     shippingDetails
     }) => {
+        const [selectedImgFiles, setSelectedImgFiles] = useState<any[]>([])
+        const { register, handleSubmit, formState: { errors } } = useForm<Inputs>();
+        const [showMsgPopUp, setShowMsgPopUp] = useState(false)
+
+        const onSubmit: SubmitHandler<Inputs> = data =>{
+            console.log(data);
+            setShowMsgPopUp(!showMsgPopUp)
+        } 
+
     return (
-        <div className='returnOrderOneWrapper'>
-            <div className="returnOrderOneHeader">
-                <h4>Return (Step 2/2)</h4>
-            </div>
+        <>
+        <form onSubmit={handleSubmit(onSubmit)}>
+            <div className='returnOrderOneWrapper'>
+                <div className="returnOrderOneHeader">
+                    <h4>Return (Step 2/2)</h4>
+                </div>
             <div className="returnOrderOneNum">
                     Item 1
                 </div>
                     <div className="returnOrderOneItem">
-                        <div className="returnOrderOneSelectRadio">
-                                <label className="radioContainer">
-                                    <input type="radio"  name="radio"/>
-                                    <span className="checkmark"></span>
-                                </label>
-                        </div>
                         <div className="returnOrderOneImgWrapper">
                             <img 
                                 className='returnOrderOneImg' 
@@ -76,9 +88,13 @@ const ReturnOrderSetpTwo:FC<ReturnOrderSetpTwoProps> = ({
                         </div>
                     </div>
                     <div className="returnReason">
-                        <label className='returnReasonLabel' htmlFor="return_reason">Reason</label>
-                        <select className='returnReasonSelect' name="return_reason" id="return_reason">
-                            <option value="">Select a Reason</option>
+                        <label 
+                            className='returnReasonLabel' 
+                            htmlFor="return_reason">
+                                Reason<span style={{color:'red'}}>*</span>
+                        </label>
+                        <select className='returnReasonSelect' id="return_reason" {...register('return_reason')}>
+                            <option value="">Select a Reason </option>
                             {
                                 reasons.length > 0 &&
                                 reasons.map(reason =>(
@@ -88,11 +104,16 @@ const ReturnOrderSetpTwo:FC<ReturnOrderSetpTwoProps> = ({
                         </select>
                     </div>
                     <div className="returnImageUpload">
-                        <ImageUpload/>
+                        <ImageUpload setSelectedImgFiles = {setSelectedImgFiles}/>
                     </div>
                     <div className="additionalCommentWrapper">
-                        <label className='addCmntLabel' htmlFor="add_cmnt">Additional Comment</label>
-                        <textarea className='addCmntInput' name="add_cmnt" id="add_cmnt" cols={30} rows={5}></textarea>
+                        <label className='addCmntLabel' htmlFor="add_cmnt">Additional Comment (Optiobal)</label>
+                        <textarea 
+                            className='addCmntInput' 
+                            id="add_cmnt" cols={30} 
+                            rows={5} 
+                            {...register('add_cmnt')}>
+                        </textarea>
                     </div>
                     <div className="orderAddress">
                         <ShippingDetails  shippingDetails={shippingDetails}/>
@@ -104,7 +125,13 @@ const ReturnOrderSetpTwo:FC<ReturnOrderSetpTwoProps> = ({
                     <div className="nextBtn">
                         <SubmitButton label='Submit' color='cart'/>
                     </div>
+            </div>
+        </form>
+        <div>
+            <ReturnSuccessMsg showMsgPopUp = {showMsgPopUp} setShowMsgPopUp={setShowMsgPopUp}/>
         </div>
+        </>
+        
     )
 }
 

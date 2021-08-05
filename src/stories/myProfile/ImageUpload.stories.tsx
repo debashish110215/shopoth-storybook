@@ -11,5 +11,5 @@ export default {
     },
     } as ComponentMeta<typeof ImageUpload>;
 
-    const Template: ComponentStory<typeof ImageUpload> = ()=> <ImageUpload  />;
+    const Template: ComponentStory<typeof ImageUpload> = (arg)=> <ImageUpload {...arg} />;
     export const ImageUploadOne = Template.bind({});
