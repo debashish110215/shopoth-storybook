@@ -15,7 +15,7 @@ export default {
     export const PersonalInfoContainerOne = Template.bind({});
     PersonalInfoContainerOne.args = {
         userDetails:{
-        fullName : 'Sayekat Chakraborty',
+        userName : 'Sayekat Chakraborty',
         email : 'Sayekat Chakraborty@gmil.com',
         phone : '+880 1926 569 236',
         gender : 'Male',

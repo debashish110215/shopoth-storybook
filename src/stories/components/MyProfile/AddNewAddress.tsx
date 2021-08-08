@@ -3,31 +3,18 @@ import { Overlay } from '../Overlay';
 import {SubmitButton} from '../SubmitButton'
 import {GrFormClose} from 'react-icons/gr'
 import '../../styles/myProfile/addNewAddress.scss';
+import {Zilla, Area, Zone} from './MyProfilePage';
 
-interface Zilla {
-    id:number;
-    title:string;
-    value:string;
-}
-interface Area {
-    id:number;
-    title:string;
-    value:string;
-}
-interface Zone {
-    id:number;
-    title:string;
-    value:string;
-}
 interface AddNewAddressProps{
     showMsgPopUp:boolean;
     setShowMsgPopUp:(value:boolean) => void ;
     zillas:Zilla[];
     areas:Area[];
     zones:Zone[];
+    address_key:string;
 }
 
-const AddNewAddress:React.FC<AddNewAddressProps> = ({showMsgPopUp, setShowMsgPopUp, zillas, areas, zones}) => {
+const AddNewAddress:React.FC<AddNewAddressProps> = ({showMsgPopUp, setShowMsgPopUp, zillas, areas, zones, address_key}) => {
     return (
         <Overlay show={showMsgPopUp} onClose={() =>setShowMsgPopUp(!showMsgPopUp)} children={
 
@@ -42,7 +29,7 @@ const AddNewAddress:React.FC<AddNewAddressProps> = ({showMsgPopUp, setShowMsgPop
                     </div>
                     <form >
                         <div className="addNewAddressContent">
-                            <h4>Add New Address</h4>
+                            <h4>{address_key === 'add'? 'Add':'Edit'} New Address</h4>
                             <div className="addNewAddressForm">
                                 <div className="addressName">
                                     <label className='formLabel' htmlFor="address_name">Address Name</label>

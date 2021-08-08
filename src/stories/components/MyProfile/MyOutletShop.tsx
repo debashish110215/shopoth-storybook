@@ -1,16 +1,9 @@
 import {FC} from 'react';
 import '../../styles/myProfile/myOutletShop.scss';
 import {MyOutletShopDetails} from './MyOutletShopDetails';
+import {Outlet} from './MyProfilePage';
 
-export interface Outlet{
-    outletId:number;
-    name:string;
-    ownerName:string;
-    phone:string;
-    address:string;
-    district:string;
-    
-}
+
 
 interface MyOutletShopProps{
     outletList:Array<Outlet>

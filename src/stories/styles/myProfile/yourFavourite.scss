@@ -14,6 +14,16 @@ $borderColor:#DFE7FF;
 .yourFavouriteWrapper{
     border:1px solid $borderColor;
     border-radius: 8px;
+    padding: 30px 20px;
+    .yourFavouriteHeader{
+        border-bottom: 1px solid $borderColor;
+        padding-bottom: 10px;
+        h4{
+            font-size: 20px;
+            font-weight: bold;
+            color: $textColor;
+        }
+    }
     .favoriteItem{
         display: flex;
         border-bottom: 1px solid $borderColor;
@@ -28,29 +38,31 @@ $borderColor:#DFE7FF;
                 right: 12px;
             }
             .favouriteImg{
-                width: 180px;
-                height: 180px;
+                max-width: 150px;
+                max-height: 150px;
             }
         }
-        .favouriteItemDes{
+        .favouriteContent{
             flex-grow: 1;
             margin-left: 20px;
-            position: relative;
-            h4{
-                font-size: 18px;
-                line-height: 24px;
-                font-weight: 400;
-                padding-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .favouriteItemDes{
+                h4{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight: 400;
+                    padding-bottom: 10px;
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: 600;
+                }
             }
-            p{
-                font-size: 14px;
-                font-weight: 600;
+            .addToCartbtn{
+                max-width: 245px;
             }
-        }
-        .addToCartbtn{
-            position: absolute;
-            bottom: 10px;
-            width: 245px;
         }
     }
 }

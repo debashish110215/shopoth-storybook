@@ -10,16 +10,13 @@ $borderColor:#DFE7FF;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
-
 .myOutletDetailsWrapper{
-
     .myOutlet{
         display: flex;
         align-items: center;
         border-bottom: 1px solid $borderColor;
         padding: 15px 0px;
         font-size: 16px;
-        // font-weight: 600;
         color: $textColor;
         .serialNo{
             align-self: flex-start;
@@ -37,7 +34,6 @@ $borderColor:#DFE7FF;
                 color: $textSecondaryColor;
             }
         }
-
         .ownerInfo{
             position: relative;
             padding-left: 30px;

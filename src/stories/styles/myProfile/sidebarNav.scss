@@ -12,17 +12,11 @@
     font-weight: 400;
     .profileNavList{
         list-style-type: none;
-
         li{
             padding: 15px;
             cursor: pointer;
             margin-bottom: 5px;
-
-            &:first-child{
-                background-color: #DFE7FF;
-                color: #21409A;
-                font-weight: bold;
-            }
+            
         }
         .profileNavItem{
             display: flex;
@@ -35,6 +29,12 @@
         }
         .profileNavText{
             display: block;
+            white-space: nowrap;
         }
     }
+}
+.selectedNav {
+    background-color: #DFE7FF;
+    color: #21409A;
+    font-weight: bold; 
 }

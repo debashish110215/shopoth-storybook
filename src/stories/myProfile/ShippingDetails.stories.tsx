@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import {MyOrder} from '../components/MyProfile/MyOrder';
+import {MyOrder} from '../components/MyProfile/MyOrders';
 
 export default {
     title: 'Shop/MyOrder',

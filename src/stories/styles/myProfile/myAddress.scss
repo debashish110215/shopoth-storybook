@@ -46,10 +46,14 @@ $borderColor:#DFE7FF;
             padding: 15px 0px;
 
             .addressEdit{
-                color: $textSecondaryColor;
-                cursor: pointer;
-                &:hover{
-                    text-decoration: underline;
+                .editNewAddress{
+                    color: $textSecondaryColor;
+                    cursor: pointer;
+                    background: none;
+                    border: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
             }
         }

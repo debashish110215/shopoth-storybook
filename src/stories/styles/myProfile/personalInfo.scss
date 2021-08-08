@@ -22,11 +22,13 @@ $borderColor:#DFE7FF;
             font-size: 20px;
             font-weight: bold;
         }
-        p{
+        button{
             cursor: pointer;
             color: $secondaryColor;
             font-size: 12px;
             font-weight: 600;
+            background: none;
+            border: none;
             &:hover{
                 text-decoration: underline;
             }

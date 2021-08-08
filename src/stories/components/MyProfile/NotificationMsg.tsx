@@ -4,20 +4,14 @@ import {Link, BrowserRouter as Router}  from 'react-router-dom';
 import {IoIosCloseCircle} from 'react-icons/io'
 import {AiFillQuestionCircle, AiFillCheckCircle} from 'react-icons/ai'
 import '../../styles/myProfile/notificationMsg.scss'
-interface Notification{
-    id:number,
-    title:string;
-    key:string;
-    status:string;
-    orderId:string;
-    oderDate:string;
-
-}
+import {Notification} from './MyProfilePage'
 interface NotificationMsgProps{
     notificationList:Array<Notification>
 }
 
-const NotificationMsg:FC<NotificationMsgProps> = ({notificationList}:NotificationMsgProps) => {
+const NotificationMsg:FC<NotificationMsgProps> = ({
+    notificationList
+}) => {
     return (
         <Router>
             <div className='nftMsgWrapper'>

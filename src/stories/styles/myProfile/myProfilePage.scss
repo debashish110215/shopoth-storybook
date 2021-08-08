@@ -1,0 +1,28 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+.myProfilePageWrapper{
+    display: flex;
+    .myProfileSidebar{
+        flex-grow: 2;
+        margin-right: 20px;
+    }
+    .myProfileContent{
+        flex-grow: 4;
+        .userInfo{
+            margin-bottom: 20px;
+        }
+    }
+    // .outlet{
+
+    // }
+}

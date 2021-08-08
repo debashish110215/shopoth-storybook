@@ -3,14 +3,8 @@ import Dotdotdot from 'react-dotdotdot'
 import {CartButton} from '../CartButton'
 import {Wishlist} from '../Wishlist'
 import '../../styles/myProfile/yourFavourite.scss';
+import {Favourite} from './MyProfilePage'
 
-interface Favourite{
-    id:number;
-    imgUrl:string;
-    productTitle:string;
-    price:number;
-    currency?:string;
-}
 
 interface YourFavouritProps{
     favouriteProductList:Array<Favourite>;
@@ -20,6 +14,9 @@ interface YourFavouritProps{
 const YourFavourit:FC<YourFavouritProps> = ({favouriteProductList, onAddToCart}) => {
     return (
         <div className='yourFavouriteWrapper'>
+            <div className="yourFavouriteHeader">
+                <h4>Your Favourites</h4>
+            </div>
             {
                 favouriteProductList.length > 0 &&
                 favouriteProductList.map(item =>(
@@ -30,11 +27,13 @@ const YourFavourit:FC<YourFavouritProps> = ({favouriteProductList, onAddToCart})
                             </div>
                             <img className='favouriteImg' src={`${item.imgUrl}`} alt={`${item.productTitle}`} />
                         </div>
-                        <div className="favouriteItemDes">
-                            <Dotdotdot clamp={4}>
-                                <h4>{item.productTitle}</h4>
-                            </Dotdotdot>
-                            <p>{item.currency || 'Tk '}{item.price}</p>
+                        <div className="favouriteContent">
+                            <div className="favouriteItemDes">
+                                {/* <Dotdotdot clamp={4}> */}
+                                    <h4>{item.productTitle}</h4>
+                                {/* </Dotdotdot> */}
+                                <p>{item.currency || 'Tk '}{item.price}</p> 
+                            </div>
                             <div className="addToCartbtn">
                                 <CartButton label='Add to Cart' color='cart'/>
                             </div>

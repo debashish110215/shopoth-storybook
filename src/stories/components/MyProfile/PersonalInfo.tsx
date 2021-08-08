@@ -1,21 +1,25 @@
 import {FC} from 'react'
 import '../../styles/myProfile/personalInfo.scss';
-import {Users} from './PersonalInfoContainer'
+import {User} from './MyProfilePage'
 
 interface PersonalInfoProps{
-    userDetails:Users
+    userDetails:User;
+    setShowPersonalInfo:(value:string) => void;
 }
-export const PersonalInfo:FC<PersonalInfoProps> = ({userDetails}:PersonalInfoProps) => {
+export const PersonalInfo:FC<PersonalInfoProps> = ({
+    userDetails,
+    setShowPersonalInfo
+}) => {
     return (
         <div className='personalInfoWrapper'>
             <div className="personalInfoHeader">
                 <h4>Personal Information</h4>
-                <p>Edit</p>
+                <button onClick = {() => setShowPersonalInfo('edit')}>Edit</button>
             </div>
             <div className="personalInfo">
                 <div className="personalInfoItem">
                     <h5>Full Name</h5>
-                    <p>{userDetails.fullName}</p>
+                    <p>{userDetails.userName}</p>
                 </div>
                 <div className="personalInfoItem">
                     <h5>Email Address</h5>

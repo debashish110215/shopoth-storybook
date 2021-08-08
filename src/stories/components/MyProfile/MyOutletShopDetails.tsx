@@ -1,6 +1,6 @@
 import {FC} from 'react';
 import '../../styles/myProfile/myOutletShopDetails.scss';
-import {Outlet} from './MyOutletShop'
+import {Outlet} from './MyProfilePage'
 
 
 interface MyOutletShopDetailsProps{

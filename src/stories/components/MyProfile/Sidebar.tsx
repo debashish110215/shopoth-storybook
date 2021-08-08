@@ -2,35 +2,31 @@ import {FC} from 'react';
 import {SidebarTop} from './SidebarTop';
 import {SidebarNav} from './SidebarNav';
 import '../../styles/myProfile/sidebar.scss'
-
+import {User} from './MyProfilePage'
 
 interface SidebarProps{
-    userImgUrl?:string;
-    userName:string;
-    userId:string;
-    id:number;
-    accountCreationDate:string;
-    // onSelectNav:(id:number, nav_key:string)=>void;
+    userDetails:User;
+    navKey:string;
+    setNavKey:(nav_key:string)=>void;
     
 }
 
-const Sidebar:FC<SidebarProps> = ({id, userName, userId, userImgUrl, accountCreationDate}:SidebarProps) => {
-
-    const onSelectNav = (id:number, nav_key:string)=>{
-        console.log('id', id, 'key', nav_key)
-    }
+const Sidebar:FC<SidebarProps> = ({userDetails,navKey, setNavKey}) => {
     return (
         <div className='profileSidebarWrapper'>
             <div className="profileSidebarTop">
                 <SidebarTop 
-                    userName={userName} 
-                    userId={userId} 
-                    userImgUrl={userImgUrl}
-                    accountCreationDate={accountCreationDate}
+                    userName={userDetails.userName} 
+                    userId={userDetails.userId} 
+                    userImgUrl={userDetails.userImgUrl}
+                    accountCreationDate={userDetails.accountCreationDate}
                 />
             </div>
             <div className="profileSidebarNav">
-                <SidebarNav id={id} onSelectNav={onSelectNav}/>
+                <SidebarNav id={userDetails.id}     
+                            navKey={navKey} 
+                            setNavKey={setNavKey}
+                        />
             </div>
         </div>
     )

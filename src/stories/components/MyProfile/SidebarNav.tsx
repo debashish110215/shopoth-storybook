@@ -5,57 +5,58 @@ import {AiOutlineInbox, AiOutlineUser} from 'react-icons/ai';
 import '../../styles/myProfile/sidebarNav.scss';
 
 interface SidebarNavProps {
-    onSelectNav:(id:number, nav_key:string)=>void;
+    navKey:string;
+    setNavKey:(nav_key:string)=>void;
     id:number;
 }
 
-export const SidebarNav:FC<SidebarNavProps> = ({onSelectNav, id}:SidebarNavProps) => {
+export const SidebarNav:FC<SidebarNavProps> = ({navKey,setNavKey, id}:SidebarNavProps) => {
     return (
         <div className='profileSidebarNavWrapper'>
             <ul className='profileNavList'>
                 <li 
-                    className='profileNavItem' 
-                    onClick={()=>onSelectNav(id, 'account_info')}> 
+                    className={`profileNavItem ${ navKey === 'account_info'?'selectedNav':''}`} 
+                    onClick={()=>setNavKey('account_info')}> 
                     <AiOutlineUser className='navIcon' size={24}/> 
                     <span className='profileNavText'>
                         Account Information
                     </span>
                 </li>
                 <li 
-                    className='profileNavItem' 
-                    onClick={()=>onSelectNav(id, 'notification')}> 
+                    className={`profileNavItem ${ navKey === 'notification'?'selectedNav':''}`} 
+                    onClick={()=>setNavKey('notification')}> 
                     <BsBell className='navIcon' size={24}/>
                     <span className='profileNavText'>
                         Notification
                     </span>
                 </li>
                 <li 
-                    className='profileNavItem' 
-                    onClick={()=>onSelectNav(id, 'my_order')}>
+                    className={`profileNavItem ${ navKey === 'my_orders'?'selectedNav':''}`} 
+                    onClick={()=>setNavKey('my_orders')}>
                     <AiOutlineInbox className='navIcon' size={24}/>
                     <span className='profileNavText'>
                         My Orders
                     </span>
                 </li>
                 <li 
-                    className='profileNavItem' 
-                    onClick={()=>onSelectNav(id, 'wishlist')}>
+                    className={`profileNavItem ${ navKey === 'wishlist'?'selectedNav':''}`} 
+                    onClick={()=>setNavKey('wishlist')}>
                     <IoMdHeartEmpty className='navIcon' size={24}/>
                     <span className='profileNavText'>
                         Wishlist
                     </span> 
                 </li>
                 <li 
-                    className='profileNavItem' 
-                    onClick={()=>onSelectNav(id, 'change_password')}>
+                    className={`profileNavItem ${ navKey === 'change_password'?'selectedNav':''}`} 
+                    onClick={()=>setNavKey('change_password')}>
                     <BsPencil className='navIcon' size={24}/> 
                     <span className='profileNavText'>
                         Change Password
                     </span>
                 </li>
                 <li 
-                    className='profileNavItem' 
-                    onClick={()=>onSelectNav(id, 'sign_out')}>
+                    className={`profileNavItem ${ navKey === 'sign_out'?'selectedNav':''}`} 
+                    onClick={()=>setNavKey('sign_out')}>
                     <BsBoxArrowLeft className='navIcon' size={24}/>
                     <span className='profileNavText'>
                         Sign Out

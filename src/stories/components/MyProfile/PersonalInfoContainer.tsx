@@ -1,39 +1,53 @@
-import {FC} from 'react'
+import {FC, useState} from 'react'
 import '../../styles/myProfile/personalInfoContainer.scss';
 import {PersonalInfo} from './PersonalInfo';
+import {PersonalInfoEdit} from './PersonalInfoEdit';
 import {MyAddress} from './MyAddress'
-
-export interface Users{
-    fullName:string;
-    email:string;
-    phone:string;
-    gender:string;
-    dob:string;
-}
-
-export interface Address{
-    addressName:string;
-    addressLine:string;
-    area?:string;
-    zone?:string;
-    thana:string;
-    district:string;
-}
+import {User, Address, Zilla, Area, Zone} from './MyProfilePage'
 
 interface PersonalInfoContainerProps{
-    userDetails:Users;
-    userAddress:Array<Address>;
+    userDetails:User;
+    userAddress:Address[];
+    zillas:Zilla[];
+    areas:Area[];
+    zones:Zone[];
 }
 
+const PersonalInfoContainer:FC<PersonalInfoContainerProps> = ({
+    userDetails, 
+    userAddress, 
+    zillas, 
+    areas, 
+    zones
+}) => {
 
-const PersonalInfoContainer:FC<PersonalInfoContainerProps> = ({userDetails, userAddress}:PersonalInfoContainerProps) => {
+    const [showPersonalInfo, setShowPersonalInfo] = useState('update')
     return (
         <div className='personalInfoContWrapper'>
             <div className="personalInfo">
-                <PersonalInfo userDetails={userDetails}/>
+                {
+                    showPersonalInfo === 'edit'?
+                    (
+                        <PersonalInfoEdit 
+                        userDetails={userDetails} 
+                        setShowPersonalInfo={setShowPersonalInfo}
+                    /> 
+                    ):
+                    (
+                        <PersonalInfo 
+                        userDetails={userDetails} 
+                        setShowPersonalInfo={setShowPersonalInfo}
+                    /> 
+                    )
+                }
             </div>
             <div className="myAddressdetails">
-                <MyAddress userAddress={userAddress}/>
+                <MyAddress 
+                    userAddress={userAddress} 
+                    zillas={zillas} 
+                    areas={areas} 
+                    zones={zones}
+                />
             </div>
         </div>
     )

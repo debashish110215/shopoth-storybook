@@ -1,6 +1,6 @@
 import {FC, useEffect} from 'react'
 import '../../styles/myProfile/personalInfoEdit.scss';
-import {Users} from './PersonalInfoContainer';
+import {User} from './MyProfilePage';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {useForm, Controller} from 'react-hook-form'
@@ -20,9 +20,13 @@ const schema = yup.object().shape({
 
 
 interface PersonalInfoEditProps{
-    userDetails:Users
+    userDetails:User;
+    setShowPersonalInfo:(value:string) => void;
 }
-export const PersonalInfoEdit:FC<PersonalInfoEditProps> = ({userDetails}:PersonalInfoEditProps) => {
+export const PersonalInfoEdit:FC<PersonalInfoEditProps> = ({
+    userDetails,
+    setShowPersonalInfo
+}) => {
 
 
     const { register, handleSubmit, control,reset, formState: { errors } } = useForm<IFormInputs>({
@@ -30,7 +34,7 @@ export const PersonalInfoEdit:FC<PersonalInfoEditProps> = ({userDetails}:Persona
     });
     useEffect(()=>{
         reset({
-            name:userDetails.fullName,
+            name:userDetails.userName,
             email:userDetails.email,
             phone:userDetails.phone,
             dob:new Date(userDetails.dob)
@@ -42,7 +46,7 @@ export const PersonalInfoEdit:FC<PersonalInfoEditProps> = ({userDetails}:Persona
             <form onSubmit={handleSubmit(onSubmit)}>
             <div className="personalInfoEditHeader">
                 <h4>Personal Information</h4>
-                <button>Update</button>
+                <button onClick = {() => setShowPersonalInfo('update')}>Update</button>
             </div>
             <div className="personalInfoEditForm">
                 <div className="formItem">

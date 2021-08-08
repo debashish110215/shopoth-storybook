@@ -13,6 +13,18 @@ $borderColor:#DFE7FF;
     font-family: 'Lato', sans-serif;
 }
 
+@mixin  common_input_style {
+    border: 1px solid $borderColor;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 8px 10px;
+    outline: none;
+    margin-bottom: 7px;
+    &:hover{
+        box-shadow: 1px 1px 5px $borderColor;
+
+    } 
+}
 .newAddressContainer{
     height: 100vh;
     display: flex;
@@ -36,33 +48,26 @@ $borderColor:#DFE7FF;
             padding-right: 20px;
             color: $textColor;
             h4{
-                font-size: 24px;
+                font-size: 20px;
                 font-weight: 700;
                 line-height: 30px;
-                padding: 5px 0px;
+                padding-bottom: 15px;
             }
             .addNewAddressForm{
                 .formLabel{
                     display: block;
                     padding-bottom: 3px;
+                    font-size: 14px;
                 }
+
                 .fromInput{
                     display: block;
                     width: 100%;
-                    border: 1px solid $borderColor;
-                    border-radius: 5px;
-                    font-size: 14px;
-                    padding: 8px 10px;
-                    outline: none;
-                    margin-bottom: 5px;
-                    &:hover{
-                        box-shadow: 1px 1px 5px $borderColor;
-
-                    } 
+                    @include common_input_style
                 }
 
                     .addressName{
-                        margin-bottom: 8px;
+                        margin-bottom: 10px;
                     }
                     .addresses{
 
@@ -71,17 +76,9 @@ $borderColor:#DFE7FF;
                             .selectZilla,  .selectArea{
                                 display: block;
                                 flex-grow: 1;
-                                border: 1px solid $borderColor;
                                 background-color: #ffffff;
-                                border-radius: 5px;
-                                font-size: 14px;
-                                padding: 8px 10px;
-                                outline: none;
-                                margin-bottom: 5px;
-                                &:hover{
-                                    box-shadow: 1px 1px 5px $borderColor;
-            
-                                } 
+                                @include common_input_style
+                                
                             }
                             .selectArea{
                                 margin-left: 5px;
@@ -90,17 +87,8 @@ $borderColor:#DFE7FF;
                         .selectZone{
                             display: block;
                             width: 100%;
-                            border: 1px solid $borderColor;
                             background-color: #ffffff;
-                            border-radius: 5px;
-                            font-size: 14px;
-                            padding: 8px 10px;
-                            outline: none;
-                            margin-bottom: 5px;
-                            &:hover{
-                                box-shadow: 1px 1px 5px $borderColor;
-        
-                            } 
+                            @include common_input_style
                         }
                     }
             }
@@ -108,7 +96,7 @@ $borderColor:#DFE7FF;
         }
             .addBtn{
                 width: 350px;
-                margin-top: 10px;
+                margin-top: 15px;
             }
         }
     

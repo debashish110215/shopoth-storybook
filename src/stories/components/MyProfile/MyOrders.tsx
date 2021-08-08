@@ -2,16 +2,16 @@ import {FC, useState, useEffect} from 'react';
 import {CartButton} from '../CartButton';
 import {Link, BrowserRouter as Router}  from 'react-router-dom';
 import '../../styles/myProfile/myOrder.scss';
-import {Order} from './MyOrderContainer'
+import {Order} from './MyProfilePage'
 
 
-interface MyOrderProps{
+interface MyOrdersProps{
     orderList:Array<Order>;
     oreder_key:string;
 }
 
 
-export const MyOrder:FC<MyOrderProps> = ({orderList, oreder_key}) => {
+export const MyOrders:FC<MyOrdersProps> = ({orderList, oreder_key}) => {
     const [orderItemList, setOrderItemList] = useState<Order[]>([])
 
     useEffect(()=>{
