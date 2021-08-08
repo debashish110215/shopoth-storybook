@@ -1,0 +1,117 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textColorGray:#343A40 ;
+$textColorLightGray:#9E9E9E;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.newAddressContainer{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .addNewAddressWrapper{
+        background-color: #ffffff;
+        max-width: 500px;
+        padding: 10px 10px 20px 30px;
+        border-radius: 8px;
+        color: $textColor;
+        box-shadow: 1px 1px 5px $textColor;
+        .closeBtn{
+            text-align: right;
+            .closeBtnIcon{
+                cursor: pointer;
+            }
+        }
+        .addNewAddressContent{
+            padding-right: 20px;
+            color: $textColor;
+            h4{
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 30px;
+                padding: 5px 0px;
+            }
+            .addNewAddressForm{
+                .formLabel{
+                    display: block;
+                    padding-bottom: 3px;
+                }
+                .fromInput{
+                    display: block;
+                    width: 100%;
+                    border: 1px solid $borderColor;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    padding: 8px 10px;
+                    outline: none;
+                    margin-bottom: 5px;
+                    &:hover{
+                        box-shadow: 1px 1px 5px $borderColor;
+
+                    } 
+                }
+
+                    .addressName{
+                        margin-bottom: 8px;
+                    }
+                    .addresses{
+
+                        .selectGroup{
+                            display: flex;
+                            .selectZilla,  .selectArea{
+                                display: block;
+                                flex-grow: 1;
+                                border: 1px solid $borderColor;
+                                background-color: #ffffff;
+                                border-radius: 5px;
+                                font-size: 14px;
+                                padding: 8px 10px;
+                                outline: none;
+                                margin-bottom: 5px;
+                                &:hover{
+                                    box-shadow: 1px 1px 5px $borderColor;
+            
+                                } 
+                            }
+                            .selectArea{
+                                margin-left: 5px;
+                            }
+                        }
+                        .selectZone{
+                            display: block;
+                            width: 100%;
+                            border: 1px solid $borderColor;
+                            background-color: #ffffff;
+                            border-radius: 5px;
+                            font-size: 14px;
+                            padding: 8px 10px;
+                            outline: none;
+                            margin-bottom: 5px;
+                            &:hover{
+                                box-shadow: 1px 1px 5px $borderColor;
+        
+                            } 
+                        }
+                    }
+            }
+
+        }
+            .addBtn{
+                width: 350px;
+                margin-top: 10px;
+            }
+        }
+    
+}
+
+
