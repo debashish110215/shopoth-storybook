@@ -1,15 +1,36 @@
 import {FC} from 'react';
 import '../../styles/myProfile/myOutletShop.scss';
 import {MyOutletShopDetails} from './MyOutletShopDetails';
-import {Outlet} from './MyProfilePage';
+import {Outlet} from './types';
 
+const  outletList = [
+    { 
+        outletId:125635, 
+        name:'Zamal Store', 
+        address:'Amborkhna Bus stand', 
+        district:'Bogura', 
+        ownerName:'Md. Zamal Hossain', 
+        phone:'01725 569 652'
+    },
+    { 
+        outletId:125635, 
+        name:'Zamal Store', 
+        address:'Amborkhna Bus stand', 
+        district:'Bogura', 
+        ownerName:'Md. Zamal Hossain', 
+        phone:'01725 569 652'
+    },
+    { 
+        outletId:125635, 
+        name:'Zamal Store', 
+        address:'Amborkhna Bus stand', 
+        district:'Bogura', 
+        ownerName:'Md. Zamal Hossain', 
+        phone:'01725 569 652'
+    },
+]
 
-
-interface MyOutletShopProps{
-    outletList:Array<Outlet>
-}
-
-const MyOutletShop:FC<MyOutletShopProps> = ({outletList}:MyOutletShopProps) => {
+const MyOutletShop:FC = () => {
     return (
         <div className='myOutletWrapper'>
             <div className="myOutletHeader">

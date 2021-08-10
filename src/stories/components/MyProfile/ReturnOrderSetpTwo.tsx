@@ -2,7 +2,7 @@ import {FC, useState, useEffect} from 'react'
 import '../../styles/myProfile/returnOrderStepTwo.scss';
 import Dotdotdot from 'react-dotdotdot';
 import {SubmitButton} from '../SubmitButton'
-import {Address} from './PersonalInfoContainer';
+import {Address} from './types';
 import ShippingDetails from './ShippingDetails';
 import ImageUpload from './ImageUpload';
 import {useForm, SubmitHandler} from 'react-hook-form';

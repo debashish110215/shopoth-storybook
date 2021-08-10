@@ -1,6 +1,6 @@
 import {FC, useState} from 'react'
 import '../../styles/myProfile/paymentSummary.scss';
-import {Payment} from './OrderDetails';
+import {Payment} from './types';
 import {BsPlus} from 'react-icons/bs'
 import {HiOutlineMinusSm} from 'react-icons/hi'
 

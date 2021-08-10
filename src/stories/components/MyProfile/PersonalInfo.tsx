@@ -1,6 +1,6 @@
 import {FC} from 'react'
 import '../../styles/myProfile/personalInfo.scss';
-import {User} from './MyProfilePage'
+import {User} from './types'
 
 interface PersonalInfoProps{
     userDetails:User;

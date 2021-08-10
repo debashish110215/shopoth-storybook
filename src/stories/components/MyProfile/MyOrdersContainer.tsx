@@ -1,42 +1,35 @@
-import {FC} from 'react';
+import {useState} from 'react';
 import '../../styles/myProfile/myOrderContainer.scss';
-import Tabs,{Tab} from "./MyOrderTabs";
-import {MyOrders} from './MyOrders'
-import {Order} from './MyProfilePage'
+import TabContainer from './TabContainer';
+import OrderDetails from './OrderDetails';
+import ReturnOrderStepOne from './ReturnOrderStepOne';
 
 
-interface MyOrdersContainerProps{
-    orderList:Array<Order>
-}
+const MyOrdersContainer= () => {
+    const [selectedOrderId, setSelectedOrderId] = useState(0)
+    const [orderKey, setOrderKey] = useState('')
 
-const MyOrdersContainer:FC<MyOrdersContainerProps> = ({
-        orderList
-    }) => {
+    const myOrderComponent = (orderKey:string)=>{
+        switch (orderKey) {
+            case 'order_details':
+                return <OrderDetails/>
+                break;
+                case 'return_order':
+                return <ReturnOrderStepOne/>
+                break;
+            default:
+                break;
+        }
+    }
     return (
-        <div className='myOrderContWrapper'>
-        <div className="myOrderContHeader">
-            <h4>My Orders</h4>
-        </div>
-            <Tabs>
-                <Tab title="All">
-                    <MyOrders orderList={orderList} oreder_key=''/>
-                </Tab>
-                <Tab title="Past Purchase">
-                    <MyOrders orderList={orderList} oreder_key='past_purchase'/>
-                </Tab>
-                <Tab title="In Progress">
-                    <MyOrders orderList={orderList} oreder_key='in_progress'/>
-                </Tab>
-                <Tab title="Completed">
-                    <MyOrders orderList={orderList} oreder_key='completed'/>
-                </Tab>
-                <Tab title="Cancelled">
-                    <MyOrders orderList={orderList} oreder_key='cancelled'/>
-                </Tab>
-                <Tab title="Return">
-                    <MyOrders orderList={orderList} oreder_key='return'/>
-                </Tab>
-            </Tabs>
+        <div className='myOrderContainer'>
+            { 
+                selectedOrderId? myOrderComponent(orderKey):
+                    <TabContainer 
+                        setSelectedOrderId={setSelectedOrderId}
+                        setOrderKey = {setOrderKey}
+                    />
+            }
         </div>
     )
 }

@@ -1,17 +1,117 @@
 import {FC, useState, useEffect} from 'react';
 import {CartButton} from '../CartButton';
-import {Link, BrowserRouter as Router}  from 'react-router-dom';
 import '../../styles/myProfile/myOrder.scss';
-import {Order} from './MyProfilePage'
+import {Order} from './types'
+import MyOrderItem from './MyOrderItem'
 
 
+const orderList = [
+    { 
+        id:1,
+        imgUrl:'./shopoth/images/png/p3.png', 
+        productTitle:'Havit HV-139D 3.5mm Stereo Headphone Black (Double Port /Single Port)', 
+        orderId:125874,
+        amount:3500,
+        status:'in_progress',
+        dateTime:'12-06-21, 10.21'
+    },
+    { 
+        id:2,
+        imgUrl:'./shopoth/images/png/p3.png', 
+        productTitle:'Havit HV-139D 3.5mm Stereo Headphone Black (Double Port /Single Port)', 
+        orderId:125874,
+        amount:3500,
+        status:'completed',
+        dateTime:'12-06-21, 10.21',
+        returnDate:'30-07-21'
+    },
+    { 
+        id:3,
+        imgUrl:'./shopoth/images/png/p3.png', 
+        productTitle:'Havit HV-139D 3.5mm Stereo Headphone Black (Double Port /Single Port)', 
+        orderId:125874,
+        amount:3500,
+        status:'in_progress',
+        dateTime:'12-06-21, 10.21'
+    },
+    { 
+        id:4,
+        imgUrl:'./shopoth/images/png/p3.png', 
+        productTitle:'Havit HV-139D 3.5mm Stereo Headphone Black (Double Port /Single Port)', 
+        orderId:125874,
+        amount:3500,
+        status:'in_progress',
+        dateTime:'12-06-21, 10.21'
+    },
+    { 
+        id:5,
+        imgUrl:'./shopoth/images/png/p3.png', 
+        productTitle:'Havit HV-139D 3.5mm Stereo Headphone Black (Double Port /Single Port)', 
+        orderId:125874,
+        amount:3500,
+        status:'cancelled',
+        dateTime:'12-06-21, 10.21'
+    },
+    { 
+        id:6,
+        imgUrl:'./shopoth/images/png/p3.png', 
+        productTitle:'Havit HV-139D 3.5mm Stereo Headphone Black (Double Port /Single Port)', 
+        orderId:125874,
+        amount:3500,
+        status:'cancelled',
+        dateTime:'12-06-21, 10.21',
+        returnDate:'30-07-21'
+    },
+    { 
+        id:7,
+        imgUrl:'./shopoth/images/png/p3.png', 
+        productTitle:'Havit HV-139D 3.5mm Stereo Headphone Black (Double Port /Single Port)', 
+        orderId:125874,
+        amount:3500,
+        status:'return',
+        dateTime:'12-06-21, 10.21'
+    },
+    { 
+        id:8,
+        imgUrl:'./shopoth/images/png/p3.png', 
+        productTitle:'Havit HV-139D 3.5mm Stereo Headphone Black (Double Port /Single Port)', 
+        orderId:125874,
+        amount:3500,
+        status:'past_purchase',
+        dateTime:'12-06-21, 10.21'
+    },
+    { 
+        id:9,
+        imgUrl:'./shopoth/images/png/p3.png', 
+        productTitle:'Havit HV-139D 3.5mm Stereo Headphone Black (Double Port /Single Port)', 
+        orderId:125874,
+        amount:3500,
+        status:'return',
+        dateTime:'12-06-21, 10.21'
+    },
+    { 
+        id:10,
+        imgUrl:'./shopoth/images/png/p3.png', 
+        productTitle:'Havit HV-139D 3.5mm Stereo Headphone Black (Double Port /Single Port)', 
+        orderId:125874,
+        amount:3500,
+        status:'past_purchase',
+        dateTime:'12-06-21, 10.21'
+    },
+]
 interface MyOrdersProps{
-    orderList:Array<Order>;
     oreder_key:string;
+    setSelectedOrderId:( id:number)=> void;
+    setOrderKey:(order_key:string) => void
+
 }
 
 
-export const MyOrders:FC<MyOrdersProps> = ({orderList, oreder_key}) => {
+export const MyOrders:FC<MyOrdersProps> = ({ 
+        oreder_key, 
+        setSelectedOrderId, 
+        setOrderKey
+    }) => {
     const [orderItemList, setOrderItemList] = useState<Order[]>([])
 
     useEffect(()=>{
@@ -22,46 +122,19 @@ export const MyOrders:FC<MyOrdersProps> = ({orderList, oreder_key}) => {
         setOrderItemList(items)
     },[oreder_key])
     return (
-        <Router>
             <div className='myOrderWrapper'>
                 {
                     orderItemList.length > 0 && 
-                    orderItemList.map(order =>(
-                        <div className="orderItem">
-                            <div className="orderInfo">
-                                <div className="orderDes">
-                                    <p className='orderId'>Order ID #{order.orderId}</p>
-                                    <p>Amount : {order.amount}</p>
-                                    <p>Status : {order.status ==='in_progress'?'In Progress'    
-                                                :order.status === 'completed'? 'Completed'
-                                                :order.status === 'cancelled'? 'Cancelled'
-                                                :order.status === 'past_purchase'? 'Past Purchase'
-                                                :order.status === 'return'? 'Return':''}</p>
-                                    <p>Date & Time : {order.dateTime}</p>
-                                </div>
-                                <div className="orderAction">
-                                    <Link to='/' className="orderDetails">
-                                        <CartButton label='Order Details' color='cart' />
-                                    </Link>
-                                    <Link to='/' className="cancelOrder">
-                                        <CartButton label='Cancel Order' outline={true} color='cart'/>
-                                    </Link>
-                                </div>
-                            </div>
-                            {
-                                order.status === 'completed' &&
-                                    (
-                                        <div className="returnAction">
-                                            <CartButton label='Return' outline={true} color='cart'/>
-                                        </div>
-                                    )
-                            }
-                        </div>
+                    orderItemList.map((order, index )=>(
+                        <MyOrderItem 
+                            order={order}   
+                            key={index} 
+                            setSelectedOrderId={setSelectedOrderId}
+                            setOrderKey = {setOrderKey}
+                        />
                     ))
                 }
             </div>
-        </Router>
-
     )
 }
 

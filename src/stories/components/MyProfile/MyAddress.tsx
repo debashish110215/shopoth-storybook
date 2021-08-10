@@ -1,16 +1,13 @@
 import {FC, useState} from 'react'
 import '../../styles/myProfile/myAddress.scss';
-import {Address, Zilla, Area, Zone} from './MyProfilePage';
 import AddNewAddress from './AddNewAddress'
 
-interface MyAddressProps{
-    userAddress:Array<Address>;
-    zillas:Zilla[];
-    areas:Area[];
-    zones:Zone[];
-}
+const userAddress = [
+    {addressName:'Home Address', addressLine:'23/2, Shah Paran', thana:'Kahalu', district:'Bogura'},
+    {addressName:'Office Address', addressLine:'23/2, Shah Paran', thana:'Kahalu', district:'Bogura'}
+]
 
-export const MyAddress:FC<MyAddressProps> = ({userAddress, zillas, areas, zones}:MyAddressProps) => {
+export const MyAddress:FC = () => {
     const [showMsgPopUp, setShowMsgPopUp] = useState(false)
     const [addressKey, setAddressKey] = useState('')
     return (
@@ -58,9 +55,6 @@ export const MyAddress:FC<MyAddressProps> = ({userAddress, zillas, areas, zones}
         <AddNewAddress 
             showMsgPopUp={showMsgPopUp} 
             setShowMsgPopUp = {setShowMsgPopUp}
-            zones={zones}
-            areas = {areas}
-            zillas = {zillas}
             address_key={addressKey}
             />
         </>

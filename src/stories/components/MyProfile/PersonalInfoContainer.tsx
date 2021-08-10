@@ -3,23 +3,20 @@ import '../../styles/myProfile/personalInfoContainer.scss';
 import {PersonalInfo} from './PersonalInfo';
 import {PersonalInfoEdit} from './PersonalInfoEdit';
 import {MyAddress} from './MyAddress'
-import {User, Address, Zilla, Area, Zone} from './MyProfilePage'
+import MyOutletShop from './MyOutletShop';
 
-interface PersonalInfoContainerProps{
-    userDetails:User;
-    userAddress:Address[];
-    zillas:Zilla[];
-    areas:Area[];
-    zones:Zone[];
+const userDetails ={
+    id:1,
+    userId:'025462',
+    userName:'Cameron Williamson',
+    email : 'Sayekat Chakraborty@gmil.com',
+    phone : '+880 1926 569 236',
+    gender : 'Male',
+    dob : '12/02/1992',
+    userImgUrl:'./pro_img.png',
+    accountCreationDate:'2021',
 }
-
-const PersonalInfoContainer:FC<PersonalInfoContainerProps> = ({
-    userDetails, 
-    userAddress, 
-    zillas, 
-    areas, 
-    zones
-}) => {
+const PersonalInfoContainer:FC = () => {
 
     const [showPersonalInfo, setShowPersonalInfo] = useState('update')
     return (
@@ -42,12 +39,10 @@ const PersonalInfoContainer:FC<PersonalInfoContainerProps> = ({
                 }
             </div>
             <div className="myAddressdetails">
-                <MyAddress 
-                    userAddress={userAddress} 
-                    zillas={zillas} 
-                    areas={areas} 
-                    zones={zones}
-                />
+                <MyAddress />
+            </div>
+            <div className="outlet">
+                <MyOutletShop/>
             </div>
         </div>
     )

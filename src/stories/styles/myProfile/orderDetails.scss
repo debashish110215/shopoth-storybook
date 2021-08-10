@@ -18,6 +18,17 @@ $borderColor:#DFE7FF;
     padding: 24px 40px;
     font-weight: 700;
     color: $textColor;
+    .backMyOrders{
+        text-align: right;
+        button{
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: orange;
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
     .orderDetailsHeader{
         display: flex;
         justify-content: space-between;

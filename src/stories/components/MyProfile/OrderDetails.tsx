@@ -1,51 +1,74 @@
 import {FC} from 'react'
 import '../../styles/myProfile/orderDetails.scss';
 import Dotdotdot from 'react-dotdotdot';
-import {Address} from './PersonalInfoContainer';
 import PaymentSummary from './PaymentSummary'
 import ShippingDetails from './ShippingDetails';
-import {SubmitButton} from '../SubmitButton'
+import {SubmitButton} from '../SubmitButton';
+import {CartButton} from '../CartButton'
 
+const orderDetailsData = {
+    orderId:'125874',
+    orderedProductList:[
+        { 
+            id:1,
+            imgUrl:'./shopoth/images/png/p3.png', 
+            productTitle:'Havit HV-139D 3.5mm Stereo Headphone Black (Double Port /Single Port)', 
+            quantury:2,
+            amount:3500,
+            currency:'Tk',
+            status:'completed',
+            dateTime:'12-06-21, 10.21',
+            deliveryId:'1256487',
+        },
+        { 
+            id:2,
+            imgUrl:'./shopoth/images/png/download.png', 
+            productTitle:'Asus RT-AC1200 V2 Dual-Band Wifi Wireless Router', 
+            quantury:1,
+            amount:3500,
+            currency:'Tk',
+            status:'completed',
+            dateTime:'12-06-21, 10.21',
+            deliveryId:'1256487',
+        },
+        { 
+            id:3,
+            imgUrl:'./shopoth/images/png/G03.jpg', 
+            productTitle:'Body Lotion for Dry Skin', 
+            quantury:5,
+            amount:3500,
+            currency:'Tk',
+            status:'completed',
+            dateTime:'12-06-21, 10.21',
+            deliveryId:'1256487',
+        },
+        
+    ],
+    paymentsummary:{
+        trxId : '8F35WI0Y51',
+        payment_key:'bikash'
+    },
+    shippingDetails:{
+        recipentName:'Md.Mizanur Rahman',
+        phone:'01521120115',
+        address:
+            {
+                addressName:'Home Address', 
+                addressLine:'23/2, Shah Paran', 
+                thana:'Kahalu', 
+                district:'Bogura'
+            },
+        
+    }
 
-export interface OrderedProduct{
-    id:number;
-    imgUrl:string;
-    productTitle:string;
-    quantury:number;
-    amount:number;
-    status:string;
-    dateTime:string;
-    currency?:string;
-    deliveryId?:string;
+};
 
-}
-export interface Payment{
-    trxId:string;
-    payment_key:string;
-}
-
-export interface Shipping{
-    recipentName:string;
-    phone:string;
-    address:Address;
-
-}
-
-interface OrderDetailsProps{
-    orderId:string;
-    orderedProductList:Array<OrderedProduct>;
-    paymentsummary:Payment;
-    shippingDetails:Shipping;
-}
-
-const OrderDetails:FC<OrderDetailsProps> = ({
-    orderId, 
-    orderedProductList, 
-    paymentsummary,
-    shippingDetails
-    }) => {
+const OrderDetails:FC = () => {
     return (
         <div className='orderDetailsWrapper'>
+            <div className="backMyOrders">
+                <button>Back</button>
+            </div>
             <div className="orderDetailsHeader">
                 <h4>Order Details</h4>
                 <div className='flexGrow'></div>
@@ -55,18 +78,12 @@ const OrderDetails:FC<OrderDetailsProps> = ({
                 </div>
             </div>
             <div className="orderNum">
-                    Order Number #{orderId}
+                    Order Number #{orderDetailsData.orderId}
                 </div>
             {
-                orderedProductList.length > 0 &&
-                orderedProductList.map(item =>(
+                orderDetailsData.orderedProductList.length > 0 &&
+                orderDetailsData.orderedProductList.map(item =>(
                     <div className="orderItem" key={item.id}>
-                        <div className="orderItemSelectRadio">
-                            <label className="radioContainer">
-                                <input type="radio"  name="radio"/>
-                                <span className="checkmark"></span>
-                            </label>
-                        </div>
                         <div className="orderItemImgWraper">
                             <img className='orderItemImg' src={`${item.imgUrl}`} alt={`${item.productTitle}`} />
                         </div>
@@ -99,10 +116,10 @@ const OrderDetails:FC<OrderDetailsProps> = ({
                     <h4>Tk 8200</h4>
                 </div>
             <div className="orderPaymnet">
-            <PaymentSummary paymentSummary={paymentsummary}/>
+            <PaymentSummary paymentSummary={orderDetailsData.paymentsummary}/>
             </div>
             <div className="orderAddress">
-            <ShippingDetails  shippingDetails={shippingDetails}/>
+            <ShippingDetails  shippingDetails={orderDetailsData.shippingDetails}/>
             </div>
             
         </div>

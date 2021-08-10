@@ -1,6 +1,6 @@
 import {FC, useEffect} from 'react'
 import '../../styles/myProfile/personalInfoEdit.scss';
-import {User} from './MyProfilePage';
+import {User} from './types';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {useForm, Controller} from 'react-hook-form'

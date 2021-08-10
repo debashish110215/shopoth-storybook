@@ -2,30 +2,55 @@ import {FC} from 'react'
 import '../../styles/myProfile/returnOrderStepOne.scss';
 import Dotdotdot from 'react-dotdotdot';
 import {SubmitButton} from '../SubmitButton'
+import { string } from 'yup';
+
+const returnOrderDetails = {
+    orderId:'125874',
+    orderedProductList:[
+        { 
+            id:1,
+            imgUrl:'./shopoth/images/png/p3.png', 
+            productTitle:'Havit HV-139D 3.5mm Stereo Headphone Black (Double Port /Single Port)', 
+            quantury:2,
+            amount:3500,
+            currency:string,
+            status:'completed',
+            dateTime:'12-06-21, 10.21',
+            deliveryId:'1256487',
+        },
+        { 
+            id:2,
+            imgUrl:'./shopoth/images/png/download.png', 
+            productTitle:'Asus RT-AC1200 V2 Dual-Band Wifi Wireless Router', 
+            quantury:1,
+            amount:3500,
+            currency:string,
+            status:'completed',
+            dateTime:'12-06-21, 10.21',
+            deliveryId:'1256487',
+        },
+        { 
+            id:3,
+            imgUrl:'./shopoth/images/png/G03.jpg', 
+            productTitle:'Body Lotion for Dry Skin', 
+            quantury:5,
+            amount:3500,
+            currency:string,
+            status:'completed',
+            dateTime:'12-06-21, 10.21',
+            deliveryId:'1256487',
+        },
+        
+    ],
+
+};
 
 
-export interface OrderedProduct{
-    id:number;
-    imgUrl:string;
-    productTitle:string;
-    quantury:number;
-    amount:number;
-    status:string;
-    dateTime:string;
-    currency?:string;
-    deliveryId?:string;
-
-}
 
 
-interface ReturnOrderStepOneProps{
-    orderId:string;
-    orderedProductList:Array<OrderedProduct>;
-}
 
-const ReturnOrderStepOne:FC<ReturnOrderStepOneProps> = ({
-    orderId, 
-    orderedProductList, 
+const ReturnOrderStepOne = ({
+
     }) => {
     return (
         <div className='returnOrderOneWrapper'>
@@ -33,11 +58,11 @@ const ReturnOrderStepOne:FC<ReturnOrderStepOneProps> = ({
                 <h4>Return (Step 1/2)</h4>
             </div>
             <div className="returnOrderOneNum">
-                    Order Number #{orderId}
+                    Order Number #{returnOrderDetails.orderId}
                 </div>
             {
-                orderedProductList.length > 0 &&
-                orderedProductList.map(item =>(
+                returnOrderDetails.orderedProductList.length > 0 &&
+                returnOrderDetails.orderedProductList.map(item =>(
                     <div className="returnOrderOneItem" key={item.id}>
                         <div className="returnOrderOneSelectRadio">
                             <label className="radioContainer">

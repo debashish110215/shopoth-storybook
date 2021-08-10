@@ -13,16 +13,13 @@ $borderColor:#DFE7FF;
 .myProfilePageWrapper{
     display: flex;
     .myProfileSidebar{
-        flex-grow: 2;
+        width: 30%;
         margin-right: 20px;
     }
     .myProfileContent{
-        flex-grow: 4;
+        width: 70%;
         .userInfo{
             margin-bottom: 20px;
         }
     }
-    // .outlet{
-
-    // }
 }

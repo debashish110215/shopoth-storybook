@@ -4,14 +4,41 @@ import {Link, BrowserRouter as Router}  from 'react-router-dom';
 import {IoIosCloseCircle} from 'react-icons/io'
 import {AiFillQuestionCircle, AiFillCheckCircle} from 'react-icons/ai'
 import '../../styles/myProfile/notificationMsg.scss'
-import {Notification} from './MyProfilePage'
-interface NotificationMsgProps{
-    notificationList:Array<Notification>
-}
+import {Notification} from './types'
 
-const NotificationMsg:FC<NotificationMsgProps> = ({
-    notificationList
-}) => {
+
+const  notificationList = [
+    { 
+        id:1,
+        title:'Did you enjoy your shopping experience?',
+        key:'question',
+        status:'completed',
+        orderId:'2015MXQ62',
+        oderDate:'20/07/2021'
+    },
+    { 
+        id:2,
+        title:'Cancellation Request Accepted',
+        key:'cancel',
+        status:'canceled',
+        orderId:'2015MXQ62',
+        oderDate:'20/07/2021'
+    },
+    { 
+        id:3,
+        title:'Confirm Recipet',
+        key:'confirm',
+        status:'completed',
+        orderId:'2015MXQ62',
+        oderDate:'20/07/2021'
+    },
+]
+
+const NotificationMsg:FC = () => {
+
+    const showOrderDetails = () =>{
+
+    }
     return (
         <Router>
             <div className='nftMsgWrapper'>
@@ -37,10 +64,10 @@ const NotificationMsg:FC<NotificationMsgProps> = ({
                                 </div>
                                 <div className="nftAction">
                                     <Link to='/' className="nftorderDetails">
-                                        <CartButton label='Order Details' color='cart' />
+                                        <CartButton label='Order Details' color='cart' onClick={showOrderDetails} />
                                     </Link>
                                     <Link to='/' className="nftBuyAgain">
-                                        <CartButton label='Buy Again' outline={true} color='cart'/>
+                                        <CartButton label='Buy Again' outline={true} color='cart' onClick={showOrderDetails}/>
                                     </Link>
                                 </div>
                             </div>

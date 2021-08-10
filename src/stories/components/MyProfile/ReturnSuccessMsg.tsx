@@ -11,6 +11,9 @@ interface ReturnTankYouProps{
 }
 
 const ReturnSuccessMsg:React.FC<ReturnTankYouProps> = ({showMsgPopUp, setShowMsgPopUp}) => {
+    const onSuccess = () =>{
+        
+    }
     return (
         <Overlay show={showMsgPopUp} onClose={() =>setShowMsgPopUp(!showMsgPopUp)} children={
 
@@ -28,7 +31,7 @@ const ReturnSuccessMsg:React.FC<ReturnTankYouProps> = ({showMsgPopUp, setShowMsg
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, adipisci error, quia ratione rerum sed nulla expedita labore laudantium maxime aspernatur doloribus temporibus sapiente at quo impedit nihil. Culpa, vel?</p>
                     </div>
                     <div className="okeyBtn">
-                        <CartButton label='Okey' color='cart'/>
+                        <CartButton label='Okey' color='cart' onClick={onSuccess}/>
                     </div>
                 </div>
             </div>
