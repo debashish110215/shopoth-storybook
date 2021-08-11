@@ -8,8 +8,8 @@ interface MyOrderTabsProps{
 const MyOrderTabs:FC<MyOrderTabsProps> = ({ children }) => {
     const [selectedTab, setSelectedTab] = useState(0)
 
-    const handleSelectTab = (index:number)=>{
-        setSelectedTab(index)
+    const handleSelectOption = (e:any)=>{
+        setSelectedTab(+e.target.value)
     }
     return (
         <div className='myOrderTabsWrapper'>
@@ -18,11 +18,25 @@ const MyOrderTabs:FC<MyOrderTabsProps> = ({ children }) => {
                     <div 
                         className={` myOrderTabItem ${index === selectedTab? 'selectedTab':''}`}
                         key={index} 
-                        onClick={()=> handleSelectTab(index)}
+                        onClick={()=> setSelectedTab(index)}
                     >
                         <p>{item.props.title}</p>
                     </div>
                 ))}
+            </div>
+            <div className="myOrdersDropDown">
+                <select name="myOrderTab" className='dropdownSelect' onChange={(e)=> handleSelectOption(e)}>
+                    {
+                        children.map((item, index) => (
+                            <option 
+                                value={index}  
+                                key={index}
+                            >
+                                {item.props.title}
+                            </option>
+                        ))
+                    }
+                </select>
             </div>
         {children[selectedTab]}
         </div>

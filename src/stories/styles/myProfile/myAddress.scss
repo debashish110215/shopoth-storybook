@@ -59,3 +59,9 @@ $borderColor:#DFE7FF;
         }
     }
 }
+
+@media only screen and (max-width: 767px){
+    .addressPart{
+        display: block;
+    }
+}

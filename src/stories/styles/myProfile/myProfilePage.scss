@@ -23,3 +23,53 @@ $borderColor:#DFE7FF;
         }
     }
 }
+.profilePageForMobile{
+    display: none;
+}
+
+@media only screen and (min-width:768px) and (max-width: 992px) {
+    .myProfilePageWrapper{
+        .myProfileSidebar{
+            width: 40%;
+            margin-right: 15px;
+        }
+        .myProfileContent{
+            width: 60%;
+            .userInfo{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 767px){
+    .sidebarBackBtn{
+        margin: 15px 0px;
+        padding-left: 10px;
+        button{
+            background: none;
+            border: none;
+            color: $primaryColor;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+    .profilePageForDesktop{
+        display: none;
+    }
+    .profilePageForMobile{
+        display: block;
+    }
+    .myProfilePageWrapper{
+        display: block;
+        .myProfileSidebar{
+            width: 100%;
+        }
+        .myProfileContent{
+            width: 100%;
+            .userInfo{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

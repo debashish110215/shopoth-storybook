@@ -38,8 +38,8 @@ $borderColor:#DFE7FF;
                 right: 12px;
             }
             .favouriteImg{
-                max-width: 150px;
-                max-height: 150px;
+                width: 160px;
+                height: 160px;
             }
         }
         .favouriteContent{
@@ -50,18 +50,39 @@ $borderColor:#DFE7FF;
             justify-content: space-around;
             .favouriteItemDes{
                 h4{
-                    font-size: 18px;
+                    font-size: 16px;
                     line-height: 24px;
                     font-weight: 400;
                     padding-bottom: 10px;
                 }
                 p{
-                    font-size: 14px;
+                    font-size: 15px;
                     font-weight: 600;
                 }
             }
             .addToCartbtn{
                 max-width: 245px;
+            }
+        }
+    }
+}
+
+@media only screen  and (max-width:992px){
+    .yourFavouriteWrapper{
+        font-size: 14px;
+        .favoriteItem {
+            display: block;
+            .favouriteImgwraper{
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+            }
+
+            .favouriteContent{
+                margin-top: 15px;
+                .addToCartbtn{
+                    margin-top: 15px;
+                }
             }
         }
     }

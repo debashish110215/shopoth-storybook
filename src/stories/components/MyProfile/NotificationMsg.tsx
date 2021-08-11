@@ -71,9 +71,7 @@ const NotificationMsg:FC <NotificationMsgProps>= ({setSelectedOrderId, setOrderK
                                     <Link to='/' className="nftorderDetails">
                                         <CartButton label='Order Details' color='cart' onClick={showOrderDetails} />
                                     </Link>
-                                    <Link to='/' className="nftBuyAgain">
-                                        <CartButton label='Buy Again' outline={true} color='cart' onClick={showOrderDetails}/>
-                                    </Link>
+                                    
                                 </div>
                             </div>
                         </div>

@@ -18,20 +18,23 @@ $borderColor:#DFE7FF;
         padding: 15px 0px;
         font-size: 16px;
         color: $textColor;
-        .serialNo{
-            align-self: flex-start;
-            padding-right: 20px;
-        }
         .outletInfo{
+            display: flex;
             padding-right: 30px;
             border-right: 1px solid $borderColor;
-            p,address{
-                padding-bottom: 5px;
+            .serialNo{
+                align-self: flex-start;
+                padding-right: 20px;
             }
-            address{
-                font-size: 14px;
-                font-weight: 400;
-                color: $textSecondaryColor;
+            .outletDetails{
+                p,address{
+                    padding-bottom: 5px;
+                }
+                address{
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $textSecondaryColor;
+                }
             }
         }
         .ownerInfo{
@@ -50,4 +53,22 @@ $borderColor:#DFE7FF;
             }
         }
     }
+}
+
+@media only screen and (max-width: 767px){
+    .myOutletDetailsWrapper{
+        .myOutlet{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border-bottom: 1px solid $borderColor;
+            font-size: 14px;
+    
+            .outletInfo{
+                padding-right: 0px;
+                border-right: 0px;
+            }
+        }
+    }
+    
 }

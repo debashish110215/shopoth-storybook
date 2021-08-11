@@ -33,4 +33,31 @@ $borderColor:#DFE7FF;
             padding: 10px 20px;
         }
     }
+    .myOrdersDropDown{
+        display: none;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .myOrderTabsWrapper{
+        .myOrderTabs{
+            display: none;
+        }
+        .myOrdersDropDown{
+            display: block;
+            margin: 10px 0px;
+            .dropdownSelect{
+                width: 100%;
+                border: 1px solid $borderColor;
+                outline: none;
+                border-radius: 5px;
+                font-size: 14px;
+                font-weight: 600;
+                padding: 10px;
+                
+            }
+            .selecItem{
+                color: $primaryColor;
+            }
+        }
+    }
 }

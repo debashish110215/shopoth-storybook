@@ -49,7 +49,7 @@ const YourFavourit = () => {
                                 {/* <Dotdotdot clamp={4}> */}
                                     <h4>{item.productTitle}</h4>
                                 {/* </Dotdotdot> */}
-                                <p>{item.currency || 'Tk '}{item.price}</p> 
+                                <p>{item.currency || 'Tk '} {item.price}</p> 
                             </div>
                             <div className="addToCartbtn">
                                 <CartButton label='Add to Cart' color='cart' onClick={onAddToCart}/>

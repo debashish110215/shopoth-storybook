@@ -14,7 +14,6 @@ $borderColor:#DFE7FF;
 }
 
 .myOrderWrapper{
-
     .orderItem{
         border-bottom: 1px solid $borderColor;
         padding: 20px;
@@ -42,17 +41,22 @@ $borderColor:#DFE7FF;
                 }
             }
         }
-        .trackAction{
-            width: 55px;
-            color: $secondaryColor;
-            margin-top: 20px;
-            font-size: 20px;
-            font-weight: 700;
-            border-bottom: 1px solid $secondaryColor;
-        }
         .returnAction{
             width: 150px;
             margin-top: 20px;  
+        }
+    }
+}
+
+@media only screen and (max-width:992px){
+    .myOrderWrapper{
+        .orderItem{
+            .orderInfo{
+                display: block;
+                .orderAction{
+                    margin-top: 15px;
+                }
+            }
         }
     }
 }

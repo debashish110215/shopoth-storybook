@@ -32,7 +32,10 @@ export const MyAddress:FC = () => {
                     userAddress.map((address, index)=>(
                         <div className="myAddressItem" key={index}>
                             <div className="addressTxt">
-                                <address>{address.addressName} : {address.addressLine}, {address.thana}, {address.district} </address>
+                                <address> 
+                                    <span className='addressPart'>{address.addressName} : {address.addressLine},</span> 
+                                    <span className='addressPart'>{address.thana}, {address.district}</span> 
+                                </address>
                             </div>
                             <div className="addressEdit">
                                 <button 

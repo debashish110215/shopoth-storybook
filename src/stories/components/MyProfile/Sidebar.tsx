@@ -22,24 +22,26 @@ interface SidebarProps{
 }
 
 const Sidebar:FC<SidebarProps> = ({navKey, setNavKey}) => {
+
     return (
-        <div className='profileSidebarWrapper'>
-            <div className="profileSidebarTop">
-                <SidebarTop 
-                    userName={userDetails.userName} 
-                    userId={userDetails.userId} 
-                    userImgUrl={userDetails.userImgUrl}
-                    accountCreationDate={userDetails.accountCreationDate}
-                />
-            </div>
-            <div className="profileSidebarNav">
-                <SidebarNav id={userDetails.id}     
-                            navKey={navKey} 
-                            setNavKey={setNavKey}
-                        />
-            </div>
+    <div className='profileSidebarWrapper'>
+        <div className="profileSidebarTop">
+            <SidebarTop 
+                userName={userDetails.userName} 
+                userId={userDetails.userId} 
+                userImgUrl={userDetails.userImgUrl}
+                accountCreationDate={userDetails.accountCreationDate}
+            />
         </div>
+        <div className="profileSidebarNav">
+            <SidebarNav id={userDetails.id}     
+                        navKey={navKey} 
+                        setNavKey={setNavKey}
+                    />
+        </div>
+    </div>
     )
 }
 
 export default Sidebar
+

@@ -53,12 +53,31 @@ $borderColor:#DFE7FF;
             }
         }
         .nftAction{
-            display: flex;
             margin-top: 15px;
-            .nftBuyAgain{
-                margin-left: 15px;
-            }
+            max-width: 200px;
         }
 
+    }
+}
+
+@media only screen and (max-width: 767px){
+
+    .nftMsgWrapper{
+        .nftItem{
+            font-size: 14px;
+            .nftInfo{
+                .nftMsgDes{
+                    font-weight: 400;
+                    h4{
+                        font-size: 14px;
+                        line-height: 25px;
+                    }
+                }
+            }
+            .nftAction{
+                font-size: 14px;
+            }
+            
+    }
     }
 }
