@@ -13,12 +13,12 @@ $borderColor:#DFE7FF;
     font-family: 'Lato', sans-serif;
 }
 
-.myOrderContWrapper{
+.tabContainerWrapper{
     color: $textColor;
     border: 1px solid $borderColor;
     border-radius: 8px;
     padding: 30px;
-    .myOrderContHeader{
+    .tabContainerHeader{
         h4{
             font-size: 20px;
             font-weight: 700;

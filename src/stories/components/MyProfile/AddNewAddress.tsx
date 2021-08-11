@@ -3,7 +3,6 @@ import { Overlay } from '../Overlay';
 import {SubmitButton} from '../SubmitButton'
 import {GrFormClose} from 'react-icons/gr'
 import '../../styles/myProfile/addNewAddress.scss';
-import {Zilla, Area, Zone} from './types';
 
 
 const zillas = [

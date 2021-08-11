@@ -1,6 +1,8 @@
-import {useState, FC} from 'react'
+import {FC} from 'react'
 import Tabs,{Tab} from "./MyOrderTabs";
-import {MyOrders} from './MyOrders'
+import {MyOrders} from './MyOrders';
+import '../../styles/myProfile/tabContainer.scss';
+
 
 interface  TabContainerProps{
     setSelectedOrderId:(id:number) => void;
@@ -8,8 +10,8 @@ interface  TabContainerProps{
 }
 const TabContainer:FC<TabContainerProps> = ({setSelectedOrderId, setOrderKey }) => {
     return (
-        <div className='myOrderContWrapper'>
-        <div className="myOrderContHeader">
+        <div className='tabContainerWrapper'>
+        <div className="tabContainerHeader">
             <h4>My Orders</h4>
         </div>
             <Tabs>

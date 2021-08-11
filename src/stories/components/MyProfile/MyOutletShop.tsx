@@ -1,7 +1,6 @@
 import {FC} from 'react';
 import '../../styles/myProfile/myOutletShop.scss';
 import {MyOutletShopDetails} from './MyOutletShopDetails';
-import {Outlet} from './types';
 
 const  outletList = [
     { 

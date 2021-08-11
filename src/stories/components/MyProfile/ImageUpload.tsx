@@ -1,7 +1,6 @@
 import React, { useState , useEffect} from "react";
 import '../../styles/myProfile/imageUpload.scss';
 import {AiOutlinePlus,AiFillCloseCircle} from 'react-icons/ai';
-import { string } from "yup";
 
 interface ImageUploadProps {
     setSelectedImgFiles:(files:any[])=> void

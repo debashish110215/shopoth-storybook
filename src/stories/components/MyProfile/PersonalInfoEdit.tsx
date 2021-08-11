@@ -40,13 +40,19 @@ export const PersonalInfoEdit:FC<PersonalInfoEditProps> = ({
             dob:new Date(userDetails.dob)
         })
     },[reset] )
-    const onSubmit = (data: IFormInputs) => console.log(data);
+    const onSubmit = (data: IFormInputs) =>{
+        console.log(data);
+        setShowPersonalInfo('update')
+    } 
     return (
         <div className='personalInfoEditWrapper'>
             <form onSubmit={handleSubmit(onSubmit)}>
             <div className="personalInfoEditHeader">
                 <h4>Personal Information</h4>
-                <button onClick = {() => setShowPersonalInfo('update')}>Update</button>
+                <div>
+                    <button type='submit'>Update</button>
+                    <button className='cancelBtn' onClick = {() => setShowPersonalInfo('update')}>Cancel</button>
+                </div>
             </div>
             <div className="personalInfoEditForm">
                 <div className="formItem">

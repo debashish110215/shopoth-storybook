@@ -9,7 +9,7 @@ const userDetails ={
     id:1,
     userId:'025462',
     userName:'Cameron Williamson',
-    email : 'Sayekat Chakraborty@gmil.com',
+    email : 'SayekatChakraborty@gmil.com',
     phone : '+880 1926 569 236',
     gender : 'Male',
     dob : '12/02/1992',
@@ -20,6 +20,7 @@ const PersonalInfoContainer:FC = () => {
 
     const [showPersonalInfo, setShowPersonalInfo] = useState('update')
     return (
+        <>
         <div className='personalInfoContWrapper'>
             <div className="personalInfo">
                 {
@@ -41,10 +42,11 @@ const PersonalInfoContainer:FC = () => {
             <div className="myAddressdetails">
                 <MyAddress />
             </div>
-            <div className="outlet">
-                <MyOutletShop/>
-            </div>
         </div>
+        <div className="outlet">
+            <MyOutletShop/>
+        </div>
+        </>
     )
 }
 

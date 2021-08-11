@@ -1,5 +1,4 @@
 import {FC, useState, useEffect} from 'react';
-import {CartButton} from '../CartButton';
 import '../../styles/myProfile/myOrder.scss';
 import {Order} from './types'
 import MyOrderItem from './MyOrderItem'
@@ -105,8 +104,6 @@ interface MyOrdersProps{
     setOrderKey:(order_key:string) => void
 
 }
-
-
 export const MyOrders:FC<MyOrdersProps> = ({ 
         oreder_key, 
         setSelectedOrderId, 

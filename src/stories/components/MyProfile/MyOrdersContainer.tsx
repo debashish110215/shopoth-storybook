@@ -1,5 +1,4 @@
 import {useState} from 'react';
-import '../../styles/myProfile/myOrderContainer.scss';
 import TabContainer from './TabContainer';
 import OrderDetails from './OrderDetails';
 import ReturnOrderStepOne from './ReturnOrderStepOne';
@@ -26,7 +25,7 @@ const MyOrdersContainer= () => {
         }
     }
     return (
-        <div className='myOrderContainer'>
+        <>
             { 
                 selectedOrderId? myOrderComponent(orderKey):
                     <TabContainer 
@@ -34,7 +33,7 @@ const MyOrdersContainer= () => {
                         setOrderKey = {setOrderKey}
                     />
             }
-        </div>
+        </>
     )
 }
 

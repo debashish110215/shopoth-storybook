@@ -23,7 +23,7 @@ const NotificationContainer = () => {
         }
     }
     return (
-        <div>
+        <>
             {
                 selectedOrderId? myOrderComponent(orderKey):
                     <NotificationMsg  
@@ -31,7 +31,7 @@ const NotificationContainer = () => {
                         setOrderKey={setOrderKey}
                 />
             }
-        </div>
+        </>
     )
 }
 
