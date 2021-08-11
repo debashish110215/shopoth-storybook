@@ -14,8 +14,7 @@ export const MyOutletShopDetails:FC<MyOutletShopDetailsProps>= ({outletList}:MyO
         <div className='myOutletDetailsWrapper'>
             {
                 outletList?.map( (outlet, index)=>(
-                    <>
-                    <div className="myOutlet">
+                    <div className="myOutlet" key={index}>
                         <div className="serialNo">
                             {index + 1}.
                         </div>
@@ -37,7 +36,6 @@ export const MyOutletShopDetails:FC<MyOutletShopDetailsProps>= ({outletList}:MyO
                                 </p>
                         </div>
                     </div>
-                    </>
                 ))
             }
         </div>

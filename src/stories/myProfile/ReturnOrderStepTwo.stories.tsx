@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ReturnOrderSetpTwo from '../components/MyProfile/ReturnOrderSetpTwo';
+import ReturnOrderSetpTwo from '../components/MyProfile/ReturnOrderStepTwo';
 
 export default {
     title: 'Shop/ReturnOrderSetpTwo',

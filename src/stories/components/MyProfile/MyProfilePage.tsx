@@ -4,7 +4,7 @@ import Sidebar from './Sidebar';
 import PersonalInfoContainer from './PersonalInfoContainer';
 import YourFavourit from './YourFavourit';
 import ChangePassword from './ChangePassword';
-import NotificationMsg from './NotificationMsg';
+import NotificationContainer from './NotificationContainer';
 import MyOrdersContainer from './MyOrdersContainer';
 
 const MyProfilePage = () => {
@@ -16,7 +16,7 @@ const MyProfilePage = () => {
                     return  <PersonalInfoContainer />
                     break;
                 case 'notification':
-                    return  <NotificationMsg/>
+                    return  <NotificationContainer/>
                     break;
                 case 'my_orders':
                     return  <MyOrdersContainer/>

@@ -2,36 +2,34 @@ import {FC, useState, useEffect} from 'react'
 import '../../styles/myProfile/returnOrderStepTwo.scss';
 import Dotdotdot from 'react-dotdotdot';
 import {SubmitButton} from '../SubmitButton'
-import {Address} from './types';
 import ShippingDetails from './ShippingDetails';
 import ImageUpload from './ImageUpload';
 import {useForm, SubmitHandler} from 'react-hook-form';
 import ReturnSuccessMsg from './ReturnSuccessMsg';
 
 
-export interface returnProduct{
-    returnId:string;
-    imgUrl:string;
-    productTitle:string;
-    quantury:number;
-    amount:number;
-    status:string;
-    dateTime:string;
-    currency?:string;
-    deliveryId?:string;
-
+const returnProductDetails ={ 
+    returnId:'125874',
+    imgUrl:'./shopoth/images/png/p3.png', 
+    productTitle:'Havit HV-139D 3.5mm Stereo Headphone Black (Double Port /Single Port)', 
+    quantury:2,
+    amount:3500,
+    currency:'Tk',
+    status:'completed',
+    dateTime:'12-06-21, 10.21',
+    deliveryId:'1256487',
 }
-export interface Shipping{
-    recipentName:string;
-    phone:string;
-    address:Address;
+const shippingDetails = {
+recipentName:'Md.Mizanur Rahman',
+phone:'01521120115',
+address:
+    {
+        addressName:'Home Address', 
+        addressLine:'23/2, Shah Paran', 
+        thana:'Kahalu', 
+        district:'Bogura'
+    },
 
-}
-
-
-interface ReturnOrderSetpTwoProps{
-    returnProductDetails:returnProduct;
-    shippingDetails:Shipping;
 }
 const reasons = [
     {id:1, title:'Reason One', value:'reason_one'},
@@ -45,11 +43,12 @@ interface Inputs{
     return_reason:string;
     add_cmnt:string;
 }
+interface ReturnOrderSetpTwoProps{
+    setOrderKey:(order_key:string) => void
 
-const ReturnOrderSetpTwo:FC<ReturnOrderSetpTwoProps> = ({
-    returnProductDetails, 
-    shippingDetails
-    }) => {
+}
+
+const ReturnOrderSetpTwo:FC<ReturnOrderSetpTwoProps> = ({setOrderKey}) => {
         const [selectedImgFiles, setSelectedImgFiles] = useState<any[]>([])
         const { register, handleSubmit, formState: { errors } } = useForm<Inputs>();
         const [showMsgPopUp, setShowMsgPopUp] = useState(false)
@@ -63,6 +62,9 @@ const ReturnOrderSetpTwo:FC<ReturnOrderSetpTwoProps> = ({
         <>
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className='returnOrderOneWrapper'>
+                <div className="backStepOne">
+                    <button onClick={()=>setOrderKey('return_order_one')}>Back to Step 1</button>
+                </div>
                 <div className="returnOrderOneHeader">
                     <h4>Return (Step 2/2)</h4>
                 </div>

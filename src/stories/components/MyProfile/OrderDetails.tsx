@@ -3,7 +3,6 @@ import '../../styles/myProfile/orderDetails.scss';
 import Dotdotdot from 'react-dotdotdot';
 import PaymentSummary from './PaymentSummary'
 import ShippingDetails from './ShippingDetails';
-import {SubmitButton} from '../SubmitButton';
 import {CartButton} from '../CartButton'
 
 const orderDetailsData = {
@@ -62,18 +61,24 @@ const orderDetailsData = {
     }
 
 };
-
-const OrderDetails:FC = () => {
+interface OrderDetailsProps{
+    setSelectedOrderId:(id:number) => void;
+    setOrderKey:(order_key:string) => void
+}
+const OrderDetails:FC<OrderDetailsProps> = ({setSelectedOrderId, setOrderKey}) => {
+    const handleReturnOrders = () =>{
+        setOrderKey('return_order_one')
+    }
     return (
         <div className='orderDetailsWrapper'>
             <div className="backMyOrders">
-                <button>Back</button>
+                <button onClick={()=>setSelectedOrderId(0)}>Back to OrderList</button>
             </div>
             <div className="orderDetailsHeader">
                 <h4>Order Details</h4>
                 <div className='flexGrow'></div>
                 <div className="ordeReturn">
-                    <SubmitButton label='Return' color='cart' outline={true}/>
+                    <CartButton label='Return' color='cart' outline={true} onClick={handleReturnOrders}/>
                     <span className='orderReturnUntil'>Until 30/07/21</span>
                 </div>
             </div>

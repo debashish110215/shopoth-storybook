@@ -3,6 +3,7 @@ import '../../styles/myProfile/myOrderContainer.scss';
 import TabContainer from './TabContainer';
 import OrderDetails from './OrderDetails';
 import ReturnOrderStepOne from './ReturnOrderStepOne';
+import ReturnOrderStepTwo from './ReturnOrderStepTwo';
 
 
 const MyOrdersContainer= () => {
@@ -12,10 +13,13 @@ const MyOrdersContainer= () => {
     const myOrderComponent = (orderKey:string)=>{
         switch (orderKey) {
             case 'order_details':
-                return <OrderDetails/>
+                return <OrderDetails setSelectedOrderId ={setSelectedOrderId} setOrderKey={setOrderKey}/>
                 break;
-                case 'return_order':
-                return <ReturnOrderStepOne/>
+                case 'return_order_one':
+                return <ReturnOrderStepOne setSelectedOrderId ={setSelectedOrderId} setOrderKey={setOrderKey}/>
+                break;
+                case 'return_order_two':
+                return <ReturnOrderStepTwo setOrderKey={setOrderKey}/>
                 break;
             default:
                 break;

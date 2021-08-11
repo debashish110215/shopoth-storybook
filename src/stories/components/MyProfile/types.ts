@@ -105,3 +105,21 @@ export interface OrderedProduct{
     deliveryId?:string;
 
 }
+export interface returnProduct{
+    returnId:string;
+    imgUrl:string;
+    productTitle:string;
+    quantury:number;
+    amount:number;
+    status:string;
+    dateTime:string;
+    currency?:string;
+    deliveryId?:string;
+
+}
+export interface Shipping{
+    recipentName:string;
+    phone:string;
+    address:Address;
+
+}

@@ -34,10 +34,14 @@ const  notificationList = [
     },
 ]
 
-const NotificationMsg:FC = () => {
+interface NotificationMsgProps{
+    setSelectedOrderId:(id:number) => void;
+    // setOrderKey:(order_key:string) => void
+}
 
+const NotificationMsg:FC <NotificationMsgProps>= ({setSelectedOrderId}) => {
     const showOrderDetails = () =>{
-
+        setSelectedOrderId(1)
     }
     return (
         <Router>
