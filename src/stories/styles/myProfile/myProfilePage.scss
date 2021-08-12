@@ -45,13 +45,18 @@ $borderColor:#DFE7FF;
     .sidebarBackBtn{
         margin: 15px 0px;
         padding-left: 10px;
+        position: relative;
         button{
             background: none;
             border: none;
             color: $primaryColor;
-            font-size: 14px;
-            font-weight: 600;
             cursor: pointer;
+        }
+        .backBtnText{
+            position: relative;
+            font-size: 16px;
+            font-weight: 400;
+            top: -9px;
         }
     }
     .profilePageForDesktop{

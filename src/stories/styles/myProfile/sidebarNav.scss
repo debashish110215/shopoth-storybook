@@ -24,7 +24,6 @@
         }
         .navIcon{
             display: block;
-            // color: #21409A;
             margin-right: 8px;
         }
         .profileNavText{
@@ -37,4 +36,20 @@
     background-color: #DFE7FF;
     color: #21409A;
     font-weight: bold; 
+}
+
+@media only screen  and (max-width:767px){
+    .profileSidebarNavWrapper{
+        font-family: 'Lato', sans-serif;
+        color:#192434;
+        font-size: 16px;
+        font-weight: 400;
+        .profileNavList{
+            list-style-type: none;
+            li{
+                padding: 8px 15px;
+                cursor: pointer;                
+            }
+        }
+    }
 }

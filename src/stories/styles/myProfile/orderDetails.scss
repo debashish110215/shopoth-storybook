@@ -130,6 +130,16 @@ $borderColor:#DFE7FF;
     }
 }
 
+@media only screen and (max-width:992px){
+    .orderDetailsWrapper{
+        .orderDetailsHeader{
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+        }
+    }
+}
+
     // custom radio button
 .radioContainer {
     display: block;
