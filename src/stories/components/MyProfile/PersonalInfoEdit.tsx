@@ -15,7 +15,16 @@ interface IFormInputs {
 }
 
 const schema = yup.object().shape({
-    name: yup.string().required('Name password is required'),
+    name: yup.string()
+            .required("Name is a required")
+            .matches(/^[a-zA-Z]+(\.?)(\s[a-zA-Z]+(\.?))*$/, "No special characters and numbers are allowed"),
+    email:yup.string()
+            .required("Email is required")
+            .email("Please provide valid email"),
+    phone: yup.string()
+            .required("Phone is required")
+            .matches(/(^([+]{1}[8]{2}|0088)?(01){1}[3-9]{1}\d{8})$/, "Please provide valid BD phone number"),
+    dob: yup.string().nullable().required('Date of Birth is required'),
 });
 
 
@@ -74,6 +83,7 @@ export const PersonalInfoEdit:FC<PersonalInfoEditProps> = ({
                             id='email' 
                             {...register('email')}
                         />
+                    <p className='showError' style={{color:'red'}}>{errors.email?.message}</p>
                     </div>
                 <div className="formItem">
                     <label className='inputLabel' htmlFor="phone">Phone Number</label>
@@ -83,6 +93,7 @@ export const PersonalInfoEdit:FC<PersonalInfoEditProps> = ({
                             id='phone' 
                             {...register('phone')}
                         />
+                    <p className='showError' style={{color:'red'}}>{errors.phone?.message}</p>
                 </div>
                 <div className="formItem">
                     <label className='inputLabel' htmlFor="dob">Date of Birth</label>
@@ -98,7 +109,8 @@ export const PersonalInfoEdit:FC<PersonalInfoEditProps> = ({
                         />
                     )}
                     />
-                    </div>
+                <p className='showError' style={{color:'red'}}>{errors.dob?.message}</p>
+                </div>
                 </div>
             </form>
         </div>

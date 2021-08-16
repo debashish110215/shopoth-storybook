@@ -15,10 +15,14 @@ export default {
     export const PersonalInfoEditOne = Template.bind({});
     PersonalInfoEditOne.args = {
         userDetails:{
-            fullName : 'Sayekat Chakraborty',
+            id:1,
+            userId:'8955',
+            userImgUrl:'',
+            userName: 'Sayekat Chakraborty',
             email : 'SayekatChakraborty@gmil.com',
-            phone : '+880 1926 569 236',
+            phone : '+8801926569236',
             gender : 'Male',
             dob : '12/02/1992',
+            accountCreationDate:''
         }
     };
