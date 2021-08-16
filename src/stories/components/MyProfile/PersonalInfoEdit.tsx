@@ -50,8 +50,8 @@ export const PersonalInfoEdit:FC<PersonalInfoEditProps> = ({
             <div className="personalInfoEditHeader">
                 <h4>Personal Information</h4>
                 <div>
-                    <button type='submit'>Update</button>
                     <button className='cancelBtn' onClick = {() => setShowPersonalInfo('update')}>Cancel</button>
+                    <button type='submit'>Update</button>
                 </div>
             </div>
             <div className="personalInfoEditForm">

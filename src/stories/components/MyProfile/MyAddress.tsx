@@ -23,7 +23,7 @@ export const MyAddress:FC = () => {
                             setAddressKey('add')
                         }
                         } >
-                        Add a new address
+                        Add a new 
                 </button>
             </div>
             <div className="myAddress">

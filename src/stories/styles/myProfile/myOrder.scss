@@ -42,8 +42,18 @@ $borderColor:#DFE7FF;
             }
         }
         .returnAction{
-            width: 150px;
-            margin-top: 20px;  
+            width: 250px;
+            display: flex;
+            margin-top: 15px;
+            color: $secondaryColor;
+            position: relative;
+            .orderReturnUntil{
+                padding-left: 10px;
+                white-space: nowrap;
+                position: relative;
+                font-weight: 400;
+                top: 12px;
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
-import {FC} from 'react';
+import {FC,useState} from 'react';
 import '../../styles/myProfile/myOutletShop.scss';
+import AddNewOutletSop from './AddNewOutletSop';
 import {MyOutletShopDetails} from './MyOutletShopDetails';
 
 const  outletList = [
@@ -30,15 +31,32 @@ const  outletList = [
 ]
 
 const MyOutletShop:FC = () => {
+    const [showMsgPopUp, setShowMsgPopUp] = useState(false)
+    const [addressKey, setAddressKey] = useState('')
     return (
         <div className='myOutletWrapper'>
             <div className="myOutletHeader">
                 <h4>My Outlet Shop</h4>
-                <p>Add a new</p>
+                
+                <button 
+                    className='addNewOutlet' 
+                    onClick={
+                        ()=> {
+                            setShowMsgPopUp(!showMsgPopUp);
+                            setAddressKey('add')
+                        }
+                        } >
+                        Add a new 
+                </button>
             </div>
             <div className="outletDetails">
                 <MyOutletShopDetails outletList={outletList}/>
             </div>
+            <AddNewOutletSop
+                showMsgPopUp={showMsgPopUp} 
+                setShowMsgPopUp = {setShowMsgPopUp}
+                address_key={addressKey}
+            />
         </div>
     )
 }

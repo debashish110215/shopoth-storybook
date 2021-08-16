@@ -7,7 +7,7 @@ interface MyOutletShopDetailsProps{
     outletList:Array<Outlet>
 }
 
-export const MyOutletShopDetails:FC<MyOutletShopDetailsProps>= ({outletList}:MyOutletShopDetailsProps) => {
+export const MyOutletShopDetails:FC<MyOutletShopDetailsProps>= ({outletList}) => {
     console.log('outlet', outletList);
     
     return (

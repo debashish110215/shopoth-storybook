@@ -42,6 +42,7 @@ const MyOrderItem:React.FC<MyOrderItemProps> = ({order, setSelectedOrderId, setO
                                             color='cart' 
                                             onClick={handleReturnOrders} 
                                         />
+                                        <span className='orderReturnUntil'>Until 30/07/21</span>
                                     </div>
                                 )
                         }
