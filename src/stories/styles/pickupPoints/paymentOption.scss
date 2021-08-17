@@ -1,0 +1,93 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textColorGray:#343A40 ;
+$textColorLightGray:#9E9E9E;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+.paymentOptionWrapper{
+    color: $textColor;
+    .deliveryAddressHeader{
+        border-bottom: 2px solid $primaryColor;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        h2{
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+    .selectPaymentOption{
+        .radioLabel{
+            padding-left: 8px;
+        }
+        .cashOnDelivery{
+            margin: 15px 0px;
+            border:1px solid $borderColor;
+            padding: 25px 40px;
+            border-radius: 8px;
+        }
+
+        .onlinePayment{
+            border:1px solid $borderColor;
+            padding: 25px 40px;
+            border-radius: 8px;
+        } 
+    }
+    .agreement{
+        margin: 20px 0px;
+        .checkboxLabel{
+            padding-left: 8px;
+        } 
+    }
+    .paymentAction{
+        display: flex;
+        margin-top: 20px;       
+        .placeOrder{
+            width: 200px;
+            margin-right: 20px;
+        }
+        .cartBtn{
+            width: 200px;
+        }
+    }
+}
+.paymentGatewayWrapper{
+    margin-top: 15px;
+    .paymentGatewayHeader{
+        h2{
+            font-size: 16px;
+            font-weight: 400;
+        }
+    } 
+    .gatewayList{
+        display: flex;
+        margin: 15px 0px;
+        .gatewayItem{
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $borderColor;
+            border-radius: 8px;
+            margin-left: 10px;
+            position: relative;
+            .gatewayCheckbox{
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
+            .gatewayImg{
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
