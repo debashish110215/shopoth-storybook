@@ -1,0 +1,72 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textColorGray:#343A40 ;
+$textColorLightGray:#9E9E9E;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.myOrderWrapper{
+    .orderItem{
+        border-bottom: 1px solid $borderColor;
+        padding: 20px;
+        .orderInfo{
+            display: flex;
+            justify-content: space-between;
+            .orderDes{
+                color: $textSecondaryColor;
+                font-weight: 400;
+                font-size: 16px;
+                p{
+                    line-height: 25px;
+                } 
+                .orderId{
+                    color: $textColor;
+                    font-weight: 700;
+                }
+            }
+    
+            .orderAction{
+                width: 180px;
+                .orderDetails{
+                    display: block;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+        .returnAction{
+            width: 250px;
+            display: flex;
+            margin-top: 15px;
+            color: $secondaryColor;
+            position: relative;
+            .orderReturnUntil{
+                padding-left: 10px;
+                white-space: nowrap;
+                position: relative;
+                font-weight: 400;
+                top: 12px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:992px){
+    .myOrderWrapper{
+        .orderItem{
+            .orderInfo{
+                display: block;
+                .orderAction{
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}

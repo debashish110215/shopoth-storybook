@@ -1,0 +1,42 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textColorGray:#343A40 ;
+$textColorLightGray:#9E9E9E;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+.shippingDetailsWrapper{
+    .shippingDetailsBtn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $borderColor;
+        padding: 10px 20px;
+        font-weight: 700;
+        h4{
+            font-size: 16px;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+        .shippingDetails{
+            margin-top: 5px;
+            padding: 10px;
+            p{
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
+                color: $textSecondaryColor;
+            }
+        } 
+    
+    
+}

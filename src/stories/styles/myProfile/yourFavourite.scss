@@ -1,0 +1,89 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.yourFavouriteWrapper{
+    border:1px solid $borderColor;
+    border-radius: 8px;
+    padding: 30px 20px;
+    .yourFavouriteHeader{
+        border-bottom: 1px solid $borderColor;
+        padding-bottom: 10px;
+        h4{
+            font-size: 20px;
+            font-weight: bold;
+            color: $textColor;
+        }
+    }
+    .favoriteItem{
+        display: flex;
+        border-bottom: 1px solid $borderColor;
+        padding: 15px;
+        .favouriteImgwraper{
+            border:1px solid $borderColor;
+            border-radius: 8px;
+            position: relative;
+            .whishlistIcon{
+                position: absolute;
+                top: 12px;
+                right: 12px;
+            }
+            .favouriteImg{
+                width: 160px;
+                height: 160px;
+            }
+        }
+        .favouriteContent{
+            flex-grow: 1;
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .favouriteItemDes{
+                h4{
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 400;
+                    padding-bottom: 10px;
+                }
+                p{
+                    font-size: 15px;
+                    font-weight: 600;
+                }
+            }
+            .addToCartbtn{
+                max-width: 245px;
+            }
+        }
+    }
+}
+
+@media only screen  and (max-width:992px){
+    .yourFavouriteWrapper{
+        font-size: 14px;
+        .favoriteItem {
+            display: block;
+            .favouriteImgwraper{
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+            }
+
+            .favouriteContent{
+                margin-top: 15px;
+                .addToCartbtn{
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}

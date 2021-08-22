@@ -1,0 +1,67 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+.myAddressWrapper{
+
+    .myAddressHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        border-bottom: 1px solid $borderColor;
+        padding-bottom: 10px;
+        h4{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .addNewAddress{
+            cursor: pointer;
+            color: $secondaryColor;
+            font-size: 12px;
+            font-weight: 600;
+            border: none;
+            background: none;
+            &:hover{
+                text-decoration: underline;
+            }
+                
+        }
+    }
+    .myAddress{
+        font-size: 14px;
+        font-weight: 400;
+        .myAddressItem{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid $borderColor;
+            padding: 15px 0px;
+
+            .addressEdit{
+                .editNewAddress{
+                    color: $textSecondaryColor;
+                    cursor: pointer;
+                    background: none;
+                    border: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .addressPart{
+        display: block;
+    }
+}

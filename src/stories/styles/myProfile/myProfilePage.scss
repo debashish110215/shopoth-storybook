@@ -1,0 +1,80 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+.myProfilePageWrapper{
+    display: flex;
+    .myProfileSidebar{
+        width: 30%;
+        margin-right: 20px;
+    }
+    .myProfileContent{
+        width: 70%;
+        .userInfo{
+            margin-bottom: 20px;
+        }
+    }
+}
+.profilePageForMobile{
+    display: none;
+}
+
+@media only screen and (min-width:768px) and (max-width: 992px) {
+    .myProfilePageWrapper{
+        .myProfileSidebar{
+            width: 40%;
+            margin-right: 15px;
+        }
+        .myProfileContent{
+            width: 60%;
+            .userInfo{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 767px){
+    .sidebarBackBtn{
+        margin: 15px 0px;
+        padding-left: 10px;
+        position: relative;
+        button{
+            background: none;
+            border: none;
+            color: $primaryColor;
+            cursor: pointer;
+        }
+        .backBtnText{
+            position: relative;
+            font-size: 16px;
+            font-weight: 400;
+            top: -9px;
+        }
+    }
+    .profilePageForDesktop{
+        display: none;
+    }
+    .profilePageForMobile{
+        display: block;
+    }
+    .myProfilePageWrapper{
+        display: block;
+        .myProfileSidebar{
+            width: 100%;
+        }
+        .myProfileContent{
+            width: 100%;
+            .userInfo{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

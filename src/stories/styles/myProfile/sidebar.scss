@@ -1,0 +1,19 @@
+$primaryColor:#21409A;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.profileSidebarWrapper{
+    padding: 25px;
+    border: 1px solid #DFE7FF;
+    border-radius: 8px;
+    .profileSidebarTop{
+        border-bottom: 2px solid $primaryColor;
+        padding-bottom: 25px;
+    }
+    .profileSidebarNav{
+        padding-top: 20px;
+    }
+}

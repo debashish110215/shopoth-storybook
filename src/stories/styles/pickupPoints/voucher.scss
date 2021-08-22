@@ -1,0 +1,165 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textColorGray:#343A40 ;
+$textColorLightGray:#9E9E9E;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.voucherWrapper{
+    color: $textColor;
+    border: 1px solid $borderColor;
+    border-radius: 8px;
+    padding: 30px;
+    .enterCodeContainer{
+        h4{
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .enterCode{
+            background-color: $borderColor;
+            margin-top: 15px;
+            padding: 15px 30px;
+            position: relative;
+            .inputControl{
+                width: 75%;
+                border: none;
+                outline: none;
+                padding: 20px 24px;
+                font-size: 14px;
+                font-weight: 400;
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+
+            }
+            .applyBtn{
+                width: 25%;
+                background: $secondaryColor;
+                color: #ffffff;
+                border: none;
+                padding: 17px;
+                cursor: pointer;
+                font-size: 20px;
+                font-weight: 700;
+                border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;
+                position: relative;
+                top: 3px;
+            }
+        }
+    }
+    .selectVoucher{
+        margin-top: 30px;
+        h4{
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .discount{
+            display: flex;
+            margin-top: 20px;
+            .discountImg{
+                width: 150px;
+                height: 120px;
+                background-color: $primaryColor;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h4{
+                    width: 70px;
+                    color: #ffffff;
+                    text-align: center;
+                    font-weight: 700;
+                   
+                }
+            }
+            .discountText{
+                flex-grow: 1;
+                padding: 15px 0px;
+                padding-left: 20px;
+                border: 1px solid $borderColor;
+                h4{
+                    color: $primaryColor;
+                    padding-bottom: 10px;
+                }
+                button{
+                    padding: 1px 5px;
+                    margin-right: 10px;
+                    color: $textSecondaryColor;
+                    border:1px solid $textColorLightGray;
+                }
+                p{
+                    color: $secondaryColor;
+                    margin-top: 5px;
+                }
+            }
+        }
+        .freeShipping{
+            display: flex;
+            margin-top: 15px;
+            .shippingImg{
+                width: 150px;
+                height: 120px;
+                background-color: $primaryColor;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h4{
+                    width: 70px;
+                    color: #ffffff;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 20px;
+                    .free{
+                        font-weight: 700;
+                    }
+                }
+            }
+            .shippingText{
+                flex-grow: 1;
+                padding: 15px 0px;
+                padding-left: 20px;
+                border: 1px solid $borderColor;
+                h4{
+                    color: $primaryColor;
+                    padding-bottom: 10px;
+                }
+                button{
+                    padding: 1px 5px;
+                    color: $textSecondaryColor;
+                    border:1px solid $textColorLightGray;
+            }
+            p{
+                color: $secondaryColor;
+                margin-top: 5px;
+            }
+        }
+    }
+    }
+
+    .selectedVoucher{
+        background-color: $borderColor;
+
+    }
+    .okBtn{
+        margin-top: 15px;
+        margin-left: auto;
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width:768px){
+   
+    .voucherWrapper{
+        .discountImg{
+            width: 120px;
+            height: 90px;
+        }
+    }
+}

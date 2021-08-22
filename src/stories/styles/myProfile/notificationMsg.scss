@@ -1,0 +1,83 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textColorGray:#343A40 ;
+$textColorLightGray:#9E9E9E;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.nftMsgWrapper{
+    border: 1px solid $borderColor;
+    padding: 40px;
+    border-radius: 8px;
+    color: $textColor;
+    .nftHeader{
+        border-bottom: 1px solid $borderColor; 
+        padding-bottom: 8px;
+        h4{
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+    .nftItem{
+        display: flex;
+        padding: 20px 0px;
+        border-bottom: 1px solid $borderColor;
+        .nftInfo{
+            padding-left: 20px;
+            .nftMsgDes{
+                font-weight: 400;
+                h4{
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+                p{
+                    padding: 5px 0px;
+                    line-height: 25px;
+                    color: $textSecondaryColor;
+                } 
+                .nftOrderId{
+                    color: $textColor;
+                    font-weight: 600;
+                }
+                .nftDateTime{
+                    font-weight: 600;
+                }
+            }
+        }
+        .nftAction{
+            margin-top: 15px;
+            max-width: 200px;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 767px){
+
+    .nftMsgWrapper{
+        .nftItem{
+            font-size: 14px;
+            .nftInfo{
+                .nftMsgDes{
+                    font-weight: 400;
+                    h4{
+                        font-size: 14px;
+                        line-height: 25px;
+                    }
+                }
+            }
+            .nftAction{
+                font-size: 14px;
+            }
+            
+    }
+    }
+}

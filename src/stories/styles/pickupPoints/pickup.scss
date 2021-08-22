@@ -1,0 +1,44 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textColorGray:#343A40 ;
+$textColorLightGray:#9E9E9E;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.pickupWrapper{
+
+    .pickAndPaly{
+        margin-top: 24px; 
+    }
+    .deliveryAddress{
+        margin-top: 24px;
+    }
+    .paymentOption{
+        margin-top: 20px;
+    }
+    .agreement{
+        margin: 20px 0px;
+        .checkboxLabel{
+            padding-left: 8px;
+        } 
+    }
+    .paymentAction{
+        display: flex;
+        margin-top: 20px;       
+        .placeOrder{
+            width: 200px;
+            margin-right: 20px;
+        }
+        .cartBtn{
+            width: 200px;
+        }
+    }
+}

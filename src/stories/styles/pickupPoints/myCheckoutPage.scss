@@ -1,0 +1,46 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textColorGray:#343A40 ;
+$textColorLightGray:#9E9E9E;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.myCheckoutPageWrapper{
+    display: flex;
+    padding: 0px 25px;
+    .pickupSection{
+        width: 50%;
+        margin-right: 10%;
+    }
+    .yourOrdersSection{
+        width: 50%;
+        .voucher{
+            margin-top: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .myCheckoutPageWrapper{
+        display: flex;
+        flex-direction: column;
+        .pickupSection{
+            width: 100%;
+        } 
+        .yourOrdersSection{
+            width: 100%;
+            margin-top: 50px;
+            .voucher{
+                margin-top: 30px;
+            }
+        }
+    }
+}

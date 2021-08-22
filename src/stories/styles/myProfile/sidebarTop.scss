@@ -1,0 +1,39 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ProfileSidebarTopWrapper{
+    font-family: 'Lato', sans-serif;
+    .ProfileImgSection{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        .profilePic{
+            display: block;
+            margin: 0 auto;
+            width: 170px;
+            height: 170px;
+            border-radius: 85px;
+        }
+    }
+    .ProfileInfo{
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            color: #9E9E9E;
+        .profileName{
+            padding-bottom: 10px;
+            color:#192434;  
+        }
+        .ProfileId{
+                padding-bottom: 5px;
+            }
+        p{
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textColorGray:#343A40 ;
+$textColorLightGray:#9E9E9E;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.msgPopupContainer{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .successMsgWrapper{
+        background-color: #ffffff;
+        max-width: 500px;
+        padding: 10px 10px 20px 30px;
+        border-radius: 8px;
+        color: $textColor;
+        box-shadow: 1px 1px 5px $textColor;
+        .closeBtn{
+            text-align: right;
+            .closeBtnIcon{
+                cursor: pointer;
+            }
+        }
+        .successMsgContent{
+            h4{
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 30px;
+                padding: 5px 0px;
+            }
+            p{
+                color: $textColorLightGray;
+                line-height: 22px;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+            .okeyBtn{
+                width: 150px;
+                margin-top: 10px;
+            }
+        }
+    
+}
+

@@ -7,7 +7,7 @@ export enum CartButtonState {
     LOADING,
     DISABLED,
     HIDDEN
-  }
+}
 
 interface ButtonProps{
     color?:'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger'| 'cart';
@@ -16,11 +16,10 @@ interface ButtonProps{
     size?:'small' | 'medium' | 'large';
     block?:string;
     label:string;
-    onClick?:() => void;
+    onClick:() => void;
     state?:CartButtonState;
     loaderColor?: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger'| 'cart'|'light'|'dark';
     search_key?:string;
-   
 }
 
 export const CartButton = ({
@@ -33,6 +32,7 @@ export const CartButton = ({
     label, 
     state = CartButtonState.NORMAL,
     search_key,
+    onClick,
     ...props
 }:ButtonProps) => {
     const btnStyle = outline?`btn-outline-${color}`:`btn-${color}`
@@ -47,9 +47,12 @@ export const CartButton = ({
                     className={['btn', `btn-${size}`, `${block?'btn-block':''}`, btnStyle].join(' ')}
                     style={{backgroundColor}}
                     disabled={isLoading}
-                    {...props} > 
+                    {...props} 
+                    onClick = {() => onClick()}
+                    > 
+
                     {isLoading? 
-                         <ClipLoader 
+                        <ClipLoader 
                             color={loaderstyle} 
                             loading={isLoading}  
                             size={10}/> 

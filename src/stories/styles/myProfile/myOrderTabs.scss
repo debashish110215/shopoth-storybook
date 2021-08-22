@@ -1,0 +1,63 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textColorGray:#343A40 ;
+$textColorLightGray:#9E9E9E;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+.myOrderTabsWrapper{
+    font-size: 18px;
+    font-weight: 400;
+    .myOrderTabs{
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid $borderColor;
+        border-bottom: 1px solid $borderColor;
+        color: $textColor;
+        margin: 15px 0px;
+        .myOrderTabItem{
+            padding: 10px;
+            cursor: pointer;
+            }
+        .selectedTab {
+            font-weight: 700;
+            color: $primaryColor;
+            background-color: $borderColor;
+            padding: 10px 20px;
+        }
+    }
+    .myOrdersDropDown{
+        display: none;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .myOrderTabsWrapper{
+        .myOrderTabs{
+            display: none;
+        }
+        .myOrdersDropDown{
+            display: block;
+            margin: 10px 0px;
+            .dropdownSelect{
+                width: 100%;
+                border: 1px solid $borderColor;
+                outline: none;
+                border-radius: 5px;
+                font-size: 14px;
+                font-weight: 600;
+                padding: 10px;
+                
+            }
+            .selecItem{
+                color: $primaryColor;
+            }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+$primaryColor:#21409A;
+$secondaryColor:#EF4056;
+$textColor:#192434;
+$textColorGray:#343A40 ;
+$textColorLightGray:#9E9E9E;
+$textSecondaryColor:#616161;
+$borderColor:#DFE7FF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.checkoutWrapper{
+    color: $textColor;
+    .checkoutHeader{
+        border-bottom: 2px solid $primaryColor;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        h2{
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+    .checkoutOption{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+        & > div{
+            padding: 30px 60px;
+            margin-right: 10px; 
+            border: 1px solid $borderColor;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .formControl{
+            font-size: 18px;
+        }
+        .formLabel{
+            font-size: 18px;
+            font-weight: 400;
+            padding-left: 7px;
+            white-space: nowrap;
+        }
+        .deliveryCharge{
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+        .selectedDelivery{
+            font-weight: 700;
+            background-color: $borderColor;
+        }
+    }
+}
+@media screen and (min-width:768px) and (max-width:1200px) {
+    .checkoutWrapper{
+        .checkoutOption{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            & > div{
+                // padding: 30px 65px;
+                margin-right: 10px; 
+                border: 1px solid $borderColor;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+@media screen and (max-width:767px){
+    
+    .checkoutWrapper{
+
+        .checkoutOption{
+            display: flex;
+            flex-direction: column;
+           
+            
+        }
+        .pickAndPlay, .expressDelivery{
+            margin-bottom: 10px;
+        }
+    }
+}
