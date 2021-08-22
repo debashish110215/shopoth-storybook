@@ -84,3 +84,21 @@ $borderColor:#DFE7FF;
         }
     }
 }
+
+@media only screen and (max-width:768px) {
+    
+    .searchStoreWrapper{
+        .address{
+            display: flex;
+            flex-direction: column;
+            .formSelect{
+                width: 100%;
+            }
+
+            .thana{
+                margin-right: 0px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

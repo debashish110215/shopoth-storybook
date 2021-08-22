@@ -15,6 +15,9 @@ $borderColor:#DFE7FF;
 
 .voucherWrapper{
     color: $textColor;
+    border: 1px solid $borderColor;
+    border-radius: 8px;
+    padding: 30px;
     .enterCodeContainer{
         h4{
             font-size: 20px;
@@ -148,5 +151,15 @@ $borderColor:#DFE7FF;
         margin-top: 15px;
         margin-left: auto;
         width: 150px;
+    }
+}
+
+@media only screen and (max-width:768px){
+   
+    .voucherWrapper{
+        .discountImg{
+            width: 120px;
+            height: 90px;
+        }
     }
 }

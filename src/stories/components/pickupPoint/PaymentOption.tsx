@@ -5,10 +5,15 @@ import '../../styles/pickupPoints/paymentOption.scss';
 
 interface PaymentOptionProps{
     paymentOpt:string;
+    paymentGateway:string;
     setPaymentOpt:(payment:string) => void
+    setPaymentGateway:(gateway:string) => void
 }
-const PaymentOption:FC<PaymentOptionProps> = ({paymentOpt, setPaymentOpt}) => {
-    const [paymentGateway, setPaymentGateway] = useState('bkash')
+const PaymentOption:FC<PaymentOptionProps> = ({paymentOpt, setPaymentOpt, paymentGateway, setPaymentGateway}) => {
+    
+    const handleChange = () =>{
+
+    }
     return (
         <form action="">
             <div className='paymentOptionWrapper'>
@@ -16,29 +21,33 @@ const PaymentOption:FC<PaymentOptionProps> = ({paymentOpt, setPaymentOpt}) => {
                         <h2>Choose payment options</h2>
                     </div>
                     <div className="selectPaymentOption">
-                        <div  className={`cashOnPayment ${paymentOpt=== 'cash_on_payment'?'selectedPayment':''}`}>
+                        <div  
+                            className={`cashOnPayment ${paymentOpt=== 'cash_on_payment'?'selectedPayment':''}`}
+                            onClick={()=> setPaymentOpt('cash_on_payment')}
+                        >
                             <input 
                                 type="radio" 
                                 className="formRadio" 
                                 id='cashOnDelivery'
-                                value='cash_on_payment'
                                 checked={paymentOpt === 'cash_on_payment'}
-                                onChange={(e)=> setPaymentOpt(e.target.value)}
+                                onChange = {handleChange}
                                 />
                             <label htmlFor="cashOnDelivery" className="radioLabel">
                                 Cash On Delivery
                             </label>
                         </div>
 
-                        <div className="onlinePaymentOpt">
-                            <div  className={`${paymentOpt=== 'online_payment'?'onlinePayment':''}`}>
+                        <div className="onlinePaymentOpt" onClick={()=> setPaymentOpt('online_payment')}>
+                            <div  
+                                className={`${paymentOpt=== 'online_payment'?'onlinePayment':''}`}
+                                
+                            >
                                 <input 
                                     type="radio" 
                                     className="formRadio" 
                                     id='onlineDelivery' 
-                                    value='online_payment'
                                     checked={paymentOpt === 'online_payment'}
-                                    onChange={(e)=> setPaymentOpt(e.target.value)}
+                                    onChange = {handleChange}
                                     />
                                 <label htmlFor="onlineDelivery" className="radioLabel">
                                     Online Delivery

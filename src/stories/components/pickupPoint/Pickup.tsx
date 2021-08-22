@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import '../../styles/pickupPoints/pickup.scss';
-import {SubmitButton} from '../../components/SubmitButton';
+import {SubmitButton, SubmitButtonState} from '../../components/SubmitButton';
 import {CartButton} from '../../components/CartButton';
 import Checkout from './Checkout';
 import DeliveryAddress from './DeliveryAddress';
@@ -8,10 +8,15 @@ import PaymentOption from './PaymentOption';
 import PickAndPay from './PickAndPay';
 
 const Pickup = () => {
+
     const [checkout, setCheckout] = useState('home_delivery')
     const [deliveryAddress, setDeliveryAddress] = useState('home_address')
     const [paymentOpt, setPaymentOpt] = useState('online_payment')
-    console.log('checkout', checkout)
+    const [paymentGateway, setPaymentGateway] = useState('bkash')
+    const [agreement, setAgreement] = useState(false)
+
+    console.log('agreement', agreement)
+
     const handleClick = () =>{
     }
     return (
@@ -32,18 +37,23 @@ const Pickup = () => {
                             <DeliveryAddress deliveryAddress={deliveryAddress} setDeliveryAddress={setDeliveryAddress} />
                         </div>
                         <div className="paymentOption">
-                            <PaymentOption paymentOpt = {paymentOpt} setPaymentOpt={setPaymentOpt}/>
+                            <PaymentOption 
+                                paymentOpt = {paymentOpt} 
+                                setPaymentOpt={setPaymentOpt}   
+                                paymentGateway = {paymentGateway}
+                                setPaymentGateway={setPaymentGateway}
+                            />
                         </div>
                     </>
                 )
             }
             <div className="agreement">
-                <input className='formCheckbox' type="checkbox" id='agreement' />
+                <input className='formCheckbox' type="checkbox" id='agreement' onChange={() => setAgreement(!agreement)} />
                 <label htmlFor="agreement" className="checkboxLabel">Agree with Terms & Conditions</label>
             </div>
             <div className="paymentAction">
                 <div className="placeOrder">
-                    <SubmitButton label='Place Order' color='cart'/>
+                    <SubmitButton label='Place Order' color='cart' state={ !agreement? SubmitButtonState.DISABLED:SubmitButtonState.NORMAL}/>
                 </div>
                 <div className="cartBtn">
                     <CartButton 

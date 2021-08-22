@@ -26,12 +26,15 @@ $borderColor:#DFE7FF;
     }
     .checkoutOption{
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         margin-top: 20px;
         & > div{
-            padding: 25px 45px;
+            padding: 30px 60px;
             margin-right: 10px; 
             border: 1px solid $borderColor;
             border-radius: 8px;
+            margin-top: 10px;
         }
         .formControl{
             font-size: 18px;
@@ -40,6 +43,7 @@ $borderColor:#DFE7FF;
             font-size: 18px;
             font-weight: 400;
             padding-left: 7px;
+            white-space: nowrap;
         }
         .deliveryCharge{
             display: block;
@@ -54,10 +58,33 @@ $borderColor:#DFE7FF;
         }
     }
 }
-
-// @media screen and (max-width:768px){
+@media screen and (min-width:768px) and (max-width:1200px) {
+    .checkoutWrapper{
+        .checkoutOption{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            & > div{
+                // padding: 30px 65px;
+                margin-right: 10px; 
+                border: 1px solid $borderColor;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+@media screen and (max-width:767px){
     
-//     .checkoutWrapper{
+    .checkoutWrapper{
 
-//     }
-// }
+        .checkoutOption{
+            display: flex;
+            flex-direction: column;
+           
+            
+        }
+        .pickAndPlay, .expressDelivery{
+            margin-bottom: 10px;
+        }
+    }
+}
