@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+import Pickup from './Pickup';
+import Voucher from './Voucher';
+// import { MyOrders } from '../MyProfile/MyOrders';
 
 const MyCheckoutPage = () => {
     return (

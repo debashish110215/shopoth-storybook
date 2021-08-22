@@ -10,6 +10,7 @@ import PickAndPay from './PickAndPay';
 const Pickup = () => {
     const [checkout, setCheckout] = useState('home_delivery')
     const [deliveryAddress, setDeliveryAddress] = useState('home_address')
+    const [paymentOpt, setPaymentOpt] = useState('online_payment')
     console.log('checkout', checkout)
     const handleClick = () =>{
     }
@@ -31,7 +32,7 @@ const Pickup = () => {
                             <DeliveryAddress deliveryAddress={deliveryAddress} setDeliveryAddress={setDeliveryAddress} />
                         </div>
                         <div className="paymentOption">
-                            <PaymentOption/>
+                            <PaymentOption paymentOpt = {paymentOpt} setPaymentOpt={setPaymentOpt}/>
                         </div>
                     </>
                 )

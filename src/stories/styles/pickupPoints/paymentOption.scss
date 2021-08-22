@@ -27,14 +27,17 @@ $borderColor:#DFE7FF;
         .radioLabel{
             padding-left: 8px;
         }
-        .cashOnDelivery{
+        .cashOnPayment{
             margin: 15px 0px;
             border:1px solid $borderColor;
             padding: 25px 40px;
             border-radius: 8px;
         }
-
         .onlinePayment{
+            font-weight: 700;
+
+        }
+        .onlinePaymentOpt{
             border:1px solid $borderColor;
             padding: 25px 40px;
             border-radius: 8px;
@@ -56,6 +59,10 @@ $borderColor:#DFE7FF;
         .cartBtn{
             width: 200px;
         }
+    }
+    .selectedPayment{
+        background-color: $borderColor;
+        font-weight: 700;
     }
 }
 .paymentGatewayWrapper{
@@ -89,5 +96,8 @@ $borderColor:#DFE7FF;
                 height: 50px;
             }
         }
+    }
+    .selectedGateway{
+        background-color: $borderColor;
     }
 }
