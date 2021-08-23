@@ -14,6 +14,7 @@ const Pickup = () => {
     const [paymentOpt, setPaymentOpt] = useState('online_payment')
     const [paymentGateway, setPaymentGateway] = useState('bkash')
     const [agreement, setAgreement] = useState(false)
+    const [storeId, setStoreId] = useState('')
 
     console.log('agreement', agreement)
 
@@ -28,7 +29,7 @@ const Pickup = () => {
                 checkout === 'pick_and_pay'?
                 (
                     <div className="pickAndPaly">
-                        <PickAndPay/>
+                        <PickAndPay storeId={storeId} setStoreId={setStoreId} />
                     </div>
                 ):
                 (

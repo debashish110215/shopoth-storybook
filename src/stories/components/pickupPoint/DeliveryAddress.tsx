@@ -32,7 +32,8 @@ const DeliveryAddress:FC<DeliveryAddressProps> = ({deliveryAddress, setDeliveryA
                                         id={address.address_key}
                                         checked={deliveryAddress=== address.address_key}/>
                                     <span className="checkmark"></span>
-                                    {address.address_name} : {address.address_line}, {address.area}, {address.zilla}
+                                    <span className='labelTxt'> {address.address_name} : {address.address_line}, {address.area}, {address.zilla}</span>
+                                    
                                 </label>
                         </div>
                         

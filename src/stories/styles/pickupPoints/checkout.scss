@@ -45,6 +45,14 @@ $borderColor:#DFE7FF;
             padding-left: 7px;
             white-space: nowrap;
         }
+        .radioContainer{
+            position: relative;
+            .labelTxt{
+                position: relative;
+                top: 3px;
+            }
+        }
+     
         .deliveryCharge{
             display: block;
             font-size: 14px;

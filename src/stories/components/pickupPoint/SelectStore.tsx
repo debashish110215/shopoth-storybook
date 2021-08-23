@@ -3,7 +3,7 @@ import '../../styles/pickupPoints/selectStore.scss';
 
 const  outletList = [
     { 
-        outletId:125635, 
+        outletId:'12345', 
         name:'Zamal Store', 
         address:'Amborkhna Bus stand', 
         district:'Bogura', 
@@ -11,32 +11,42 @@ const  outletList = [
         phone:'01725 569 652'
     },
     { 
-        outletId:125635, 
-        name:'Zamal Store', 
+        outletId:'85365', 
+        name:'Sadia Store', 
         address:'Amborkhna Bus stand', 
         district:'Bogura', 
         ownerName:'Md. Zamal Hossain', 
         phone:'01725 569 652'
     },
     { 
-        outletId:125635, 
-        name:'Zamal Store', 
+        outletId:'85432', 
+        name:'Hasan Store', 
         address:'Amborkhna Bus stand', 
         district:'Bogura', 
         ownerName:'Md. Zamal Hossain', 
         phone:'01725 569 652'
     },
 ]
+interface SelectStoreProps {
+    storeId:string;
+    setStoreId:(storeId:string) => void
+}
 
-const SelectStore= () => {    
+const SelectStore:FC<SelectStoreProps>= ({storeId, setStoreId}) => {    
     return (
         <div className='selectStoreWrapper'>
             {
                 outletList?.map( (outlet, index)=>(
-                    <div className="selectStore" key={index}>
+                    <div className={`selectStore ${storeId === outlet.outletId?'selectedStore':''}`} key={index} onClick={() => setStoreId(outlet.outletId)}>
                         <div className="storeInfo">
-                            <div className="selectRadio">
-                                <input type="radio" />
+                            <div className="selectRadio" >
+                                <label className="radioContainer">
+                                    <input type="radio" className="formControl" 
+                                        id={outlet.name}
+                                        name='store'
+                                        checked={storeId === outlet.outletId}/>
+                                    <span className="checkmark"></span>                                    
+                                </label>
                             </div>
                             <div className="storeDetails">
                                 <p> {outlet.name}</p>

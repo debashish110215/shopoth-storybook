@@ -23,7 +23,7 @@ const Checkout:FC<CheckoutProps> = ({setCheckout, checkout}) => {
                                    checked={checkout === 'pick_and_pay'}
                                     />
                                 <span className="checkmark"></span>
-                                Pick & Pay
+                                <span className='labelTxt'> Pick & Pay</span>
                              </label>
                     <span className='deliveryCharge'>No Charge</span>
                 </div>
@@ -39,7 +39,8 @@ const Checkout:FC<CheckoutProps> = ({setCheckout, checkout}) => {
                                      checked={checkout === 'express_delivery'}
                                     />
                                 <span className="checkmark"></span>
-                                Express Delivery
+                                <span className='labelTxt'> Express Delivery</span>
+                                
                              </label>
                     <span className='deliveryCharge'>Charge: Tk 70</span>
                 </div>
@@ -54,7 +55,8 @@ const Checkout:FC<CheckoutProps> = ({setCheckout, checkout}) => {
                                     checked={checkout === 'home_delivery'}
                                     />
                                 <span className="checkmark"></span>
-                                Home Delivery
+                                <span className='labelTxt'> Home Delivery</span>
+                               
                              </label>
                     <span className='deliveryCharge'>Charge: Tk 70</span>
                 </div>

@@ -32,7 +32,8 @@ const PaymentOption:FC<PaymentOptionProps> = ({paymentOpt, setPaymentOpt, paymen
                                     onChange = {handleChange}
                                     />
                                 <span className="checkmark"></span>
-                                Cash On Delivery
+                                <span className='labelTxt'> Cash On Delivery</span>
+                                
                              </label>
                         </div>
 
@@ -48,7 +49,8 @@ const PaymentOption:FC<PaymentOptionProps> = ({paymentOpt, setPaymentOpt, paymen
                                     onChange = {handleChange}
                                     />
                                 <span className="checkmark"></span>
-                                Online Delivery
+                                <span className='labelTxt'> Online Delivery</span>
+                                
                              </label>
                             </div>
                             <div className="selectPaymentGateway">

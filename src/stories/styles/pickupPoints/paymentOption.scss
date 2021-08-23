@@ -42,6 +42,13 @@ $borderColor:#DFE7FF;
             padding: 25px 40px;
             border-radius: 8px;
         } 
+        .radioContainer{
+            position: relative;
+            .labelTxt{
+                position: relative;
+                top: 3px;
+            }
+        }
     }
     .agreement{
         margin: 20px 0px;

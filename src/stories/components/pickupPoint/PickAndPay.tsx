@@ -1,10 +1,13 @@
-import React from 'react'
+import React, {FC} from 'react'
 import SearchStore from './SearchStore';
 import SelectStore from './SelectStore';
 import '../../styles/pickupPoints/pickAndPay.scss';
 
-
-const PickAndPay = () => {
+interface PickAndPayProps {
+    storeId:string;
+    setStoreId:(storeId:string) => void
+}
+const PickAndPay:FC<PickAndPayProps> = ({storeId, setStoreId}) => {
     return (
         <div className='pickAndPlayWrapper'>
             <div className="pickAndPlayHeader">
@@ -14,7 +17,7 @@ const PickAndPay = () => {
                 <SearchStore/>
             </div>
             <div className="selectStore">
-                <SelectStore/>
+                <SelectStore storeId={storeId} setStoreId={setStoreId}/>
             </div>
         </div>
     )
