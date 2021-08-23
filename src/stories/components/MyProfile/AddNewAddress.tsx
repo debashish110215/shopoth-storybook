@@ -3,6 +3,7 @@ import { Overlay } from '../Overlay';
 import {SubmitButton} from '../SubmitButton'
 import {GrFormClose} from 'react-icons/gr'
 import '../../styles/myProfile/addNewAddress.scss';
+import lodash from 'lodash'
 
 
 const zillas = [
@@ -37,6 +38,8 @@ const AddNewAddress:React.FC<AddNewAddressProps> = ({
     setShowMsgPopUp, 
     address_key
 }) => {
+
+  
     return (
         <Overlay show={showMsgPopUp} onClose={() =>setShowMsgPopUp(!showMsgPopUp)} children={
 
@@ -51,11 +54,11 @@ const AddNewAddress:React.FC<AddNewAddressProps> = ({
                     </div>
                     <form >
                         <div className="addNewAddressContent">
-                            <h4>{address_key === 'add'? 'Add':'Edit'} New Address</h4>
+                            <h4> {lodash.capitalize(address_key)} New Address</h4>
                             <div className="addNewAddressForm">
                                 <div className="addressName">
                                     <label className='formLabel' htmlFor="address_name">Address Name</label>
-                                    <input className='fromInput' type="text" placeholder='Insert Address Name'/>
+                                    <input className='fromInput' type="text" placeholder='Ex: Home Address'/>
                                 </div>
                                 <div className="addresses">
                                     <label className='formLabel' htmlFor="addresses">Addresses</label>
