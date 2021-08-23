@@ -38,6 +38,8 @@ export const SubmitButton = ({
     const btnStyle = outline?`btn-outline-${color}`:`btn-${color}`
     const loaderstyle = `text-${loaderColor}`
     const isLoading = state === SubmitButtonState.LOADING
+    const isDisabled = state === SubmitButtonState.DISABLED
+
     return (
         <React.Fragment> 
             {
@@ -46,7 +48,7 @@ export const SubmitButton = ({
                     type='submit'
                     className={['btn', `btn-${size}`, `${block?'btn-block':''}`, btnStyle].join(' ')}
                     style={{backgroundColor}}
-                    disabled={isLoading}
+                    disabled={isLoading || isDisabled}
                     {...props} > 
                     {isLoading? 
                         <ClipLoader 

@@ -11,6 +11,7 @@ $borderColor:#DFE7FF;
     font-family: 'Lato', sans-serif;
 }
 .selectStoreWrapper{
+    
     .selectStore{
         padding: 15px 0px;
         color: $textColor;
@@ -20,11 +21,18 @@ $borderColor:#DFE7FF;
         .storeInfo{
             display: flex;
             border-right: 1px solid $borderColor;
-            padding-right: 0px;
-            border-right: 0px;
+            // padding-right: 0px;
+            // border-right: 0px;
+            padding-left: 20px;
             .selectRadio{
                 align-self: flex-start;
-                padding-right: 10px;
+                .radioContainer{
+                    position: relative;
+                    .labelTxt{
+                        position: relative;
+                        top: 3px;
+                    }
+                }
             }
             .storeDetails{
                 p,address{
@@ -39,6 +47,7 @@ $borderColor:#DFE7FF;
         }
         .ownerInfo{
             margin-top: 10px;
+            padding-left:30px;
             p{
                 padding-bottom: 2px;
             }
@@ -51,6 +60,10 @@ $borderColor:#DFE7FF;
                 padding-left: 5px;
             }
         }
+    }
+    .selectedStore{
+        background-color: $borderColor;
+        font-weight: 700;
     }
 }
 
