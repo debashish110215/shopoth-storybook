@@ -26,11 +26,10 @@ const PaymentGateway:FC<PaymentGatewayProps> = ({ paymentOpt, paymentGateway, se
                         <div className={`gatewayItem ${paymentGateway === item.title && showCheckbox? 'selectedGateway':''}`} key={item.id} onClick={() => setPaymentGateway(item.title)}>
                             {
                                 (showCheckbox && paymentGateway ===item.title) &&  (
-                                    <input 
-                                        type="checkbox" 
-                                        className='gatewayCheckbox' 
-                                        checked={item.title === paymentGateway}
-                                    />
+                                    <label className="checkContainer gatewayCheckbox">
+                                    <input type="checkbox"  checked={item.title === paymentGateway} />
+                                    <span className="checkmark"></span>
+                                </label>
                                 )
                             }
                            

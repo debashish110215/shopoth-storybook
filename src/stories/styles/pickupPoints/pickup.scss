@@ -28,8 +28,11 @@ $borderColor:#DFE7FF;
     }
     .agreement{
         margin: 20px 0px;
+        position: relative;
         .checkboxLabel{
-            padding-left: 8px;
+            font-size: 14px;
+            position: relative;
+            top: -6px;
         } 
     }
     .paymentAction{

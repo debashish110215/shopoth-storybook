@@ -49,8 +49,12 @@ const Pickup = () => {
                 )
             }
             <div className="agreement">
-                <input className='formCheckbox' type="checkbox" id='agreement' onChange={() => setAgreement(!agreement)} />
-                <label htmlFor="agreement" className="checkboxLabel">Agree with Terms & Conditions</label>
+                <label className="checkContainer">
+                    <input type="checkbox" id='agreement' onChange={() => setAgreement(!agreement)} />
+                    <span className="checkmark"></span>
+                    <span className="checkboxLabel">Agree with Terms & Conditions</span>
+                </label>
+           
             </div>
             <div className="paymentAction">
                 <div className="placeOrder">
