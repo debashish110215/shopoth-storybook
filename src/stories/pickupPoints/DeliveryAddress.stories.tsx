@@ -9,5 +9,5 @@ export default {
     },
     } as ComponentMeta<typeof DeliveryAddress>;
 
-    const Template: ComponentStory<typeof DeliveryAddress> = () => <DeliveryAddress />;
+    const Template: ComponentStory<typeof DeliveryAddress> = (args) => <DeliveryAddress {...args} />;
     export const DeliveryAddressOne = Template.bind({});

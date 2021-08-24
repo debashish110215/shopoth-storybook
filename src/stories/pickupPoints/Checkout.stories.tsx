@@ -9,5 +9,5 @@ export default {
     },
     } as ComponentMeta<typeof Checkout>;
 
-    const Template: ComponentStory<typeof Checkout> = () => <Checkout />;
+    const Template: ComponentStory<typeof Checkout> = (args) => <Checkout {...args}/>;
     export const CheckoutOne = Template.bind({});

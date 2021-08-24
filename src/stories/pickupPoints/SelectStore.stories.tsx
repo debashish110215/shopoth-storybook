@@ -9,5 +9,5 @@ export default {
     },
     } as ComponentMeta<typeof SelectStore>;
 
-    const Template: ComponentStory<typeof SelectStore> = () => <SelectStore />;
+    const Template: ComponentStory<typeof SelectStore> = (args) => <SelectStore {...args} />;
     export const SelectStoreOne = Template.bind({});
