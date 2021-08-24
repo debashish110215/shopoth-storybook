@@ -47,7 +47,7 @@ export const FilterProductList:FC<FilterProductListProps> = ({productList,catego
                  
                 }
                 <div className='search-bottom-btn'>
-                    <CartButton label='View all results for'  color='cart' search_key={search_key}/>
+                    <CartButton label='View all results for'  color='cart' search_key={search_key} onClick={()=>{}}/>
                 </div>
             </div>
         </Router>

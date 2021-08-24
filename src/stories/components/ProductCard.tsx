@@ -58,7 +58,7 @@ const ProductCard:FC<any> = () => {
                 <Price currentPrice={455222} regularPrice={524326}/>   
             </div>
             <div className="product-add-to-cart">
-                <CartButton label='Add to Cart' color='cart'/>
+                <CartButton label='Add to Cart' color='cart' onClick={()=>{}}/>
             </div>
         </div>
     )

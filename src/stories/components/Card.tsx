@@ -51,7 +51,7 @@ const Card:FC<CardProps> = ({badgeTitle, cardImage, productTitle}:CardProps) => 
                     <ColorVariation/>
                 </div>
                 <div className='card-btn'>
-                    <CartButton label='Add to Cart' color='cart'/>   
+                    <CartButton label='Add to Cart' color='cart' onClick={()=>{}}/>   
                 </div>
                 <Link to='/' className='card-main'>
                     <div className="product-img">

@@ -16,6 +16,6 @@ const Template: ComponentStory<typeof HeaderCartIcon> = (args) => <HeaderCartIco
 
 export const HeaderCartIconOne = Template.bind({});
 HeaderCartIconOne.args = {
-    cartItemCount:15,
-    itemTotalAmount:1000
+    selectTotalItems:15,
+    totalAmount:1000
 };

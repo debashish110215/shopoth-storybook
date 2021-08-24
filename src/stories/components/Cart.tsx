@@ -89,7 +89,7 @@ export const Cart:FC<CartProps> = ({
                     </div>
                 </div>
                 <div className='search-bottom-btn'>
-                    <CartButton label='Procced to checkout'  color='cart'/>
+                    <CartButton label='Procced to checkout'  color='cart' onClick={()=>{}}/>
                 </div>
             </div>
         </Router>

@@ -71,7 +71,6 @@ export default {
             imgUrl:'./images/health/Tokma-Seeds-(Basil)-100gm.jpg',
             price:3560
         },
-    ],
-    onSelectProduct: ()=>{}
+    ]
 };
 
