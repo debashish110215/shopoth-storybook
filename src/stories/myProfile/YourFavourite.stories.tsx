@@ -10,7 +10,7 @@ export default {
     },
     } as ComponentMeta<typeof YourFavourit>;
 
-    const Template: ComponentStory<typeof YourFavourit> = (args) => <YourFavourit {...args} />;
+    const Template: ComponentStory<typeof YourFavourit> = () => <YourFavourit  />;
     export const YourFavouritOne = Template.bind({});
     YourFavouritOne.args = {
         favouriteProductList:[

@@ -14,11 +14,15 @@ export default {
     const Template: ComponentStory<typeof PersonalInfo> = (args) => <PersonalInfo {...args} />;
     export const PersonalInfoOne = Template.bind({});
     PersonalInfoOne.args = {
-        userDetails:{
-            fullName : 'Sayekat Chakraborty',
-            email : 'Sayekat Chakraborty@gmil.com',
+        userDetails :{
+            id:1,
+            userId:'025462',
+            userName:'Cameron Williamson',
+            email : 'SayekatChakraborty@gmil.com',
             phone : '+880 1926 569 236',
             gender : 'Male',
             dob : '12/02/1992',
+            userImgUrl:'./pro_img.png',
+            accountCreationDate:'2021',
         }
     };

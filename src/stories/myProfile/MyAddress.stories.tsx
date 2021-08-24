@@ -14,9 +14,5 @@ export default {
     const Template: ComponentStory<typeof MyAddress> = (args) => <MyAddress {...args} />;
     export const MyAddressOne = Template.bind({});
     MyAddressOne.args = {
-        userAddress:[
-            {addressName:'Home Address', addressLine:'23/2, Shah Paran', thana:'Kahalu', district:'Bogura'},
-            {addressName:'Office Address', addressLine:'23/2, Shah Paran', thana:'Kahalu', district:'Bogura'}
-        ]
-    
+     
     };

@@ -9,5 +9,5 @@ export default {
     },
     } as ComponentMeta<typeof PaymentOption>;
 
-    const Template: ComponentStory<typeof PaymentOption> = () => <PaymentOption />;
+    const Template: ComponentStory<typeof PaymentOption> = (args) => <PaymentOption {...args} />;
     export const PaymentOptionOne = Template.bind({});

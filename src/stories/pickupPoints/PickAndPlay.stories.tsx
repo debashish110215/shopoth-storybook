@@ -9,5 +9,5 @@ export default {
     },
     } as ComponentMeta<typeof PickAndPay>;
 
-    const Template: ComponentStory<typeof PickAndPay> = () => <PickAndPay />;
+    const Template: ComponentStory<typeof PickAndPay> = (args) => <PickAndPay {...args} />;
     export const PickAndPayOne = Template.bind({});
