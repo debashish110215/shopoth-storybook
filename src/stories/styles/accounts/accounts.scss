@@ -1,28 +1,34 @@
 @import '../base';
 
-.signUpContainer{
+.accountContainer{
     color: $textColor;
     font-weight: 400;
     .shopothLogo{
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         text-align: center;
+
+        // .shopothLogoImg{
+
+        // }
     }
     .shopothTitle{
         text-align: center;
         h2{
             font-size: 32px;
         }
+        p{padding-top: 10px;
+            font-size: 18px;
+        }
     }
-    .siginUpForm{
-        margin-top: 30px;
-        .inputControl{
+    .accountForm{
+        margin-top: 50px;
+        .formControl{
             width: 100%;
             border: 1px solid $borderColor;
             outline: none;
             font-size: 18px;
             padding: 15px 20px;
             border-radius: 8px;
-            transition: all 0.30s ease-in-out;
             &:focus{
                 box-shadow: 0 0 3px rgba(81, 203, 238, 1);
             } 
@@ -34,6 +40,7 @@
             padding-top: 5px;
             padding-left: 8px;
         }
+
         .genderContainer{
             position: relative;
             .genderError{
@@ -72,8 +79,9 @@
             margin-right: 5px;
             font-size: 24px;
         }
+
         .fullName, .phone, .email, .genderContainer, .dobContainer, .passwordContainer{
-                margin-bottom: 24px;
+            margin-bottom: 24px;
         } 
         .gender{
             margin-top: 20px;
@@ -83,31 +91,83 @@
                 margin-right: 20px;
             } 
         }
-       .password{
-           display: flex;
-           align-items: center;
-           margin-top: 10px;
-           border: 1px solid $borderColor;
-           border-radius: 8px;
-           .passwordControl{
-            flex-grow: 1;
-            border: none;
-            outline: none;
-            font-size: 18px;
-            padding: 15px 20px;
-            transition: all 0.30s ease-in-out;
-            &:focus{
-                box-shadow: 0 0 3px rgba(81, 203, 238, 1);
-            } 
-           }
-           .showHideBtn{
+
+        .resend{
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            color: $textColor;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .passwordContainer, .confirmPasswordContainer{
+            margin-top: 24px;
+            .password, .confirmPassword{
+                display: flex;
+                align-items: center;
+                border: 1px solid $borderColor;
+                border-radius: 8px;
+                .passwordControl{
+                flex-grow: 1;
+                border: none;
+                outline: none;
                 font-size: 18px;
-                cursor: pointer;
-                margin: 0px 24px;
-                color: $textColorLightGray;
-           }
+                padding: 15px 20px;
+                transition: all 0.30s ease-in-out;
+                &:focus{
+                    box-shadow: 0 0 3px rgba(81, 203, 238, 1);
+                } 
+                }
+                .showHideBtn{
+                    font-size: 18px;
+                    cursor: pointer;
+                    margin: 0px 24px;
+                    color: $textColorLightGray;
+                }
+            }
        }
+      
     }
+
+    .accountfooter{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        padding-right: 10px;
+        .forgetPasswordBtn{
+            font-size: 16px;
+            font-weight: 700;
+            color: $primaryColor;
+            border: none;
+            background: none;
+            cursor: pointer;
+            margin-left: 15px;
+        }
+        .signInOrSignUp{
+            color: $primaryColor;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+    .keepMeSignIn{
+        position: relative;
+        margin: 5px 0px;
+        margin-left: 10px;
+        .checkboxLabel{
+            position: relative;
+            font-size: 16px;
+            top: -7px;
+            left: -5px;
+            font-weight: 700;
+        }
+        p{
+            font-size: 14px;
+            position: relative;
+            top: -12px;
+            padding-left: 30px;
+        }
+     }
      .emailMe{
         max-width: 340px;
          margin-left: 10px;
@@ -126,24 +186,27 @@
             cursor: pointer;
         }
      }
-    .signUpBtn{
-        margin: 15px 0px;
+
+    .submitBtn{
+        margin: 24px 0px;
         p{
             font-size: 16px;
             text-align: right;
             margin-top: 10px;
             padding-right: 15px;
         }
-        .signIn{
-            color: $primaryColor;
-            font-weight: 700;
-            cursor: pointer;
-        }
-    }   
+        
+    }
+    .signIn{
+        color: $primaryColor;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
 }
 
 @media only screen and (max-width:768px) {
-    .signUpContainer{
+    .accountContainer{
         .shopothLogo{
             margin-bottom: 20px;
             text-align: center;
@@ -154,7 +217,7 @@
                 font-size: 30px;
             }
         }
-        .siginUpForm{
+        .accountForm{
             .inputControl{
                 font-size: 16px;
                 padding: 10px;
@@ -206,7 +269,7 @@
                }
            }
         }
-        .signUpBtn{
+        .submitBtn{
             p{
                 font-size: 14px;
                 text-align: center;
@@ -216,5 +279,50 @@
         }
         
     }
+    .accountfooter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
+
+@media only screen and (max-width:420px) {
+    .accountContainer{
+        .shopothTitle{
+            h2{
+                font-size: 20px;
+            }
+            p{
+                padding-top: 10px;
+                font-size: 16px;
+            }
+        }
+        .accountForm{
+           .emailOrPhone{
+                .formControl{
+                    font-size: 14px;
+                }
+           } 
+           .password{
+               .passwordControl{
+                font-size: 14px;
+               }
+               .showHideBtn{
+                    width: 10%;
+                    font-size: 14px;
+               }
+           }
+        }
+        .submitBtn{
+            margin: 10px 0px;
+            p{
+                font-size: 16px;
+                text-align: center;
+                margin-top: 10px;
+                padding-right: 15px;
+            }
+            
+        }
+    }
+}

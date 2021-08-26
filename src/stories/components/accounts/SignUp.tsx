@@ -3,10 +3,10 @@ import {useForm, Controller} from 'react-hook-form'
 import {SubmitButton} from '../SubmitButton'
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
-import '../../styles/accounts/signUp.scss';
 import DatePicker from "react-datepicker";
 import {GoCalendar} from 'react-icons/go'
 import "react-datepicker/dist/react-datepicker.css";
+import '../../styles/accounts/accounts.scss';
 
 interface IFormInputs {
     full_name: string;
@@ -61,19 +61,19 @@ const SignUp = () => {
  
     const onSubmit = (data: IFormInputs) => console.log(data);
     return (
-        <div className='signUpContainer'>
+        <div className='accountContainer'>
             <div className="shopothLogo">
-                <p>Shopoth</p>
+                <img className='shopothLogoImg' src="./shopoth.svg" alt="shopoth icon" />
             </div>
             <div className="shopothTitle">
                 <h2>Create your Shopoth account</h2>
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="siginUpForm">
+                <div className="accountForm">
                     <div className="fullName">
                         <input 
                             type="text" 
-                            className='inputControl' 
+                            className='formControl' 
                             placeholder='Full Name' 
                             {...register('full_name')}
                         />
@@ -82,7 +82,7 @@ const SignUp = () => {
                     <div className="phone">
                         <input 
                             type="text" 
-                            className='inputControl' 
+                            className='formControl' 
                             placeholder='Phone Number' 
                             {...register('phone')} 
                         />
@@ -91,7 +91,7 @@ const SignUp = () => {
                     <div className="email">
                         <input 
                             type="email" 
-                            className='inputControl' 
+                            className='formControl' 
                             placeholder='Email Address' 
                             {...register('email')} 
                             autoComplete="new-email"
@@ -180,7 +180,7 @@ const SignUp = () => {
                 </div>
             
                 <div className="emailMe">
-                <label className="checkContainer">
+                <label className="checkContainer" htmlFor='emailMe'>
                     <input type="checkbox" id='emailMe' {...register('email_me')} />
                     <span className="checkmark "></span>
                 </label>
@@ -195,7 +195,7 @@ const SignUp = () => {
                          and  <span className='terms'> Privacy Policy</span>
                     </p>
                 </div>
-                <div className="signUpBtn">
+                <div className="submitBtn">
                     <SubmitButton label='Create Account' color='cart'/>
                     <p>Do you have an account? <span className='signIn'>Sign In</span> </p>
                 </div>

@@ -3,8 +3,7 @@ import {useForm} from 'react-hook-form'
 import {SubmitButton} from '../SubmitButton'
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
-import '../../styles/accounts/signIn.scss';
-
+import '../../styles/accounts/accounts.scss';
 
 interface IFormInputs {
     emailOrPhone: string;
@@ -20,25 +19,24 @@ const schema = yup.object().shape({
 
 const SignIn = () => {
     const [showPassword, setShowPassword] = useState(false)
-
     const { register, handleSubmit, formState: { errors } } = useForm<IFormInputs>({
         resolver: yupResolver(schema)
     });
     const onSubmit = (data: IFormInputs) => console.log(data);
     return (
-        <div className='signInContainer'>
+        <div className='accountContainer'>
             <div className="shopothLogo">
-                <p>Shopoth</p>
+            <img className='shopothLogoImg' src="./shopoth.svg" alt="shopoth icon" />
             </div>
             <div className="shopothTitle">
                 <h2>Sign in to your Shopoth account</h2>
                 <p>It's great to see you again. Sign in to continue</p>
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="siginInForm">
+                <div className="accountForm">
                     <div className="emailOrPhone">
-                        <input type="text" className='emailControl' placeholder='Phone Number / Email Address' {...register('emailOrPhone')} />
-                        <p className='errorMsg genderError'>{errors.emailOrPhone?.message}</p>
+                        <input type="text" className='formControl' placeholder='Phone Number / Email Address' {...register('emailOrPhone')} />
+                        <p className='errorMsg '>{errors.emailOrPhone?.message}</p>
                     </div>
                     <div className="passwordContainer">
                     <div className="password">
@@ -62,9 +60,7 @@ const SignIn = () => {
                     </div>
                    
                 </div>
-                <div className="forgetPassword">
-                    <button className='forgetPasswordBtn'>Forget your password?</button>
-                </div>
+               
                 <div className="keepMeSignIn">
                 <label className="checkContainer" htmlFor='keepMeSignIn'>
                     <input type="checkbox" id='keepMeSignIn' {...register('keep_me')} />
@@ -73,9 +69,12 @@ const SignIn = () => {
                 </label>
                     <p>Uncheck if using a public device</p>
                 </div>
-                <div className="signInBtn">
+                <div className="submitBtn">
                     <SubmitButton label='Sign In' color='cart'/>
-                    <p>Don't have an account? <span className='createAnAccount'>Create an Account</span> </p>
+                </div>
+                <div className="accountfooter">
+                    <button className='forgetPasswordBtn'>Forget your password?</button>
+                    <p>Don't have an account? <span className='signInOrSignUp'>Create an Account</span> </p>
                 </div>
               
             </form>
