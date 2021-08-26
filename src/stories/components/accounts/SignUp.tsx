@@ -48,8 +48,6 @@ const SignUp = () => {
         }
     });
 
-
-
     const CustomInput = forwardRef<any>(({onClick, value, placeholder}:any, ref) => {
         return (
           <div className='customDatePicker'>
@@ -60,9 +58,7 @@ const SignUp = () => {
           </div>
         );
       });
-
-
-      
+ 
     const onSubmit = (data: IFormInputs) => console.log(data);
     return (
         <div className='signUpContainer'>
@@ -142,32 +138,6 @@ const SignUp = () => {
                         </div>
                         <p className='errorMsg genderError'>{errors.gender?.message}</p>
                     </div>
-                   
-                    {/* <div className="dobContainer">
-                    <div className="dob">
-                        <Controller
-                            control={control}
-                            name='dob'
-                            render={({ field}) => (
-                            <DatePicker
-                                className="dateControl"
-                                placeholderText='Select birth date'
-                                onChange={(date) => field.onChange(date)}
-                                selected={field.value}
-                                customInput={<CustomInput />}
-                            />
-                             )}
-                        />
-                       
-                    </div>
-                    <p className='errorMsg'>{errors.dob?.message}</p>
-                    </div> */}
-
-
-
-
-
-
                     <div className="dobContainer">
                     <div className="dob">
                         <Controller
@@ -180,27 +150,12 @@ const SignUp = () => {
                                 onChange={(date) => field.onChange(date)}
                                 selected={field.value}
                                 customInput={<CustomInput />}
-                            />
+                                />
                              )}
                         />
-                       
                     </div>
                     <p className='errorMsg'>{errors.dob?.message}</p>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                  
                   <div className="passwordContainer">
                     <div className="password">
                             <input 
