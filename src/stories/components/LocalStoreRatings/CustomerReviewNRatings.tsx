@@ -2,11 +2,24 @@ import '../../styles/localStoreRatings/CustomerReviewNRatings.scss';
 import StarsRating from "react-star-rate";
 import {CartButton} from "../CartButton";
 import ProgressBar from "@ramonak/react-progress-bar";
+import {useEffect, useState} from "react";
+import {AiOutlineArrowDown} from "react-icons/ai";
 
 const SearchBarWithResult = () => {
+    const [width, setWidth] = useState(0)
+    useEffect(() => {
+        function handleResize() {
+            console.log(width)
+            setWidth(window.innerWidth)
+        }
+
+        window.addEventListener('resize', handleResize)
+    })
+
     return (
-        <div className="main">
-            <div className="heading">Customer review & ratings</div>
+        <div className="rnr-main">
+            <div className="rnr-heading">{width < 768 ? <><span className="rnrText">Customer Reviews (1,500)</span>
+                <span className="rnrIcon"><AiOutlineArrowDown/></span></> : 'Customer review & ratings'}</div>
             <div className="ratingsAvg">
                 <div className="point">4.5</div>
                 <div>

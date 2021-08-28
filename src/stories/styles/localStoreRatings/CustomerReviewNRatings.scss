@@ -1,29 +1,10 @@
-.main {
+.rnr-main {
   //margin-top: 25px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-}
-
-.heading {
-  grid-column: 3 / -1;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 135%;
-  /* identical to box height, or 54px */
-
-  letter-spacing: -0.025em;
-
-  color: #000000;
-}
-
-.ratingsAvg {
-  grid-column: 3 / 5;
-  text-align: center;
 }
 
 .point {
@@ -56,12 +37,6 @@
   color: #616161;
 }
 
-.recommendedAvg {
-  grid-column: 5 / 8;
-  border-left: 1px solid #DFE7FF;
-  text-align: center;
-}
-
 .outOfRecommend {
   font-family: Lato;
   font-style: normal;
@@ -76,21 +51,11 @@
   color: #616161;
 }
 
-.detailsReview {
-  grid-column: 8 / 10;
-  margin-top: -10px;
-}
-
 .individual {
   display: grid;
   grid-template-columns: repeat(12, auto);
   align-items: center;
   margin-top: 10px;
-}
-
-.writeReview {
-  grid-column: 10 / -1;
-  justify-self: center;
 }
 
 .starText {
@@ -118,142 +83,401 @@
   color: #192434;
 }
 
-.briefTxt1 {
-  margin-top: 25px;
-  grid-column: 3 / -1;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 22px;
-  /* identical to box height, or 110% */
-  letter-spacing: 0.03em;
-
-  /* Color-text */
-
-  color: #192434;
-
-}
-
-.briefTxt2 {
-  grid-column: 3 / -1;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 150%;
-  /* identical to box height, or 27px */
-
-
-  /* color-Text-secondary */
-
-  color: #616161;
-}
-
-.ratingWithTitle, .byUser, .byUser, .images, .seeMore {
-  grid-column: 3 / -1;
-}
-
-.ratingWithTitle {
-  div {
-    display: inline-block;
-  }
-}
-
-.ratingStars {
-  vertical-align: super;
-}
-
-.ratingTitle {
-  margin-left: 33px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 150%;
-  /* identical to box height, or 27px */
-  color: #000000;
-  align-items: end;
-}
-
-.byUser {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 150%;
-  /* identical to box height, or 21px */
-
-
-  /* Color-text */
-
-  color: #192434;
-}
-
-.comment {
-  grid-column: 3 / 10;
-
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 150%;
-  /* or 27px */
-
-
-  /* color-Text-secondary */
-
-  color: #616161;
-}
-
-.images > div {
-  width: 165px;
-  height: 147px;
-  border: 1px solid #DFE7FF;
-  box-sizing: border-box;
-  border-radius: 5px;
-  display: inline-block;
-  margin-right: 20px;
-}
-
-/*.images > div > img {
-  max-width: 50%;
-  max-height: 50%;
-}*/
-
-.seeMore {
-  margin-top: 20px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 150%;
-  /* identical to box height, or 27px */
-
-
-  color: #000000;
-}
-
-/*@media (max-width: 1279px) {
-  .heading,
-  .zila,
-  .area, .thana, .findStore {
-    grid-column: 1 / -1
-  }
-
-  .findStore {
-    justify-self: end;
+@media (max-width: 359px) {
+  .theRatings, .totalRatings, .totalComments {
+    grid-column: 1 / -1 !important;
+    justify-self: start !important;
   }
 }
 
 @media (max-width: 767px) {
-  .heading,
-  .zila,
-  .area, .thana, .findStore {
-    grid-column: 1 / -1
+  .rnr-heading {
+    grid-column: 1 / -1;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 24px;
+    color: #03001F;
+    margin-top: 20px;
+    border: 1px solid #E7EDFF;
+    border-radius: 2px;
+    padding: 10px;
+    display: block;
+
+    .rnrText {
+      float: left;
+    }
+
+    .rnrIcon {
+      float: right;
+      cursor: pointer;
+    }
   }
 
-  .findStore {
-    justify-self: end;
+  .ratingsAvg {
+    grid-column: 1 / 6;
+    text-align: center;
   }
-}*/
+
+  .recommendedAvg {
+    grid-column: 6 / -1;
+    border-left: 1px solid #DFE7FF;
+    text-align: center;
+  }
+
+  .detailsReview {
+    grid-column: 1 / -1;
+    margin-top: -10px;
+  }
+
+  .writeReview {
+    grid-column: 3 / 9;
+    justify-self: center;
+  }
+
+  .briefTxt1 {
+    margin-top: 25px;
+    grid-column: 1 / -1;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height, or 110% */
+    letter-spacing: 0.03em;
+
+    /* Color-text */
+
+    color: #192434;
+
+  }
+
+  .briefTxt2 {
+    grid-column: 1 / -1;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+
+
+    /* color-Text-secondary */
+
+    color: #616161;
+  }
+
+  .ratingWithTitle, .byUser, .byUser, .images, .seeMore {
+    grid-column: 1 / -1;
+  }
+
+  .ratingWithTitle {
+    div {
+      display: inline-block;
+    }
+  }
+
+  .ratingStars {
+    vertical-align: super;
+  }
+
+  .ratingStars > ul {
+    margin-top: -8px;
+  }
+
+  .ratingTitle {
+    margin-left: 10px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height, or 27px */
+    color: #000000;
+  }
+
+  .byUser {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    /* identical to box height, or 21px */
+
+
+    /* Color-text */
+
+    color: #192434;
+  }
+
+  .comment {
+    grid-column: 1 / -1;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+  }
+
+  .images > div {
+    width: 80px;
+    height: 70px;
+    border: 1px solid #DFE7FF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 6px !important;
+  }
+
+  /*.images > div > img {
+    max-width: 50%;
+    max-height: 50%;
+  }*/
+
+  .seeMore {
+    margin-top: 20px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+
+    letter-spacing: 0.03em;
+
+    /* Color-text */
+
+    color: #03001F;
+  }
+}
+
+@media (min-width: 768px) {
+  .rnr-heading {
+    grid-column: 3 / -1;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 135%;
+    /* identical to box height, or 54px */
+
+    letter-spacing: -0.025em;
+
+    color: #000000;
+  }
+
+  .ratingsAvg {
+    grid-column: 3 / 5;
+    text-align: center;
+  }
+
+  .point {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 135%;
+    /* identical to box height, or 54px */
+
+    letter-spacing: -0.025em;
+
+    /* Color-text */
+
+    color: #192434;
+    margin-bottom: -15px;
+  }
+
+  .totalRatings {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+
+
+    /* color-Text-secondary */
+
+    color: #616161;
+  }
+
+  .recommendedAvg {
+    grid-column: 5 / 8;
+    border-left: 1px solid #DFE7FF;
+    text-align: center;
+  }
+
+  .outOfRecommend {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    /* identical to box height, or 18px */
+
+
+    /* color-Text-secondary */
+
+    color: #616161;
+  }
+
+  .detailsReview {
+    grid-column: 8 / 10;
+    margin-top: -10px;
+  }
+
+  .individual {
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .writeReview {
+    grid-column: 10 / -1;
+    justify-self: center;
+  }
+
+  .starText {
+    grid-column: 1 / 2;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-decoration-line: underline;
+    color: #192434;
+  }
+
+  .pBar {
+    grid-column: 2 / 9;
+  }
+
+  .countText {
+    grid-column: 10 / 12;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #192434;
+  }
+
+  .briefTxt1 {
+    margin-top: 25px;
+    grid-column: 3 / -1;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+    /* identical to box height, or 110% */
+    letter-spacing: 0.03em;
+
+    /* Color-text */
+
+    color: #192434;
+
+  }
+
+  .briefTxt2 {
+    grid-column: 3 / -1;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+
+
+    /* color-Text-secondary */
+
+    color: #616161;
+  }
+
+  .ratingWithTitle, .byUser, .byUser, .images, .seeMore {
+    grid-column: 3 / -1;
+  }
+
+  .ratingWithTitle {
+    div {
+      display: inline-block;
+    }
+  }
+
+  .ratingStars {
+    vertical-align: super;
+  }
+
+  .ratingTitle {
+    margin-left: 33px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+    color: #000000;
+    align-items: end;
+  }
+
+  .byUser {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    /* identical to box height, or 21px */
+
+
+    /* Color-text */
+
+    color: #192434;
+  }
+
+  .comment {
+    grid-column: 3 / 10;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 27px */
+
+
+    /* color-Text-secondary */
+
+    color: #616161;
+  }
+
+  .images > div {
+    width: 165px;
+    height: 147px;
+    border: 1px solid #DFE7FF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  /*.images > div > img {
+    max-width: 50%;
+    max-height: 50%;
+  }*/
+
+  .seeMore {
+    margin-top: 20px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+
+
+    color: #000000;
+  }
+}
