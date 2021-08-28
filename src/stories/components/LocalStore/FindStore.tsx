@@ -26,7 +26,7 @@ const FindStore = () => {
     return (
         <>
             <div className="findStoreWrapper">
-                    <div className="heading">Local Store</div>
+                    <div className="ls-heading">Local Store</div>
                     <div className="zila">
                         <Select label="Zila" name="zila" options={zilas} />
                     </div>

@@ -3,7 +3,8 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(3, min(100px, 1fr));
-  grid-gap: 20px;
+  grid-row-gap: 20px;
+  grid-column-gap: 66px;
 }
 
 .line {
@@ -39,11 +40,15 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
+  .sbwrWrapper {
+    grid-column-gap: 20px;
+  }
+
   .line {
-    grid-column: 2 / 12;
+    grid-column: 1 / -1;
   }
   .searchbar {
-    grid-column: 1 / -1;
+    display: none;
   }
 }

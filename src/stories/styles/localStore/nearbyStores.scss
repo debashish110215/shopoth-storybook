@@ -9,38 +9,14 @@
   box-sizing: border-box;
 }
 
-.main {
+.nbs-main {
   margin-top: 25px;
   max-width: 100%;
-}
-
-h1 {
-  margin-left: 15px;
-  width: 151px;
-  height: 29px;
-  left: 50px;
-  top: 890px;
-
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 29px;
-  /* identical to box height */
-
-
-  color: #000000;
 }
 
 .card_image {
   position: relative;
   padding: 8px;
-}
-
-.card-wishlist {
-  position: absolute;
-  left: 5%;
-  top: 8%;
 }
 
 img {
@@ -80,7 +56,7 @@ img {
 
 .card_content {
   display: grid;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 0px 0.5rem;
   background: white;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
@@ -396,76 +372,6 @@ img {
   }
 }
 
-@media (max-width: 576px) {
-  .shop {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 26px;
-    /* identical to box height, or 130% */
-
-    display: flex;
-    align-items: center;
-
-    /* Color-Text */
-
-    color: #192434;
-  }
-
-  .owner {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 26px;
-    /* identical to box height, or 186% */
-
-    display: flex;
-    align-items: center;
-
-    /* Color-Text */
-
-    color: #192434;
-  }
-
-  .id {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 26px;
-    /* identical to box height, or 217% */
-
-    display: flex;
-    align-items: center;
-
-    /* Color-Text */
-
-    color: #192434;
-  }
-
-  .numOfComment, .numOfRating {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 150%;
-    /* identical to box height, or 18px */
-
-    letter-spacing: -0.025em;
-
-    /* Color-text */
-
-    color: #03001F;
-  }
-
-  .react-star-rate div {
-    font-size: 20px !important;
-    width: 12px !important;
-  }
-}
-
 .rating-num > p {
   font-family: Lato;
   font-style: normal;
@@ -486,5 +392,265 @@ img {
   .react-star-rate div {
     font-size: 20px !important;
     width: 12px !important;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 568px) {
+  .shop {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    /* identical to box height, or 130% */
+
+    display: flex;
+    align-items: center;
+
+    /* Color-Text */
+
+    color: #192434;
+  }
+
+  .react-star-rate li {
+    width: 7px !important;
+  }
+
+  .react-star-rate div {
+    font-size: 20px !important;
+    width: 12px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    margin-left: 15px;
+    width: 151px;
+    height: 29px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+
+
+    color: #000000;
+  }
+
+  .card-wishlist {
+    position: absolute;
+    left: 8%;
+    top: 10%;
+  }
+
+  .left {
+    margin-top: -20px;
+  }
+
+  .right {
+    margin-top: -30px;
+  }
+
+  .shop {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    /* identical to box height, or 130% */
+
+    display: flex;
+    align-items: center;
+
+    /* Color-Text */
+
+    color: #192434;
+  }
+
+  .owner {
+    margin-top: -10px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 26px;
+    /* identical to box height, or 186% */
+
+    display: flex;
+    align-items: center;
+
+    /* Color-Text */
+
+    color: #192434;
+  }
+
+  .id {
+    margin-top: -10px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 26px;
+    /* identical to box height, or 217% */
+
+    display: flex;
+    align-items: center;
+
+    /* Color-Text */
+
+    color: #192434;
+  }
+
+  .numOfRating {
+    margin-top: 2px !important;
+  }
+
+  .numOfComment, .numOfRating {
+    margin-top: -10px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    /* identical to box height, or 18px */
+
+    letter-spacing: -0.025em;
+
+    /* Color-text */
+
+    color: #03001F;
+  }
+
+  .rating-num > p {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px !important;
+    line-height: 26px !important;
+    color: #192434;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    margin-left: 15px;
+    width: 151px;
+    height: 29px;
+    left: 50px;
+    top: 890px;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+
+
+    color: #000000;
+  }
+
+  .card-wishlist {
+    position: absolute;
+    left: 8%;
+    top: 10%;
+  }
+
+  .left {
+    margin-top: -20px;
+  }
+
+  .right {
+    margin-top: -30px;
+  }
+
+  .shop {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height, or 130% */
+
+    display: flex;
+    align-items: center;
+
+    /* Color-Text */
+
+    color: #192434;
+    margin: 10px 0px;
+  }
+
+  .owner {
+    margin-top: -10px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 186% */
+
+    display: flex;
+    align-items: center;
+
+    /* Color-Text */
+
+    color: #192434;
+    margin: 10px 0px;
+  }
+
+  .id {
+    margin-top: -10px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height, or 217% */
+
+    display: flex;
+    align-items: center;
+
+    /* Color-Text */
+
+    color: #192434;
+    margin: 10px 0px;
+  }
+
+  .numOfRating {
+    margin-top: 2px !important;
+  }
+
+  .numOfComment {
+    font-family: Poppins;
+  }
+
+  .numOfRating {
+    font-family: Lato;
+  }
+
+  .numOfComment, .numOfRating {
+    margin-top: -10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 26px;
+    /* identical to box height, or 18px */
+
+    letter-spacing: -0.025em;
+
+    /* Color-text */
+
+    color: #03001F;
+  }
+
+  .rating-num > p {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    color: #192434;
   }
 }

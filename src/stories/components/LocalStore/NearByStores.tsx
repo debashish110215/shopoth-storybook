@@ -6,7 +6,7 @@ import {Wishlist} from "../Wishlist";
 const SearchBarWithResult = () => {
     return (
 
-        <div className="main">
+        <div className="nbs-main">
             <h1>Nearby Stores</h1>
             <ul className="cards">
                 <li className="cards_item">
