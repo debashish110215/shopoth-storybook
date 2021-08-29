@@ -4,7 +4,7 @@ import {SDRRC} from './SDRRC'
 import {useEffect, useState} from "react";
 
 const StoreInfo = () => {
-    const [width, setWidth] = useState(0)
+    const [width, setWidth] = useState(1024)
     useEffect(() => {
         function handleResize() {
             console.log(width)

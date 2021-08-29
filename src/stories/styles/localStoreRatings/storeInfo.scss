@@ -77,8 +77,9 @@
   }
 
   .location {
-    grid-column: 6 / 8;
-    justify-content: center;
+    grid-column: 1 / -1;
+    //justify-content: center;
+    justify-self: center;
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
@@ -173,7 +174,7 @@
       font-family: Poppins;
       font-style: normal;
       font-weight: normal;
-      font-size: 14px;
+      font-size: 13px;
       line-height: 26px;
       color: #192434;
       justify-self: end;
@@ -262,7 +263,7 @@
       /* Color-Primary */
 
       color: #EF4056;
-      //justify-self: end;
+      justify-self: start;
     }
   }
 }
@@ -279,10 +280,10 @@
 }
 
 @media (min-width: 414px) and (max-width: 896px) {
-    .close {
-      grid-column: 3 / 3;
-      justify-self: self-start !important;
-    }
+  .close {
+    grid-column: 3 / 3;
+    justify-self: self-start !important;
+  }
 }
 
 @media (min-width: 768px) {
@@ -303,7 +304,7 @@
   .img {
     grid-column: 3 / 8;
     height: 400px;
-    justify-self: end;
+    //justify-self: end;
   }
 
   img {
@@ -394,8 +395,8 @@
     grid-column: 1 / 4;
   }
 
-  .totalRatings {
-    grid-column: 4 / 6;
+  .rrc .totalRatings {
+    grid-column: 4 / 7;
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
@@ -405,7 +406,7 @@
   }
 
   .totalComments {
-    grid-column: 6 / 12;
+    grid-column: 7 / 12;
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -486,6 +487,39 @@
 
     color: #EF4056;
     justify-self: end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .theRatings {
+    grid-column: 1 / 4;
+  }
+
+  .rrc .totalRatings {
+    grid-column: 4 / 6;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: #03001F;
+    justify-self: center;
+  }
+
+  .totalComments {
+    grid-column: 6 / 12;
+  }
+
+  .close {
+    grid-column: 3 / 4;
+    justify-self: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .react-star-rate div {
+    font-size: 20px !important;
+    width: 12px !important;
   }
 }
 

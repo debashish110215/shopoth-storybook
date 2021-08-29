@@ -234,7 +234,7 @@ const SearchBarWithResult = () => {
                 </div>
             </div>
 
-            <div className="seeMore">See more</div>
+            <div className="seeMore" onClick={() => console.log('I see')}>See more</div>
         </div>
     );
 }

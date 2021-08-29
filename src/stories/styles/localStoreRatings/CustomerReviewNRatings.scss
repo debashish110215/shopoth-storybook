@@ -1,5 +1,5 @@
 .rnr-main {
-  //margin-top: 25px;
+  margin-top: 25px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
@@ -250,6 +250,7 @@
     /* Color-text */
 
     color: #03001F;
+    cursor: pointer;
   }
 }
 
@@ -479,5 +480,6 @@
 
 
     color: #000000;
+    cursor: pointer;
   }
 }
