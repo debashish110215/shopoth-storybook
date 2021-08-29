@@ -46,8 +46,7 @@ const ChangePassword:FC = () => {
                             type={`${(key ==='current_password' && showPassword)?'text':'password'}`}
                             id='current_password' 
                             {...register('current_password')} 
-                        />
-                        <div className="showHideBtnWrapper">
+                        />    <div className="showHideBtnWrapper">
                             <button 
                                 className='showHideBtn' 
                                 type='button' 
@@ -56,6 +55,7 @@ const ChangePassword:FC = () => {
                                 {(key ==='current_password' && showPassword)?'Hide':'Show'}  
                             </button>
                         </div>
+                    
                     </div>
                     <p className='showError' style={{color:'red'}}>{errors.current_password?.message}</p>
                 </div>

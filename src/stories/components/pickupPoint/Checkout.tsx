@@ -49,15 +49,15 @@ const Checkout:FC<CheckoutProps> = ({setCheckout, checkout}) => {
                     onClick={() => setCheckout('home_delivery')}
                 >
                       <label className="radioContainer " htmlFor="home_delivery">
-                                <input type="radio" className="formControl" 
-                                    id='home_delivery'
-                                    name='checkoutOption'
-                                    checked={checkout === 'home_delivery'}
-                                    />
-                                <span className="checkmark"></span>
-                                <span className='labelTxt'> Home Delivery</span>
-                               
-                             </label>
+                            <input type="radio" className="formControl" 
+                                id='home_delivery'
+                                name='checkoutOption'
+                                checked={checkout === 'home_delivery'}
+                                />
+                            <span className="checkmark"></span>
+                            <span className='labelTxt'> Home Delivery</span>  
+                        </label>
+                        
                     <span className='deliveryCharge'>Charge: Tk 70</span>
                 </div>
             </div>
