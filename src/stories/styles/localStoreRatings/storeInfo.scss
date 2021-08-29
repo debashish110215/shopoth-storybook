@@ -1,0 +1,525 @@
+.storeInfoWrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, min(100px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+
+  .card-wishlist {
+    position: absolute;
+    left: 3%;
+    top: 4%;
+  }
+}
+
+.image_with_wishlist {
+  position: relative;
+}
+
+.rrc {
+  margin-top: -10px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 10px;
+  align-items: baseline;
+}
+
+.serviceHour {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 10px;
+  //grid-row-gap: 10px;
+  //align-items: baseline;
+  //align-content: end;
+}
+
+@media (max-width: 359px) {
+  .theRatings, .totalRatings, .totalComments {
+    grid-column: 1 / -1 !important;
+  }
+
+  .location {
+    grid-column: 6 / 7 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .si-heading {
+    grid-column: 1 / -1;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+    color: #000000;
+  }
+
+  .img {
+    grid-column: 1 / -1;
+    height: 170px;
+    //justify-self: end;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .loc {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 150px;
+    justify-self: center;
+  }
+
+  .location {
+    grid-column: 1 / -1;
+    //justify-content: center;
+    justify-self: center;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    /* identical to box height, or 21px */
+
+
+    color: #000000;
+  }
+
+  .details {
+    grid-column: 1 / -1;
+    align-items: center;
+
+    .name {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: #192434;
+      vertical-align: top;
+    }
+
+    .location {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 150%;
+      /* identical to box height, or 27px */
+      vertical-align: top;
+      float: right;
+      color: #000000;
+      //margin-left: calc(50% + 5px);
+      //transform: translateX(-420%);
+    }
+
+    .phone {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      //line-height: 26px;
+      vertical-align: top;
+      color: #192434;
+    }
+
+    .storeId {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      //line-height: 26px;
+      color: #192434;
+      vertical-align: bottom;
+    }
+
+    .storeLoc {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      //line-height: 30px;
+      color: #616161;
+      vertical-align: top;
+    }
+
+    .card-rating {
+      justify-content: flex-start;
+    }
+
+    .theRatings {
+      grid-column: 1 / 6;
+    }
+
+    .totalRatings {
+      grid-column: 6 / 9;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 26px;
+      color: #03001F;
+      justify-self: end;
+      align-self: end;
+    }
+
+    .totalComments {
+      grid-column: 9 / -1;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 26px;
+      color: #192434;
+      justify-self: end;
+      align-self: end;
+    }
+
+    .rating-num > p {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 26px;
+      color: #192434;
+    }
+
+    .sh-heading {
+      grid-column: 1 / -1;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 150%;
+      /* identical to box height, or 24px */
+      color: #000000;
+      border: 1px solid #E7EDFF;
+      border-radius: 2px;
+      padding: 10px;
+      display: block;
+
+      .shText {
+        float: left;
+      }
+
+      .shIcon {
+        float: right;
+        cursor: pointer;
+      }
+    }
+
+    /*    .serviceHour {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: repeat(8, 1fr);
+          grid-column-gap: 10px;
+          grid-row-gap: 10px;
+        }*/
+
+    .day {
+      grid-column: 1 / 6;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      /* identical to box height */
+
+
+      color: #000000;
+    }
+
+    .time {
+      grid-column: 6 / -1;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      /* identical to box height */
+
+      /* Secondary */
+
+      color: #21409A;
+    }
+
+    .close {
+      grid-column: 6 / 11;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 150%;
+      /* identical to box height, or 21px */
+
+      text-align: right;
+
+      /* Color-Primary */
+
+      color: #EF4056;
+      justify-self: start;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .img, .loc {
+    height: 300px !important;
+  }
+
+  .close {
+    grid-column: 3 / 3;
+    justify-self: self-start;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 896px) {
+  .close {
+    grid-column: 3 / 3;
+    justify-self: self-start !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .si-heading {
+    grid-column: 3 / -1;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 150%;
+    color: #000000;
+  }
+
+  .shIcon {
+    display: none;
+  }
+
+  .img {
+    grid-column: 3 / 8;
+    height: 400px;
+    //justify-self: end;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .loc {
+    grid-column: 8 / -1;
+    height: 400px;
+    justify-self: center;
+  }
+
+  .details {
+    grid-column: 3 / -1;
+    align-items: center;
+
+    .name {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: #192434;
+      vertical-align: top;
+    }
+
+    .location {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 150%;
+      /* identical to box height, or 27px */
+      vertical-align: top;
+      float: right;
+      color: #000000;
+      //margin-left: calc(50% + 5px);
+      //transform: translateX(-420%);
+    }
+
+    .phone {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      //line-height: 26px;
+      vertical-align: top;
+      color: #192434;
+    }
+
+    .storeId {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      //line-height: 26px;
+      color: #192434;
+      vertical-align: bottom;
+    }
+
+    .storeLoc {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      //line-height: 30px;
+      color: #616161;
+      vertical-align: top;
+    }
+
+    .card-rating {
+      justify-content: flex-start;
+    }
+  }
+
+  .rrc {
+    margin-top: -10px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 10px;
+    align-items: baseline;
+  }
+
+  .theRatings {
+    grid-column: 1 / 4;
+  }
+
+  .rrc .totalRatings {
+    grid-column: 4 / 7;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: #03001F;
+  }
+
+  .totalComments {
+    grid-column: 7 / 12;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: #192434;
+  }
+
+  .rating-num > p {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: #192434;
+  }
+
+  .serviceHour {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    //align-items: baseline;
+    //align-content: end;
+  }
+
+  .serviceHour > .sh-heading {
+    grid-column: 1 / 4;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+    color: #000000;
+  }
+
+  .day {
+    grid-column: 1 / 2;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+
+    color: #000000;
+  }
+
+  .time {
+    grid-column: 3 / 6;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    /* Secondary */
+
+    color: #21409A;
+  }
+
+  .close {
+    grid-column: 3 / 4;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    /* identical to box height, or 21px */
+
+    text-align: right;
+
+    /* Color-Primary */
+
+    color: #EF4056;
+    justify-self: end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .theRatings {
+    grid-column: 1 / 4;
+  }
+
+  .rrc .totalRatings {
+    grid-column: 4 / 6;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: #03001F;
+    justify-self: center;
+  }
+
+  .totalComments {
+    grid-column: 6 / 12;
+  }
+
+  .close {
+    grid-column: 3 / 4;
+    justify-self: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .react-star-rate div {
+    font-size: 20px !important;
+    width: 12px !important;
+  }
+}
+
