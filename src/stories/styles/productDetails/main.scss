@@ -1,0 +1,26 @@
+.pdWrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  justify-content: center;
+}
+
+.pdCrnrWrapper {
+  margin: 10px;
+  padding-bottom: 25px;
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+  .pdCrnrWrapper {
+    padding-right: 65px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #FBFBFF;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pdCrnrWrapper {
+    padding-right: 145px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #FBFBFF;
+  }
+}
