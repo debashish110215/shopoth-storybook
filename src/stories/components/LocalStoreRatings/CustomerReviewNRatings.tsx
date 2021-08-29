@@ -6,7 +6,7 @@ import {useEffect, useState} from "react";
 import {AiOutlineArrowDown} from "react-icons/ai";
 
 const SearchBarWithResult = () => {
-    const [width, setWidth] = useState(0)
+    const [width, setWidth] = useState(1024)
     useEffect(() => {
         function handleResize() {
             console.log(width)
