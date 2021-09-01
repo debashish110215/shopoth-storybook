@@ -1,6 +1,5 @@
 import {FiSearch} from 'react-icons/fi';
 import '../../styles/localStore/sbwr.scss';
-import '../../styles/pickupPoints/searchStore.scss';
 
 const SearchBarWithResult = () => {
     return (

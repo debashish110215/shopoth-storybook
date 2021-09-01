@@ -1,5 +1,4 @@
 import '../../styles/localStore/nearbyStores.scss';
-import '../../styles/pickupPoints/searchStore.scss';
 import {Rating} from "../Rating";
 import {Wishlist} from "../Wishlist";
 

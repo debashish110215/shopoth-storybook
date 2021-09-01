@@ -16,7 +16,7 @@ const Template: ComponentStory<typeof Image> = (args) => <Image {...args} />;
 export const CardImage = Template.bind({});
 CardImage.args = {
     title:'new',
-    imageUrl:'shoes_480*480.png'
+    imageUrl:'shoes_480X480.png'
  
 };
 
